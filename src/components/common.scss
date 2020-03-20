@@ -1,28 +1,207 @@
-// Подключение компонентов
-@import "./header/header";
-@import "./footer/footer";
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i%7CMontserrat:400,700%7COpen+Sans:400,700%7CRoboto:400,700&display=swap');
 
 body {
-  font-family: Oswald, sans-serif;
+  font-family: "Open Sans", "Calibri", sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+p {
+  line-height: 22px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+/* Фрагмент кода предоставлен лектором */
+
+.hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 .container {
-  width: 100%;
-  max-width: 1180px;
   margin: 0 auto;
+  width: 100%;
+  max-width: 1220px;
+  padding: 0 20px;
+}
+
+.list-point-none {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/*breadcrumbs*/
+
+.breadcrumbs-item {
   padding-right: 20px;
-  padding-left: 20px;
+  font-family: "Crimson Text", "Big Caslon", serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: #1e0606;
 }
 
-.title-block {
-  margin: 0 0 20px 0;
-
-  &_one {
-    font-size: 30px;
-    text-transform: uppercase;
-  }
-  &_two {
-    font-size: 25px;
-    max-width: 500px;
-  }
+.breadcrumbs-active {
+  opacity: 0.5;
 }
+
+.breadcrumbs-list {
+  display: inline-flex;
+  margin-top: 0;
+  margin-bottom: 49px;
+}
+
+.breadcrumbs-link-active:hover {
+  opacity: 0.75;
+}
+
+/* title */
+
+.title-site {
+  margin-top: 0;
+  margin-bottom: 17px;
+  font-family: "Montserrat", "Candara", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  text-transform: uppercase;
+}
+
+/* Forms */
+
+.form-row-short {
+  width: 290px;
+}
+
+.form-row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 43px;
+  min-width: 600px;
+}
+
+.form-label {
+  top: 20px;
+  position: absolute;
+}
+
+.form-input {
+  padding: 13px 19px;
+  width: 100%;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.form-input:hover {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.form-input:active {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.input-message {
+  min-height: 150px;
+  width: 100%;
+  resize: none;
+}
+
+/*selector*/
+
+.selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -8px;
+  margin-bottom: 56px;
+  font-family: "Montserrat", "Candara", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #1e0606;
+}
+
+.selector-pages {
+  display: flex;
+}
+
+.selector-item {
+  padding-left: 33px;
+  padding-right: 33px;
+}
+
+.selector-item-active {
+  color: #c29974;
+}
+
+.selector-item:hover {
+  opacity: 0.75;
+}
+
+.selector-item-forvard {
+  fill: rgba(30, 6, 6, 0.12);
+}
+
+.selector-item-back {
+  transform: rotate(180deg);
+  fill: rgba(30, 6, 6, 0.12);
+}
+
+.selector-item-forvard:hover {
+  fill: #c29974;
+}
+
+.selector-item-back:hover {
+  fill: #c29974;
+}
+
+.selector-item-forvard:active {
+  fill: #c29974;
+  opacity: 0.5;
+}
+
+.selector-item-back:active {
+  fill: #c29974;
+  opacity: 0.5;
+}
+
+// Подключение компонентов
+@import "./header/header";
+@import "./footer/footer";
+@import "./button/button";
+@import "./link-button/link-button";

@@ -1,22 +1,199 @@
-footer {
-  background-color: #ffd042;
-  height: 80px;
+/*footer*/
+
+.footer {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  background-color: #434343;
+}
+
+.footer-item {
+  color: #ffffff;
+}
+
+.footer-nav-list,
+.footer-customer-info-list {
+  margin-top: 28px;
+  margin-bottom: 13px;
+}
+
+.footer__title {
+  padding-bottom: 23px;
+  min-width: 380px;
+  margin: 0;
+  font-weight: normal;
+  color: #aaaaaa;
+  border-bottom: solid 1px #666666;
+}
+
+.web-developer {
+  color: #a2a2a2;
+}
+
+.footer-nav-item,
+.customer-info-item {
+  padding-bottom: 15px;
+}
+
+.footer-item:hover {
+  opacity: 0.5;
+}
+
+.footer-item:active {
+  opacity: 0.2;
+}
+
+.footer-row {
+  padding-top: 23px;
+  padding-bottom: 100px;
+  border-top: solid 1px #666666;
+}
+
+.footer-list {
   display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.rating-text {
+  padding-right: 28px;
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+.rating-area {
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
+  position: relative;
+}
+
+.rating-area:focus {
+  outline-color: rgb(77, 144, 254);
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
+}
+
+.rating-area:not(:checked) > input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}
+
+.rating-area:not(:checked) > label {
+  float: right;
+  width: 20px;
+  padding: 0;
+  fill: #ffffff;
+  cursor: pointer;
+}
+
+input:checked ~ .rating-text {
+  color: #c29974;
+}
+
+input:hover ~ .rating-text {
+  color: #c29974;
+}
+
+.rating-area > input:checked ~ label {
+  fill: #c29974;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+  fill: #836e5b;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+  fill: #836e5b;
+}
+
+input:focus + label {
+  outline-color: rgb(77, 144, 254);
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
+}
+
+.copyright {
+  padding-left: 149px;
+  padding-right: 109px;
+}
+
+.footer-connect-form {
+  margin-top: 25px;
+  border: 1px solid transparent;
+}
+
+.footer-connect-form:hover {
+  border-color: #fffdfd;
+  cursor: pointer;
+}
+
+.footer-connect-form:active {
+  border-color: #fffdfd;
+  cursor: pointer;
+}
+
+.footer-connect-form {
+  min-width: 300px;
+  height: 40px;
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ebebeb;
+  background-color: #666666;
+}
+
+.button-connect {
+  border: none;
+  height: 40px;
+  margin-left: -4px;
+}
+
+.social-list {
+  display: flex;
+  padding-top: 9px;
+}
+
+.web-developer:hover {
+  text-decoration-line: underline;
+}
+
+.web-developer:active {
+  text-decoration-line: underline;
+}
+
+.social-link {
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
+  margin-right: 11px;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  background: #666666;
+  border-radius: 50%;
+}
 
-  span {
-    padding-right: 20px;
-  }
+.social-item:hover {
+  opacity: 0.5;
+}
 
-  a {
-    color: #000;
-    text-decoration: none;
-
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-    &:hover {
-      border-bottom: 1px solid #000;
-    }
-  }
+.social-item:active {
+  opacity: 0.2;
 }

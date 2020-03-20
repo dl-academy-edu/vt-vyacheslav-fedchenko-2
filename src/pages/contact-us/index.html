@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../../static/images/favicon.ico"/>
+</head>
+<body>
+  @@include('header/index.html')
+  <main>
+    <div class="breadcrumbs-box container">
+    <h1 class="title-site">Contact Us</h1>
+    <div class="breadcrumbs">
+      <ul class="breadcrumbs-list list-point-none">
+        <li class="breadcrumbs-item">
+          <a href="../../index.html" class="breadcrumbs-link-active">
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="breadcrumbs-item">
+          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.31229 0L0 1.17735L5.37541 6L0 10.8227L1.31229 12L8 6L1.31229 0Z" fill="#1E0606"/>
+            </svg>
+        </li>
+        <li class="breadcrumbs-item">
+          <span class="breadcrumbs-active">Contact Us</span>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div class="contact-box container">
+      <div class="contacts-form_modal">
+        <form class="contacts-form" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+          <div class="form-row">
+            <label class="form-label" for="form-name">Name</label>
+            <input class="form-input" id="form-name" type="text" name="name" value="Ivan Ivanov">
+          </div>
+          <div class="form-row">
+            <div class="form-row-short">
+              <label class="form-label" for="form-phone">Phone</label>
+              <input class="form-input" id="form-phone" type="text" name="phone">
+            </div>
+            <div class="form-row-short">
+              <label class="form-label" for="form-email-modal">Email</label>
+              <input class="form-input" id="form-email-modal" type="email" name="email">
+            </div>
+          </div>
+          <div class="form-row">
+          <label class="form-label" for="form-message">Message</label>
+          <textarea class="form-input input-message" id="form-message" name="message"></textarea>
+          </div>
+          <label class="checkbox-label">
+            <input class="form-checkbox hidden" type="checkbox" value="accept" name="accept-button">
+            <span class="form-checkbox-indicator">By clicking on the button, you consent to the processing of your personal data</span>
+          </label>
+          @@include('button/index.html', {
+            "type": "submit",
+            "class": "submit-button",
+            "text": "SUBMIT"
+            })
+        </form>
+      </div>
+    <div class="contact-info">
+      <p class="contact-info-text">
+        Our support team are on-hand to assist with any issues you are experiencing.
+      </p>
+      <p class="contact-info-text">
+        Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.
+      </p>
+      <h2 class="contact-info-title">
+        An expert is waiting to help you!
+      </h2>
+    </div>
+  </div>
+  </main>
+  @@include('footer/index.html')
+</body>
+</html>
