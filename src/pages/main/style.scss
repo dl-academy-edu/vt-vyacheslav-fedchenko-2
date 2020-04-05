@@ -134,12 +134,7 @@ a:active > .product-title {
 }
 
 .product {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
-  width: 280px;
-  height: 270px;
   margin-bottom: 20px;
 }
 
@@ -160,8 +155,6 @@ a:active > .product-title {
 
 .product-img {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .button-blue {
@@ -170,9 +163,7 @@ a:active > .product-title {
 
 .about-products {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
 }
 
 .about-products-title {

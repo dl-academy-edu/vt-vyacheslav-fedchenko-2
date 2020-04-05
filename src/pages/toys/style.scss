@@ -8,6 +8,34 @@
   padding: 42px 105px 17px 11px;
 }
 
+.filter-field {
+  background-color: rgba(125, 151, 218, 0.2);
+}
+
+.filter-legend {
+  font-weight: bold;
+  padding-top: 1px;
+  padding-bottom: 10px;
+}
+
+.fieldset-color {
+  display: flex;
+  padding-left: 58px;
+}
+
+.fieldset-delivery {
+  display: flex;
+  padding-left: 66px;
+}
+
+.fieldset-amount {
+  padding-right: 25px;
+}
+
+fieldset {
+  border: 0 none;
+}
+
 /*range*/
 
 .slider:focus {
@@ -15,10 +43,6 @@
   outline-offset: -2px;
   outline-style: auto;
   outline-width: 5px;
-}
-
-.slidecontainer {
-  width: 100%;
 }
 
 .slider {
@@ -49,34 +73,6 @@
   display: flex;
   justify-content: space-between;
   margin: 16px -11px 0 -5px;
-}
-
-.filter-field {
-  background-color: rgba(125, 151, 218, 0.2);
-}
-
-.filter-legend {
-  font-weight: bold;
-  padding-top: 1px;
-  padding-bottom: 10px;
-}
-
-.fieldset-color {
-  display: flex;
-  padding-left: 58px;
-}
-
-.fieldset-delivery {
-  display: flex;
-  padding-left: 66px;
-}
-
-.fieldset-amount {
-  padding-right: 25px;
-}
-
-fieldset {
-  border: 0 none;
 }
 
 /*checkbox*/
@@ -198,7 +194,7 @@ input:focus + .form-radio-indicator {
   display: block;
   height: 35px;
   width: 80px;
-  padding-top: 9px;
+  padding-top: 10px;
   text-align: center;
   background-color: #ffffff;
   border: none;
@@ -227,33 +223,19 @@ input:focus + .form-radio-box-indicator {
 
 .fieldset-button {
   margin-top: 36px;
-  border: none;
 }
 
 /*toy list*/
 
-.products {
-  padding: 0;
-  margin-top: 0;
-  font-family: "Montserrat", "Candara", sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 49px;
-  text-transform: uppercase;
-}
-
-.toy {
+.toys {
   margin-top: 57px;
   margin-bottom: 34px;
 }
 
-.products {
-  font-family: "Montserrat", "Candara", sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 49px;
-  text-transform: uppercase;
-  color: #1e0606;
+.toy-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .toy-item {
@@ -271,8 +253,6 @@ input:focus + .form-radio-box-indicator {
 }
 
 .toy-title {
-  display: flex;
-  justify-content: center;
   padding-top: 27px;
   font-weight: normal;
   font-size: 14px;
@@ -281,8 +261,6 @@ input:focus + .form-radio-box-indicator {
 }
 
 .toy-cost {
-  display: flex;
-  justify-content: center;
   padding-top: 16px;
   font-weight: bold;
   font-size: 16px;
