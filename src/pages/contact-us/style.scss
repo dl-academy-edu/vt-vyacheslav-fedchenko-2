@@ -7,8 +7,7 @@
 }
 
 .contact-info {
-  position: relative;
-  width: 380px;
+  max-width: 380px;
   margin-left: 120px;
   margin-bottom: 60px;
 }
@@ -21,7 +20,6 @@
 .contact-info-title {
   margin: 0;
   font-family: "Montserrat", "Candara", sans-serif;
-  font-weight: 600;
   font-size: 26px;
   line-height: 34px;
   text-transform: uppercase;
@@ -43,9 +41,7 @@
 }
 
 .submit-button {
-  display: flex;
   margin-top: 22px;
-  border: none;
 }
 
 input:focus + .form-checkbox-indicator {
@@ -85,6 +81,3 @@ input:focus + .form-checkbox-indicator {
   cursor: pointer;
 }
 
-.contacts-form_modal {
-  display: flex;
-}
