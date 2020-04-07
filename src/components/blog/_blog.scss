@@ -6,36 +6,36 @@
   width: 100%;
   font-size: $small-2;
   line-height: 25px;
-	color: $dark;
-	
-	&__img {
-		padding-bottom: 10px;
-	}
+  color: $dark;
+
+  &__img {
+    padding-bottom: 10px;
+  }
 
 
-	&__date {
-		font-family: "Roboto", "Arial", sans-serif;
-		font-weight: normal;
-		font-size: $small;
-		line-height: 19px;
-		color: $gray;
-	}
+  &__date {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: $small;
+    line-height: 19px;
+    color: $gray;
+  }
 
-	&__title {
-		margin-top: 8px;
-		margin-bottom: 15px;
-		font-family: "Montserrat", "Candara", sans-serif;
-		font-weight: bold;
-		font-size: $normal-2;
-		line-height: 31px;
-		color: $dark;
-	}
+  &__title {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    font-family: "Montserrat", "Candara", sans-serif;
+    font-weight: bold;
+    font-size: $normal-2;
+    line-height: 31px;
+    color: $dark;
+  }
 
-	&__text {
-		margin-top: 0;
-		margin-bottom: 34px;
-		line-height: 25px;
-	}
+  &__text {
+    margin-top: 0;
+    margin-bottom: 34px;
+    line-height: 25px;
+  }
 }
 
 a:hover > .blog__title {
