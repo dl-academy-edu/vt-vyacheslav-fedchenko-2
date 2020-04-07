@@ -232,12 +232,12 @@ input:focus + .form-radio-box-indicator {
 .toys {
   margin-top: 57px;
   margin-bottom: 34px;
-}
 
-.toys__list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  margin-top: 0;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
 }
