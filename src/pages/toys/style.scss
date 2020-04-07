@@ -1,21 +1,23 @@
 /*filter*/
 
+@import "../../components/var";
+
 .filter {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 42px 105px 17px 11px;
-}
+  background-color: $dark-violet;
 
-.filter-field {
-  background-color: rgba(125, 151, 218, 0.2);
-}
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 42px 105px 17px 11px;
+  }
 
-.filter-legend {
-  font-weight: bold;
-  padding-top: 1px;
-  padding-bottom: 10px;
+  &__legend {
+    font-weight: bold;
+    padding-top: 1px;
+    padding-bottom: 10px;
+  }
 }
 
 .fieldset-color {
@@ -38,35 +40,35 @@ fieldset {
 
 /*range*/
 
-.slider:focus {
-  outline-color: rgb(77, 144, 254);
-  outline-offset: -2px;
-  outline-style: auto;
-  outline-width: 5px;
-}
-
 .slider {
   -webkit-appearance: none;
   width: 188px;
   height: 4px;
-  background-color: #666666;
+  background-color: $gray-3;
   outline: none;
-}
 
-.slider:hover {
-  -webkit-transition: 0.2s;
-  opacity: 0.9;
-  transition: opacity 0.2s;
-}
+  &:focus {
+    outline-color: $blue;
+    outline-offset: -2px;
+    outline-style: auto;
+    outline-width: 5px;
+  }
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 24px;
-  height: 24px;
-  border: 0;
-  background: url(../../static/images/Range.svg);
-  cursor: pointer;
+  &:hover {
+    -webkit-transition: 0.2s;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 0;
+    background: url(../../static/images/Range.svg);
+    cursor: pointer;
+  }
 }
 
 .range-cost {
@@ -79,23 +81,23 @@ fieldset {
 
 .form-checkbox:checked + .form-checkbox-indicator:after {
   background: url(../../static/images/Check.svg) no-repeat;
-  background-color: #ffffff;
+  background-color: $white;
 }
 
 .form-checkbox-indicator {
   padding-left: 30px;
   margin-right: 8px;
-}
 
-.form-checkbox-indicator:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 19px;
-  width: 19px;
-  border: 2px solid #c29974;
-  border-radius: 3px;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 19px;
+    width: 19px;
+    border: 2px solid $brown;
+    border-radius: 3px;
+  }
 }
 
 .checkbox-label {
@@ -104,21 +106,21 @@ fieldset {
   align-items: center;
   padding-bottom: 20px;
   cursor: pointer;
-}
 
-.checkbox-label:hover {
-  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 input:focus + .form-checkbox-indicator {
-  outline-color: rgb(77, 144, 254);
+  outline-color: $blue;
   outline-offset: -2px;
   outline-style: auto;
   outline-width: 5px;
 }
 
 .form-checkbox:disabled + .form-checkbox-indicator:after {
-  border: 2px solid #e1cdba;
+  border: 2px solid $brown-6;
 }
 
 .form-checkbox:disabled + .form-checkbox-indicator:after {
@@ -132,28 +134,28 @@ input:focus + .form-checkbox-indicator {
   align-items: center;
   padding-bottom: 16px;
   cursor: pointer;
-}
 
-.radio-label:hover {
-  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .form-radio-indicator {
   position: relative;
   padding-left: 30px;
   margin-right: 10px;
-}
 
-.form-radio-indicator:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: block;
-  height: 20px;
-  width: 20px;
-  border: 2px solid #c29974;
-  border-radius: 100%;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    height: 20px;
+    width: 20px;
+    border: 2px solid $brown;
+    border-radius: 100%;
+  }
 }
 
 .form-radio:checked + .form-radio-indicator:before {
@@ -165,22 +167,22 @@ input:focus + .form-checkbox-indicator {
   height: 12px;
   width: 12px;
   border-radius: 100%;
-  background-color: #c29974;
+  background-color: $brown;
 }
 
 input:focus + .form-radio-indicator {
-  outline-color: rgb(77, 144, 254);
+  outline-color: $blue;
   outline-offset: -2px;
   outline-style: auto;
   outline-width: 5px;
 }
 
 .form-radio:disabled + .form-radio-indicator:before {
-  background-color: #e1cdba;
+  background-color: $brown-6;
 }
 
 .form-radio:disabled + .form-radio-indicator:after {
-  border: 2px solid #e1cdba;
+  border: 2px solid $brown-6;
 }
 
 /*radio-box*/
@@ -196,20 +198,20 @@ input:focus + .form-radio-indicator {
   width: 80px;
   padding-top: 10px;
   text-align: center;
-  background-color: #ffffff;
+  background-color: $white;
   border: none;
 }
 
 .form-radio-box:checked + .form-radio-box-indicator {
-  background-color: #f3d0db;
+  background-color: $pink;
 }
 
 .form-radio-box:hover + .form-radio-box-indicator {
-  background-color: #eddeeb;
+  background-color: $light-pink;
 }
 
 input:focus + .form-radio-box-indicator {
-  outline-color: rgb(77, 144, 254);
+  outline-color: $blue;
   outline-offset: -2px;
   outline-style: auto;
   outline-width: 5px;
@@ -232,63 +234,10 @@ input:focus + .form-radio-box-indicator {
   margin-bottom: 34px;
 }
 
-.toy-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.toy-item {
-  width: 380px;
-  position: relative;
-  margin-bottom: 45px;
-}
-
-.toy-list {
+.toys__list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 20px;
   margin-top: 0;
-}
-
-.toy-title {
-  padding-top: 27px;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 19px;
-  color: #1e0606;
-}
-
-.toy-cost {
-  padding-top: 16px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 22px;
-  color: #1e0606;
-}
-
-.toy-select:hover:before {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 89px;
-  left: 87px;
-  width: 207px;
-  height: 207px;
-  content: "LEARN MORE";
-  color: #1e0606;
-  font-family: "Montserrat", "Candara", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 29px;
-  text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
-  background-color: #e5eaf8;
-  opacity: 0.9;
-}
-
-.toy-select:active:before {
-  opacity: 0.67;
 }

@@ -1,198 +1,201 @@
-/*footer*/
+@import "../var";
 
 .footer {
   font-weight: normal;
-  font-size: 16px;
+  font-size: $small;
   line-height: 22px;
-  color: #ffffff;
-  background-color: #434343;
+  color: $white;
+  background-color: $dark-gray;
+
+  &__item {
+    color: $white;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+  }
+
+  &__nav-list,
+  &__customer-info-list {
+    margin-top: 28px;
+    margin-bottom: 13px;
+  }
+
+  &__title {
+    padding-bottom: 23px;
+    min-width: 380px;
+    margin: 0;
+    font-weight: normal;
+    color: $gray-2;
+    border-bottom: solid 1px $gray-3;
+  }
+
+  &__web-developer {
+    color: $gray-4;
+
+    &:hover {
+      text-decoration-line: underline;
+    }
+
+    &:active {
+      text-decoration-line: underline;
+    }
+  }
+
+  &__nav-item,
+  &__customer-info-item {
+    padding-bottom: 15px;
+  }
+
+  &__row {
+    padding-top: 23px;
+    padding-bottom: 100px;
+    border-top: solid 1px $gray-3;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    flex-wrap: wrap;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__rating-text {
+    padding-right: 28px;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+
+  &__rating-area {
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+    position: relative;
+
+    &:focus {
+      outline-color: $blue;
+      outline-offset: -2px;
+      outline-style: auto;
+      outline-width: 5px;
+    }
+
+    &:not(:checked) > input {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+      width: 0;
+      height: 0;
+    }
+
+    &:not(:checked) > label {
+      float: right;
+      width: 20px;
+      padding: 0;
+      fill: $white;
+      cursor: pointer;
+    }
+
+    &> input:checked ~ label {
+      fill: $brown;
+    }
+
+    &:not(:checked) > label:hover,
+    &:not(:checked) > label:hover ~ label {
+      fill: $brown-2;
+    }
+
+    &> input:checked + label:hover,
+    &> input:checked + label:hover ~ label,
+    &> input:checked ~ label:hover,
+    &> input:checked ~ label:hover ~ label,
+    &> label:hover ~ input:checked ~ label {
+      fill: $brown-2;
+    }
+  }
+
+  &__copyright {
+    padding-left: 149px;
+    padding-right: 109px;
+  }
+
+  &__connect-form {
+    margin-top: 25px;
+    border: 1px solid transparent;
+    min-width: 300px;
+    height: 40px;
+    padding-left: 15px;
+    font-size: $small;
+    line-height: 22px;
+    color: $gray-5;
+    background-color: $gray-3;
+
+    &:hover {
+      border-color: $light;
+      cursor: pointer;
+    }
+
+    &:active {
+      border-color: $light;
+      cursor: pointer;
+    }
+  }
+
+  &__button-connect {
+    height: 40px;
+    margin-left: -4px;
+  }
+
+  &__social-list {
+    display: flex;
+    padding-top: 9px;
+  }
+
+  &__social-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 11px;
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+    background: $gray-3;
+    border-radius: 50%;
+  }
+
+  &__.footer__social-item {
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+  }
 }
 
-.footer-item {
-  color: #ffffff;
+input:checked ~ .footer__rating-text {
+  color: $brown;
 }
 
-.footer-nav-list,
-.footer-customer-info-list {
-  margin-top: 28px;
-  margin-bottom: 13px;
-}
-
-.footer__title {
-  padding-bottom: 23px;
-  min-width: 380px;
-  margin: 0;
-  font-weight: normal;
-  color: #aaaaaa;
-  border-bottom: solid 1px #666666;
-}
-
-.web-developer {
-  color: #a2a2a2;
-}
-
-.footer-nav-item,
-.customer-info-item {
-  padding-bottom: 15px;
-}
-
-.footer-item:hover {
-  opacity: 0.5;
-}
-
-.footer-item:active {
-  opacity: 0.2;
-}
-
-.footer-row {
-  padding-top: 23px;
-  padding-bottom: 100px;
-  border-top: solid 1px #666666;
-}
-
-.footer-list {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 100px;
-  flex-wrap: wrap;
-}
-
-.footer-info {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.rating-text {
-  padding-right: 28px;
-  margin: 0;
-  padding-bottom: 30px;
-}
-
-.rating-area {
-  display: flex;
-  flex-direction: row-reverse;
-  overflow: hidden;
-  position: relative;
-}
-
-.rating-area:focus {
-  outline-color: rgb(77, 144, 254);
-  outline-offset: -2px;
-  outline-style: auto;
-  outline-width: 5px;
-}
-
-.rating-area:not(:checked) > input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-  width: 0;
-  height: 0;
-}
-
-.rating-area:not(:checked) > label {
-  float: right;
-  width: 20px;
-  padding: 0;
-  fill: #ffffff;
-  cursor: pointer;
-}
-
-input:checked ~ .rating-text {
-  color: #c29974;
-}
-
-input:hover ~ .rating-text {
-  color: #c29974;
-}
-
-.rating-area > input:checked ~ label {
-  fill: #c29974;
-}
-.rating-area:not(:checked) > label:hover,
-.rating-area:not(:checked) > label:hover ~ label {
-  fill: #836e5b;
-}
-.rating-area > input:checked + label:hover,
-.rating-area > input:checked + label:hover ~ label,
-.rating-area > input:checked ~ label:hover,
-.rating-area > input:checked ~ label:hover ~ label,
-.rating-area > label:hover ~ input:checked ~ label {
-  fill: #836e5b;
+input:hover ~ .footer__rating-text {
+  color: $brown;
 }
 
 input:focus + label {
-  outline-color: rgb(77, 144, 254);
+  outline-color: $blue;
   outline-offset: -2px;
   outline-style: auto;
   outline-width: 5px;
-}
-
-.copyright {
-  padding-left: 149px;
-  padding-right: 109px;
-}
-
-.footer-connect-form {
-  margin-top: 25px;
-  border: 1px solid transparent;
-}
-
-.footer-connect-form:hover {
-  border-color: #fffdfd;
-  cursor: pointer;
-}
-
-.footer-connect-form:active {
-  border-color: #fffdfd;
-  cursor: pointer;
-}
-
-.footer-connect-form {
-  min-width: 300px;
-  height: 40px;
-  padding-left: 15px;
-  font-size: 16px;
-  line-height: 22px;
-  color: #ebebeb;
-  background-color: #666666;
-}
-
-.button-connect {
-  height: 40px;
-  margin-left: -4px;
-}
-
-.social-list {
-  display: flex;
-  padding-top: 9px;
-}
-
-.web-developer:hover {
-  text-decoration-line: underline;
-}
-
-.web-developer:active {
-  text-decoration-line: underline;
-}
-
-.social-link {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 11px;
-  width: 30px;
-  height: 30px;
-  flex: 0 0 30px;
-  background: #666666;
-  border-radius: 50%;
-}
-
-.social-item:hover {
-  opacity: 0.5;
-}
-
-.social-item:active {
-  opacity: 0.2;
 }

@@ -1,0 +1,24 @@
+@import "../var";
+
+.product {
+  position: relative;
+  margin-bottom: 19px;
+}
+
+.product__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Montserrat", "Candara", sans-serif;
+  font-weight: bold;
+  font-size: $normal-3;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.product__img {
+  display: flex;
+}

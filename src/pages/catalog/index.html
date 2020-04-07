@@ -11,75 +11,75 @@
   <body>
     @@include('header/index.html')
     <main>
-      <div class="breadcrumbs-box container">
+      <div class="container">
         <h1 class="title-site">Category Products</h1>
         <div class="breadcrumbs">
-          <ul class="breadcrumbs-list list-point-none">
-            <li class="breadcrumbs-item">
-              <a href="../../index.html" class="breadcrumbs-link-active">
-                <span>Home</span>
+          <ul class="breadcrumbs__list list-point-none">
+            <li class="breadcrumbs__item">
+              <a href="../../index.html" class="breadcrumbs__link_active">
+                <span class="breadcrumbs__title">Home</span>
               </a>
             </li>
-            <li class="breadcrumbs-item">
+            <li class="breadcrumbs__item">
               <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.31229 0L0 1.17735L5.37541 6L0 10.8227L1.31229 12L8 6L1.31229 0Z" fill="#1E0606"/>
                 </svg>
             </li>
-            <li class="breadcrumbs-item">
-              <span class="breadcrumbs-active">Catalog</span>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__title_active">Catalog</span>
             </li>
           </ul>
         </div>
       </div>
       <div class="products container">
-        <ul class="products-list list-point-none">
-          <li class="product">
-            <a href="#">
-              <img src="../../static/images/product-1.jpg" alt="APPAREL KIDS" width="280" height="270" class="product-img"/>
-              <span class="product-title">APPAREL KIDS</span>
-            </a>
-          </li>
-          <li class="product">
-            <a href="#">
-              <img src="../../static/images/product-2.jpg" alt="HOLIDAY SHOP" width="280" height="270" class="product-img"/>
-              <span class="product-title">HOLIDAY SHOP</span>
-            </a>
-          </li>
-          <li class="product">
-            <a href="/pages/toys/index.html">
-              <img src="../../static/images/product-3.jpg" alt="TOYS" width="280" height="270" class="product-img"/>
-              <span class="product-title">TOYS</span>
-            </a>
-          </li>
-          <li class="product">
-            <a href="#">
-              <img src="../../static/images/product-4.jpg" alt="ACCESSORIES" width="280" height="270" class="product-img"/>
-              <span class="product-title">ACCESSORIES</span>
-            </a>
-          </li>
-        <li class="product">
-          <a href="#">
-            <img src="../../static/images/product-5.jpg" alt="SALE" width="280" height="270" class="product-img"/>
-            <span class="product-title">SALE</span>
-          </a>
-        </li>
-      <li class="product">
-        <a href="#">
-          <img src="../../static/images/product-6.jpg" alt="APPAREL ADULTS" width="280" height="270" class="product-img"/>
-          <span class="product-title">APPAREL ADULTS</span>
-        </a>
-      </li>
+        <ul class="products__list list-point-none">
+          @@include('product/index.html', {
+            "link": "#",
+            "img": "product-1.jpg",
+            "alt": "APPAREL KIDS",
+            "title": "APPAREL KIDS"
+          })
+          @@include('product/index.html', {
+            "link": "#",
+            "img": "product-2.jpg",
+            "alt": "HOLIDAY SHOP",
+            "title": "HOLIDAY SHOP"
+          })
+          @@include('product/index.html', {
+            "link": "/pages/toys/index.html",
+            "img": "product-3.jpg",
+            "alt": "TOYS",
+            "title": "TOYS"
+          })
+          @@include('product/index.html', {
+            "link": "#",
+            "img": "product-4.jpg",
+            "alt": "ACCESSORIES",
+            "title": "ACCESSORIES"
+          })
+          @@include('product/index.html', {
+            "link": "#",
+            "img": "product-5.jpg",
+            "alt": "SALE",
+            "title": "SALE"
+          })
+          @@include('product/index.html', {
+            "link": "#",
+            "img": "product-6.jpg",
+            "alt": "APPAREL ADULTS",
+            "title": "APPAREL ADULTS"
+          })
         </ul>
       </div>
       <article class="products-info container">
-        <h2 class="products-info-title">Product Description</h2>
-        <p class="products-info-text">
+        <h2 class="products-info__title">Product Description</h2>
+        <p class="products-info__text">
           Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.
         </p>
-        <p class="products-info-text">
+        <p class="products-info__text">
           A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.
         </p>
-        <p class="products-info-text">
+        <p class="products-info__text">
           The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.
         </p>
       </article>

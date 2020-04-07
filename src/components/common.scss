@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i%7CMontserrat:400,700%7COpen+Sans:400,700%7CRoboto:400,700&display=swap');
+@import "../components/var";
 
 body {
   font-family: "Open Sans", "Calibri", sans-serif;
@@ -7,7 +8,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #000000;
+  color: $black;
 }
 
 p {
@@ -60,28 +61,35 @@ textarea {
 
 /*breadcrumbs*/
 
-.breadcrumbs-item {
-  padding-right: 20px;
-  font-family: "Crimson Text", "Big Caslon", serif;
-  font-style: italic;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 25px;
-  color: #1e0606;
-}
+.breadcrumbs {
 
-.breadcrumbs-active {
-  opacity: 0.5;
-}
+  &__item {
+    padding-right: 20px;
+    font-family: "Crimson Text", "Big Caslon", serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: $normal;
+    line-height: 25px;
+    color: $dark;
+  }
 
-.breadcrumbs-list {
-  display: inline-flex;
-  margin-top: 0;
-  margin-bottom: 49px;
-}
+  &__title_active {
+    opacity: 0.5;
+  }
 
-.breadcrumbs-link-active:hover {
-  opacity: 0.75;
+  &__list {
+    display: inline-flex;
+    margin-top: 0;
+    margin-bottom: 49px;
+  }
+
+  &__link_active {
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
 }
 
 /* title */
@@ -91,16 +99,12 @@ textarea {
   margin-bottom: 17px;
   font-family: "Montserrat", "Candara", sans-serif;
   font-weight: bold;
-  font-size: 40px;
+  font-size: $big-2;
   line-height: 49px;
   text-transform: uppercase;
 }
 
 /* Forms */
-
-.form-row-short {
-  width: 290px;
-}
 
 .form-row {
   position: relative;
@@ -108,6 +112,10 @@ textarea {
   justify-content: space-between;
   padding-top: 43px;
   min-width: 600px;
+}
+
+.form-row-short {
+  width: 290px;
 }
 
 .form-label {
@@ -120,18 +128,18 @@ textarea {
   width: 100%;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: normal;
-  font-size: 18px;
+  font-size: $small-2;
   line-height: 21px;
-  background-color: #ffffff;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-}
+  background-color: $white;
+  border: 2px solid $dark-2;
 
-.form-input:hover {
-  border: 2px solid rgba(0, 0, 0, 0.3);
-}
+  &:hover {
+    border: 2px solid $dark-3;
+  }
 
-.form-input:active {
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  &:active {
+    border: 2px solid $dark-2;
+  }
 }
 
 .input-message {
@@ -150,58 +158,63 @@ textarea {
   margin-bottom: 56px;
   font-family: "Montserrat", "Candara", sans-serif;
   font-weight: bold;
-  font-size: 16px;
+  font-size: $small;
   line-height: 20px;
   text-transform: uppercase;
-  color: #1e0606;
-}
+  color: $dark;
 
-.selector-pages {
-  display: flex;
-}
+  &__pages {
+    display: flex;
+  }
 
-.selector-item {
-  padding-left: 33px;
-  padding-right: 33px;
-}
+  &__item {
+    padding-left: 33px;
+    padding-right: 33px;
 
-.selector-item-active {
-  color: #c29974;
-}
+    &:hover {
+      opacity: 0.75;
+    }
+  }
 
-.selector-item:hover {
-  opacity: 0.75;
-}
+  &__item_active {
+    color: $brown;
+  }
 
-.selector-item-forvard {
-  fill: rgba(30, 6, 6, 0.12);
-}
+  &__item-forvard {
+    fill: $dark-6;
 
-.selector-item-back {
-  transform: rotate(180deg);
-  fill: rgba(30, 6, 6, 0.12);
-}
+    &:hover {
+      fill: $brown;
+    }
 
-.selector-item-forvard:hover {
-  fill: #c29974;
-}
+    &:active {
+      fill: $brown;
+      opacity: 0.5;
+    }
+  }
 
-.selector-item-back:hover {
-  fill: #c29974;
-}
+  &__item-back {
+    transform: rotate(180deg);
+    fill: $dark-6;
 
-.selector-item-forvard:active {
-  fill: #c29974;
-  opacity: 0.5;
-}
+    &:hover {
+      fill: $brown;
+    }
 
-.selector-item-back:active {
-  fill: #c29974;
-  opacity: 0.5;
+    &:active {
+      fill: $brown;
+      opacity: 0.5;
+    }
+  }
 }
 
 // Подключение компонентов
+
 @import "./header/header";
 @import "./footer/footer";
 @import "./button/button";
 @import "./link-button/link-button";
+@import "./product/product";
+@import "./blog/blog";
+@import "./toy/toy";
+

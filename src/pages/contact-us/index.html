@@ -11,28 +11,28 @@
 <body>
   @@include('header/index.html')
   <main>
-    <div class="breadcrumbs-box container">
+    <div class="container">
     <h1 class="title-site">Contact Us</h1>
     <div class="breadcrumbs">
-      <ul class="breadcrumbs-list list-point-none">
-        <li class="breadcrumbs-item">
-          <a href="../../index.html" class="breadcrumbs-link-active">
-            <span>Home</span>
+      <ul class="breadcrumbs__list list-point-none">
+        <li class="breadcrumbs__item">
+          <a href="../../index.html" class="breadcrumbs__link_active">
+            <span class="breadcrumbs__title">Home</span>
           </a>
         </li>
-        <li class="breadcrumbs-item">
+        <li class="breadcrumbs__item">
           <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M1.31229 0L0 1.17735L5.37541 6L0 10.8227L1.31229 12L8 6L1.31229 0Z" fill="#1E0606"/>
             </svg>
         </li>
-        <li class="breadcrumbs-item">
-          <span class="breadcrumbs-active">Contact Us</span>
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__title_active">Contact Us</span>
         </li>
       </ul>
     </div>
     </div>
-    <div class="contact-box container">
-        <form class="contacts-form" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+    <div class="contact container">
+        <form class="contact__form" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
           <div class="form-row">
             <label class="form-label" for="form-name">Name</label>
             <input class="form-input" id="form-name" type="text" name="name" value="Ivan Ivanov">
@@ -61,14 +61,14 @@
             "text": "SUBMIT"
             })
         </form>
-    <div class="contact-info">
-      <p class="contact-info-text">
+    <div class="contact__info">
+      <p class="contact__info-text">
         Our support team are on-hand to assist with any issues you are experiencing.
       </p>
-      <p class="contact-info-text">
+      <p class="contact__info-text">
         Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.
       </p>
-      <h2 class="contact-info-title">
+      <h2 class="contact__info-title">
         An expert is waiting to help you!
       </h2>
     </div>

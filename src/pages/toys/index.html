@@ -11,40 +11,40 @@
 <body>
   @@include('header/index.html')
   <main>
-    <div class="breadcrumbs-box container">
+    <div class="container">
       <h1 class="title-site">Toy for kids</h1>
         <div class="breadcrumbs">
-        <ul class="breadcrumbs-list list-point-none">
-          <li class="breadcrumbs-item">
-            <a href="../../index.html" class="breadcrumbs-link-active">
-              <span>Home</span>
+        <ul class="breadcrumbs__list list-point-none">
+          <li class="breadcrumbs__item">
+            <a href="../../index.html" class="breadcrumbs__link_active">
+              <span class="breadcrumbs__title">Home</span>
             </a>
           </li>
-          <li class="breadcrumbs-item">
+          <li class="breadcrumbs__item">
             <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M1.31229 0L0 1.17735L5.37541 6L0 10.8227L1.31229 12L8 6L1.31229 0Z" fill="#1E0606"/>
               </svg>
           </li>
-          <li class="breadcrumbs-item">
-            <a href="../../pages/catalog/index.html" class="breadcrumbs-link-active">
-              <span>Catalog</span>
+          <li class="breadcrumbs__item">
+            <a href="../../pages/catalog/index.html" class="breadcrumbs__link_active">
+              <span class="breadcrumbs__title">Catalog</span>
             </a>
           </li>
-          <li class="breadcrumbs-item">
+          <li class="breadcrumbs__item">
             <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M1.31229 0L0 1.17735L5.37541 6L0 10.8227L1.31229 12L8 6L1.31229 0Z" fill="#1E0606"/>
               </svg>
           </li>
-          <li class="breadcrumbs-item">
-            <span class="breadcrumbs-active">Toys</span>
+          <li class="breadcrumbs__item">
+            <span class="breadcrumbs__title_active">Toys</span>
           </li>
         </ul>
       </div>
     </div>
-    <div class="filter-field">
-      <form class="filter container" name="select" method="get">
-        <fieldset>
-          <legend class="filter-legend">Cost</legend>
+    <div class="filter">
+      <form class="filter__form container" name="select" method="get">
+        <fieldset class="fieldset-cost">
+          <legend class="filter__legend">Cost</legend>
           <label class="slidecontainer">
               <input type="range" min="0" max="500" value="100" class="slider" id="myRange">
               <span class="range-cost">
@@ -54,7 +54,7 @@
           </label>
         </fieldset>
         <fieldset class="fieldset-color">
-          <legend class="filter-legend">Color</legend>
+          <legend class="filter__legend">Color</legend>
             <label class="checkbox-label">
               <input class="form-checkbox hidden" type="checkbox" value="Black" name="color" checked>
               <span class="form-checkbox-indicator">Black</span>
@@ -73,7 +73,7 @@
             </label>
         </fieldset>
         <fieldset class="fieldset-delivery">
-          <legend class="filter-legend">Delivery</legend>
+          <legend class="filter__legend">Delivery</legend>
             <label class="radio-label">
               <input class="form-radio hidden" type="radio" value="Free-shipping" name="delivery">
               <span class="form-radio-indicator">Free shipping</span>
@@ -84,7 +84,7 @@
             </label>
         </fieldset>
         <fieldset class="fieldset-amount">
-          <legend class="filter-legend">Amount</legend>
+          <legend class="filter__legend">Amount</legend>
           <div class="radio-box-container">
           <label class="radio-box-label">
             <input class="form-radio-box hidden" type="radio" value="0-5-amount" name="amount" checked>
@@ -102,82 +102,70 @@
         </fieldset>
         @@include('button/index.html', {
           "type": "submit",
-          "class": "fieldset-button button-black",
+          "class": "fieldset-button",
           "text": "APPLY"
           })
       </form>
     </div>
     <div class="toys container">
-      <ul class="toy-list list-point-none">
-        <li class="toy-item">
-          <a class="toy-link" href="#">
-            <div class="toy-select">
-              <img src="../../static/images/toy1.jpg" alt="Selected toy" width="380" height="385" class="toy-img"/>
-            </div>
-            <span class="toy-title">SHARKY BEAN BAG CHAIR COVER</span>
-            <span class="toy-cost">$60.00 USD</span>
-          </a>
-        </li>
-        <li class="toy-item">
-          <a class="toy-link" href="#">
-            <div class="toy-select">
-              <img src="../../static/images/toy2.jpg" alt="Selected toy" width="380" height="385" class="toy-img"/>
-            </div>
-            <span class="toy-title">BRASS DECO FRAMES</span>
-            <span class="toy-cost">$66.00 USD</span>
-          </a>
-        </li>
-        <li class="toy-item">
-          <a class="toy-link" href="#">
-            <div class="toy-select">
-              <img src="../../static/images/toy3.jpg" alt="Selected toy" width="380" height="385" class="toy-img"/>
-            </div>
-            <span class="toy-title">CIBO FULL APRON</span>
-            <span class="toy-cost">$60.00 USD</span>
-          </a>
-        </li>
-        <li class="toy-item">
-          <a class="toy-link" href="#">
-            <div class="toy-select">
-              <img src="../../static/images/toy4.jpg" alt="Selected toy" width="380" height="385" class="toy-img"/>
-            </div>
-            <span class="toy-title">GATCHA GATCHA GUMBALL MACHINE</span>
-            <span class="toy-cost">$56.00 USD</span>
-          </a>
-        </li>
-        <li class="toy-item">
-          <a class="toy-link" href="#">
-            <div class="toy-select">
-              <img src="../../static/images/toy5.jpg" alt="Selected toy" width="380" height="385" class="toy-img"/>
-            </div>
-            <span class="toy-title">CHRISTMAS ADVENT SCENTED CANDLE</span>
-            <span class="toy-cost">$29.00 USD</span>
-          </a>
-        </li>
-        <li class="toy-item">
-          <a class="toy-link" href="#">
-            <div class="toy-select">
-              <img src="../../static/images/toy6.jpg" alt="Selected toy" width="380" height="385" class="toy-img"/>
-            </div>
-            <span class="toy-title">TANGLE SPINNING TEA LIGHT</span>
-            <span class="toy-cost">$56.00 USD</span>
-          </a>
-        </li>
+      <ul class="toys__list list-point-none">
+        @@include('toy/index.html', {
+          "link": "#",
+          "img": "toy1.jpg",
+          "alt": "Selected blog",
+          "title": "SHARKY BEAN BAG CHAIR COVER",
+          "cost": "$60.00 USD"
+        })
+        @@include('toy/index.html', {
+          "link": "#",
+          "img": "toy2.jpg",
+          "alt": "Selected blog",
+          "title": "BRASS DECO FRAMES",
+          "cost": "$66.00 USD"
+        })
+        @@include('toy/index.html', {
+          "link": "#",
+          "img": "toy3.jpg",
+          "alt": "Selected blog",
+          "title": "CIBO FULL APRON",
+          "cost": "$60.00 USD"
+        })
+        @@include('toy/index.html', {
+          "link": "#",
+          "img": "toy4.jpg",
+          "alt": "Selected blog",
+          "title": "GATCHA GATCHA GUMBALL MACHINE",
+          "cost": "$56.00 USD"
+        })
+        @@include('toy/index.html', {
+          "link": "#",
+          "img": "toy5.jpg",
+          "alt": "Selected blog",
+          "title": "CHRISTMAS ADVENT SCENTED CANDLE",
+          "cost": "$29.00 USD"
+        })
+        @@include('toy/index.html', {
+          "link": "#",
+          "img": "toy6.jpg",
+          "alt": "Selected blog",
+          "title": "TANGLE SPINNING TEA LIGHT",
+          "cost": "$56.00 USD"
+        })
       </ul>
     </div>
     <div class="selector container">
-      <a class="selector-item-back" href="#">
+      <a class="selector__item-back" href="#">
         <svg width="18" height="29" viewBox="0 0 18 29"  xmlns="http://www.w3.org/2000/svg">
           <path d="M2.82846 0L3.62396e-05 2.82843L11.5858 14.4142L3.62396e-05 26L2.82846 28.8284L17.2427 14.4142L2.82846 0Z"/>
         </svg>
       </a>
-      <div class="selector-pages">
-        <a class="selector-item-active selector-item" href="#">1</a>
-        <a class="selector-item" href="#">2</a>
-        <a class="selector-item" href="#">3</a>
-        <a class="selector-item" href="#">4</a>
+      <div class="selector__pages">
+        <a class="selector__item_active selector__item" href="#">1</a>
+        <a class="selector__item" href="#">2</a>
+        <a class="selector__item" href="#">3</a>
+        <a class="selector__item" href="#">4</a>
       </div>
-      <a class="selector-item-forvard" href="#">
+      <a class="selector__item-forvard" href="#">
         <svg width="18" height="29" viewBox="0 0 18 29"  xmlns="http://www.w3.org/2000/svg">
           <path d="M2.82846 0L3.62396e-05 2.82843L11.5858 14.4142L3.62396e-05 26L2.82846 28.8284L17.2427 14.4142L2.82846 0Z"/>
         </svg>

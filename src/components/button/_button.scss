@@ -1,25 +1,38 @@
+@import "../var";
+
 .button {
   padding: 9px 22px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: $small;
   line-height: 22px;
   text-transform: uppercase;
-  color: #ffffff;
-  background-color: #000000;
+  color: $white;
+  background-color: $black;
   cursor: pointer;
   border: none;
-}
 
-.button:hover {
-  background-color: #c29974;
-  transition-duration: 0.5s;
-}
+  &:hover {
+    background-color: $brown;
+    transition-duration: 0.5s;
+  }
 
-.button:active {
-  background-color: #cfaf91;
-}
+  &:active {
+    background-color: $light-brown;
+  }
 
-.button:disabled {
-  color: #e1e1e1;
-  background-color: #c1c1c1;
+  &:disabled {
+    color: $gray-7;
+    background-color: $light-gray;
+  }
+
+  &_blue {
+    background-color: $dark-blue;
+  }
+
+  &_gray {
+    display: flex;
+    margin-top: 21px;
+    background: $light-gray;
+    border: none;
+  }
 }
