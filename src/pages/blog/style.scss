@@ -2,10 +2,12 @@
 
 @import "../../components/var";
 
-.blog__list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 19px;
-  margin-top: 0;
+.blog {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 19px;
+    margin-top: 0;
+  }
 }

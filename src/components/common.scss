@@ -73,8 +73,12 @@ textarea {
     color: $dark;
   }
 
-  &__title_active {
+  &__title {
+    opacity: 1;
+
+    &_active {
     opacity: 0.5;
+    }
   }
 
   &__list {
@@ -83,7 +87,7 @@ textarea {
     margin-bottom: 49px;
   }
 
-  &__link_active {
+  &__link {
     opacity: 1;
 
     &:hover {
@@ -106,46 +110,124 @@ textarea {
 
 /* Forms */
 
-.form-row {
+.form {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 43px;
-  min-width: 600px;
-}
-
-.form-row-short {
-  width: 290px;
-}
-
-.form-label {
-  top: 20px;
-  position: absolute;
-}
-
-.form-input {
-  padding: 13px 19px;
-  width: 100%;
+  padding: 21px 40px 40px 40px;
+  margin: 0 auto 61px;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: normal;
-  font-size: $small-2;
-  line-height: 21px;
-  background-color: $white;
-  border: 2px solid $dark-2;
+  font-size: $very-small-2;
+  line-height: 16px;
+  color: $dark;
+  background-color: $gray-6;
 
-  &:hover {
-    border: 2px solid $dark-3;
+  &_modal {
+    padding: 22px 40px 42px 40px;
+    margin: auto;
   }
 
-  &:active {
+  &__row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 43px;
+    min-width: 600px;
+  }
+
+  &__row_short {
+    width: 290px;
+  }
+
+  &__label {
+    top: 20px;
+    position: absolute;
+  }
+
+  &__input {
+    padding: 13px 19px;
+    width: 100%;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: $small-2;
+    line-height: 21px;
+    background-color: $white;
     border: 2px solid $dark-2;
+
+    &:hover {
+      border: 2px solid $dark-3;
+    }
+
+    &:active {
+      border: 2px solid $dark-2;
+    }
+  }
+
+  &__input-message {
+    min-height: 150px;
+    width: 100%;
+    resize: none;
+  }
+
+  &__checkbox-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    cursor: pointer;
+  }
+
+  &__checkbox-indicator {
+    margin-right: 15px;
+    padding-left: 34px;
+    padding-top: 2px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      border: 2px solid $brown;
+      border-radius: 3px;
+      margin-top: 19px;
+    }
+  }
+
+  &__submit-button {
+    margin-top: 20px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__checkbox {
+    &:checked + .form__checkbox-indicator:after {
+      background: url(../../static/images/Check.svg) no-repeat;
+    }
   }
 }
 
-.input-message {
-  min-height: 150px;
-  width: 100%;
-  resize: none;
+input:focus + .form__checkbox-indicator {
+  outline-color: $blue;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
 }
 
 /*selector*/
@@ -174,36 +256,36 @@ textarea {
     &:hover {
       opacity: 0.75;
     }
-  }
 
-  &__item_active {
-    color: $brown;
-  }
+    &_forvard {
+      fill: $dark-6;
 
-  &__item-forvard {
-    fill: $dark-6;
+      &:hover {
+        fill: $brown;
+      }
 
-    &:hover {
-      fill: $brown;
+      &:active {
+        fill: $brown;
+        opacity: 0.5;
+      }
     }
 
-    &:active {
-      fill: $brown;
-      opacity: 0.5;
+    &_back {
+      transform: rotate(180deg);
+      fill: $dark-6;
+
+      &:hover {
+        fill: $brown;
+      }
+
+      &:active {
+        fill: $brown;
+        opacity: 0.5;
+      }
     }
-  }
 
-  &__item-back {
-    transform: rotate(180deg);
-    fill: $dark-6;
-
-    &:hover {
-      fill: $brown;
-    }
-
-    &:active {
-      fill: $brown;
-      opacity: 0.5;
+    &_active {
+      color: $brown;
     }
   }
 }
@@ -217,4 +299,3 @@ textarea {
 @import "./product/product";
 @import "./blog/blog";
 @import "./toy/toy";
-

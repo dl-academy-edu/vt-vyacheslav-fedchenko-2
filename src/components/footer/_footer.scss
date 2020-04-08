@@ -20,7 +20,7 @@
   }
 
   &__nav-list,
-  &__customer-info-list {
+  &__customer-list {
     margin-top: 28px;
     margin-bottom: 13px;
   }
@@ -47,7 +47,7 @@
   }
 
   &__nav-item,
-  &__customer-info-item {
+  &__customer {
     padding-bottom: 15px;
   }
 
@@ -128,39 +128,47 @@
     padding-right: 109px;
   }
 
-  &__connect-form {
-    margin-top: 25px;
-    border: 1px solid transparent;
-    min-width: 300px;
-    height: 40px;
-    padding-left: 15px;
-    font-size: $small;
-    line-height: 22px;
-    color: $gray-5;
-    background-color: $gray-3;
+  &__connect {
 
-    &:hover {
-      border-color: $light;
-      cursor: pointer;
+    &__input {
+      margin-top: 25px;
+      border: 1px solid transparent;
+      min-width: 300px;
+      height: 40px;
+      padding-left: 15px;
+      font-size: $small;
+      line-height: 22px;
+      color: $gray-5;
+      background-color: $gray-3;
+  
+      &:hover {
+        border-color: $light;
+        cursor: pointer;
+      }
+  
+      &:active {
+        border-color: $light;
+        cursor: pointer;
+      }
     }
 
-    &:active {
-      border-color: $light;
-      cursor: pointer;
+    &__button {
+      height: 40px;
+      margin-left: -4px;
+    }
+
+    &__label {
+      top: 20px;
+      position: absolute;
     }
   }
+}
 
-  &__button-connect {
-    height: 40px;
-    margin-left: -4px;
-  }
+.social {
+  display: flex;
+  padding-top: 9px;
 
-  &__social-list {
-    display: flex;
-    padding-top: 9px;
-  }
-
-  &__social-link {
+  &__link {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -172,7 +180,7 @@
     border-radius: 50%;
   }
 
-  &__.footer__social-item {
+  &__item {
     opacity: 1;
 
     &:hover {
@@ -184,6 +192,7 @@
     }
   }
 }
+
 
 input:checked ~ .footer__rating-text {
   color: $brown;

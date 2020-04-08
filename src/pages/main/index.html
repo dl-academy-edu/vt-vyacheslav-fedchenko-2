@@ -13,12 +13,12 @@
     <main>
       <div class="container">
         <section class="poster">
-          <div class="slider">
-            <span class="slider__number">01</span>
-            <button aria-label="slider-button" class="slider__button slider__button_active"></button>
-            <button aria-label="slider-button" class="slider__button"></button>
-            <button aria-label="slider-button" class="slider__button"></button>
-            <button aria-label="slider-button" class="slider__button"></button>
+          <div class="poster__nav">
+            <span class="poster__nav__number">01</span>
+            <button aria-label="poster__nav__button" class="poster__nav__button poster__nav__button_active"></button>
+            <button aria-label="poster__nav__button" class="poster__nav__button"></button>
+            <button aria-label="poster__nav__button" class="poster__nav__button"></button>
+            <button aria-label="poster__nav__button" class="poster__nav__button"></button>
           </div>
           <div class="poster__item">
             <div class="poster__content">
@@ -159,35 +159,35 @@
     </main>
     @@include('footer/index.html')
     <div class="modal-bg modal-bg__close modal-bg__js">
-      <form class="modal-window" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
-        <div class="form-row">
-          <label class="form-label" for="form-name">Name</label>
-          <input class="form-input form-input__js" id="form-name" type="text" name="name">
+      <form class="form form_modal" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+        <div class="form__row">
+          <label class="form__label" for="form-name">Name</label>
+          <input class="form__input form__input__js" id="form-name" type="text" name="name">
         </div>
-        <div class="form-row">
-          <div class="form-row-short">
-            <label class="form-label" for="form-phone">Phone</label>
-            <input class="form-input" id="form-phone" type="text" name="phone">
+        <div class="form__row">
+          <div class="form__row_short">
+            <label class="form__label" for="form-phone">Phone</label>
+            <input class="form__input" id="form-phone" type="text" name="phone">
           </div>
-          <div class="form-row-short">
-            <label class="form-label" for="form-email-modal">Email</label>
-            <input class="form-input" id="form-email-modal" type="email" name="email">
+          <div class="form__row_short">
+            <label class="form__label" for="form-email-modal">Email</label>
+            <input class="form__input" id="form-email-modal" type="email" name="email">
           </div>
         </div>
-        <div class="form-row">
-        <label class="form-label" for="form-message">Message</label>
-        <textarea class="form-input input-message" id="form-message" name="message"></textarea>
+        <div class="form__row">
+        <label class="form__label" for="form-message">Message</label>
+        <textarea class="form__input form__input-message" id="form-message" name="message"></textarea>
         </div>
-        <label class="checkbox-label">
-          <input class="form-checkbox hidden" type="checkbox" value="accept" name="accept-button">
-          <span class="form-checkbox-indicator">By clicking on the button, you consent to the processing of your personal data</span>
+        <label class="form__checkbox-label">
+          <input class="form__checkbox hidden" type="checkbox" value="accept" name="accept-button">
+          <span class="form__checkbox-indicator">By clicking on the button, you consent to the processing of your personal data</span>
         </label>
         @@include('button/index.html', {
           "type": "submit",
           "class": "button_gray",
           "text": "SUBMIT"
           })
-        <button type="button" class="modal-window__close modal-window__close__js">
+        <button type="button" class="form__close form__close__js">
           <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
           <path d="M2.21902 14.6113C1.70029 15.1295 0.893368 15.1295 0.374636 14.6113C0.11527 14.3522 -6.13512e-07 14.0355 -5.9841e-07 13.69C-5.83308e-07 13.3445 0.11527 13.0278 0.374636 12.7687L5.64841 7.5L0.374637 2.23127C0.115271 1.97215 -7.23629e-08 1.65547 -5.72611e-08 1.30998C-4.21593e-08 0.964491 0.115271 0.647806 0.374637 0.388689C0.893369 -0.129545 1.70029 -0.129545 2.21902 0.388689L7.4928 5.65738L12.7666 0.38869C13.2853 -0.129545 14.0922 -0.129545 14.611 0.38869C15.1297 0.906924 15.1297 1.71304 14.611 2.23127L9.33718 7.5L14.611 12.7687C15.1297 13.287 15.1297 14.0931 14.611 14.6113C14.0922 15.1295 13.2853 15.1295 12.7666 14.6113L7.4928 9.34258L2.21902 14.6113Z" fill="white"/>
           </svg>

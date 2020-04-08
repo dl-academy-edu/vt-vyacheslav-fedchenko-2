@@ -16,7 +16,7 @@
     <div class="breadcrumbs">
       <ul class="breadcrumbs__list list-point-none">
         <li class="breadcrumbs__item">
-          <a href="../../index.html" class="breadcrumbs__link_active">
+          <a href="../../index.html" class="breadcrumbs__link">
             <span class="breadcrumbs__title">Home</span>
           </a>
         </li>
@@ -32,32 +32,32 @@
     </div>
     </div>
     <div class="contact container">
-        <form class="contact__form" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
-          <div class="form-row">
-            <label class="form-label" for="form-name">Name</label>
-            <input class="form-input" id="form-name" type="text" name="name" value="Ivan Ivanov">
+        <form class="form" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+          <div class="form__row">
+            <label class="form__label" for="form-name">Name</label>
+            <input class="form__input" id="form-name" type="text" name="name" value="Ivan Ivanov">
           </div>
-          <div class="form-row">
-            <div class="form-row-short">
-              <label class="form-label" for="form-phone">Phone</label>
-              <input class="form-input" id="form-phone" type="text" name="phone">
+          <div class="form__row">
+            <div class="form__row_short">
+              <label class="form__label" for="form-phone">Phone</label>
+              <input class="form__input" id="form-phone" type="text" name="phone">
             </div>
-            <div class="form-row-short">
-              <label class="form-label" for="form-email-modal">Email</label>
-              <input class="form-input" id="form-email-modal" type="email" name="email">
+            <div class="form__row_short">
+              <label class="form__label" for="form-email-modal">Email</label>
+              <input class="form__input" id="form-email-modal" type="email" name="email">
             </div>
           </div>
-          <div class="form-row">
-          <label class="form-label" for="form-message">Message</label>
-          <textarea class="form-input input-message" id="form-message" name="message"></textarea>
+          <div class="form__row">
+          <label class="form__label" for="form-message">Message</label>
+          <textarea class="form__input form__input-message" id="form-message" name="message"></textarea>
           </div>
-          <label class="checkbox-label">
-            <input class="form-checkbox hidden" type="checkbox" value="accept" name="accept-button">
-            <span class="form-checkbox-indicator">By clicking on the button, you consent to the processing of your personal data</span>
+          <label class="form__checkbox-label">
+            <input class="form__checkbox hidden" type="checkbox" value="accept" name="accept-button">
+            <span class="form__checkbox-indicator">By clicking on the button, you consent to the processing of your personal data</span>
           </label>
           @@include('button/index.html', {
             "type": "submit",
-            "class": "submit-button",
+            "class": "form__submit-button",
             "text": "SUBMIT"
             })
         </form>

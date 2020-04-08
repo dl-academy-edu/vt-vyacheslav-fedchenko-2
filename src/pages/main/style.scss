@@ -66,45 +66,45 @@
   &__button {
     width: 161px;
   }
-}
 
-.slider {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: absolute;
-  top: 17px;
-  left: 28px;
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 17px;
+    left: 28px;
+  
+    &__button {
+      margin-left: 3px;
+      margin-top: 11px;
+      width: 31px;
+      height: 3px;
+      background-color: $brown-4;
+      border: none;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: $brown-5;
+        transition-duration: 0.5s;
+      }
 
-  &__button {
-    margin-left: 3px;
-    margin-top: 11px;
-    width: 31px;
-    height: 3px;
-    background-color: $brown-4;
-    border: none;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $brown-5;
-      transition-duration: 0.5s;
+      &_active {
+        margin-top: 10px;
+        width: 31px;
+        height: 3px;
+        background-color: $dark-4;
+        border: none;
+      }
     }
-  }
-
-  &__button_active {
-    margin-top: 10px;
-    width: 31px;
-    height: 3px;
-    background-color: $dark-4;
-    border: none;
-  }
-
-  &__number {
-    padding-bottom: 4px;
-    font-family: "Montserrat", "Candara", sans-serif;
-    font-weight: 300;
-    font-size: $very-big;
-    color: $dark-5;
+  
+    &__number {
+      padding-bottom: 4px;
+      font-family: "Montserrat", "Candara", sans-serif;
+      font-weight: 300;
+      font-size: $very-big;
+      color: $dark-5;
+    }
   }
 }
 
@@ -132,9 +132,7 @@
   }
 }
 
-a:hover > .product__title {
-  text-decoration: underline;
-}
+a:hover > .product__title,
 a:active > .product__title {
   text-decoration: underline;
 }
@@ -218,9 +216,9 @@ a:active > .product__title {
     &:hover:before {
       content: "";
       position: absolute;
-      margin-top: -11px;
+      margin-top: -12px;
       left: -60px;
-      width: 326px;
+      width: 325px;
       height: 55px;
       background-color: $dark-blue;
       pointer-events: none;
@@ -228,7 +226,7 @@ a:active > .product__title {
   }
 
   &__item-link-active {
-    padding: 14px 180px 15px 60px;
+    padding: 16px 180px 13px 60px;
     margin-left: -60px;
     font-weight: bold;
     background-color: $dark-blue;
@@ -302,7 +300,7 @@ a:active > .product__title {
 .contacts {
   max-width: 543px;
   margin-right: 37px;
-  margin-bottom: 77px;
+  margin-bottom: 64px;
   padding: 0 30px 0 30px;
   background-color: $light-blue;
 
@@ -339,71 +337,3 @@ a:active > .product__title {
     display: none;
   }
 }
-
-.modal-window {
-  position: relative;
-  padding: 22px 40px 42px 40px;
-  margin: auto;
-  font-family: "Roboto", "Arial", sans-serif;
-  font-weight: normal;
-  font-size: $very-small-2;
-  line-height: 16px;
-  color: $dark;
-  background-color: $gray-6;
-
-  &__close {
-    position: absolute;
-    top: 0;
-    right: -25px;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.5;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-  }
-}
-
-input:focus + .form-checkbox-indicator {
-  outline-color: $blue;
-  outline-offset: -2px;
-  outline-style: auto;
-  outline-width: 5px;
-}
-
-.form-checkbox:checked + .form-checkbox-indicator:after {
-  background: url(../../static/images/Check.svg) no-repeat;
-}
-
-.form-checkbox-indicator {
-  margin-right: 15px;
-  padding-left: 34px;
-  padding-top: 2px;
-}
-
-.form-checkbox-indicator:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  border: 2px solid $brown;
-  border-radius: 3px;
-  margin-top: 19px;
-}
-
-.checkbox-label {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-top: 20px;
-  cursor: pointer;
-}
-

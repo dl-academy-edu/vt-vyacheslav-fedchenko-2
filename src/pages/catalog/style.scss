@@ -29,8 +29,11 @@
 
   &__text {
     max-width: 680px;
-    margin: 0;
-    padding-bottom: 15px;
+    
+    &> p {
+      margin: 0;
+      padding-bottom: 15px;
+    }
   }
 
   &__title {
@@ -45,9 +48,7 @@
   }
 }
 
-a:hover > .product__title {
-  text-decoration: underline;
-}
+a:hover > .product__title,
 a:active > .product__title {
   text-decoration: underline;
 }
