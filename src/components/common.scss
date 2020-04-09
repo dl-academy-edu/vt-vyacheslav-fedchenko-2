@@ -132,10 +132,10 @@ textarea {
     justify-content: space-between;
     padding-top: 43px;
     min-width: 600px;
-  }
 
-  &__row_short {
-    width: 290px;
+    &_short {
+      width: 290px;
+    }
   }
 
   &__label {
@@ -257,35 +257,25 @@ input:focus + .form__checkbox-indicator {
       opacity: 0.75;
     }
 
-    &_forvard {
-      fill: $dark-6;
+    &_active {
+      color: $brown;
+    }
+  }
 
-      &:hover {
-        fill: $brown;
-      }
+  &__btn {
+    fill: $dark-6;
 
-      &:active {
-        fill: $brown;
-        opacity: 0.5;
-      }
+    &:hover {
+      fill: $brown;
+    }
+
+    &:active {
+      fill: $brown;
+      opacity: 0.5;
     }
 
     &_back {
       transform: rotate(180deg);
-      fill: $dark-6;
-
-      &:hover {
-        fill: $brown;
-      }
-
-      &:active {
-        fill: $brown;
-        opacity: 0.5;
-      }
-    }
-
-    &_active {
-      color: $brown;
     }
   }
 }
