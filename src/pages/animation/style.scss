@@ -1,277 +1,277 @@
 @import "../../components/var";
 
 .animation {
-	position: relative;
-	margin: 0 auto 66px auto;
+  position: relative;
+  margin: 0 auto 66px auto;
   width: 100%;
-	max-width: 1585px;
-	overflow: hidden;
+  max-width: 1585px;
+  overflow: hidden;
 
-	&__background-top {
-		padding-left: 175px;
-	}
+  &__background-top {
+    padding-left: 175px;
+  }
 
-	&__background-bottom {
-		padding-left: 0px;
-	}
+  &__background-bottom {
+    padding-left: 0px;
+  }
 
-	&__car1 {
-		position: absolute;
-		bottom: 31.5%;
-		animation: car1_anim 10s;
-		animation-iteration-count:infinite;
-		max-width: 250px;
-		width: 15vw;
-	}
+  &__car1 {
+    position: absolute;
+    bottom: 31.5%;
+    animation: car1_anim 10s;
+    animation-iteration-count:infinite;
+    max-width: 250px;
+    width: 15vw;
+  }
 
-	&__car2 {
-		position: absolute;
-		bottom: 32.1%;
-		animation: car2_anim 10s;
-		animation-iteration-count:infinite;
-		max-width: 203px;
-		width: 13vw;
-	}
+  &__car2 {
+    position: absolute;
+    bottom: 32.1%;
+    animation: car2_anim 10s;
+    animation-iteration-count:infinite;
+    max-width: 203px;
+    width: 13vw;
+  }
 
-	&__car3 {
-		position: absolute;
-		bottom: 34%;
-		animation: car3_anim 10s;
-		animation-iteration-count:infinite;
-		max-width: 246px;
-		width: 15vw;
-	}
+  &__car3 {
+    position: absolute;
+    bottom: 34%;
+    animation: car3_anim 10s;
+    animation-iteration-count:infinite;
+    max-width: 246px;
+    width: 15vw;
+  }
 
-	&__car4 {
-		position: absolute;
-		bottom: 30.2%;
-		animation: car4_anim 10s;
-		animation-iteration-count:infinite;
-		max-width: 268px;
-		width: 16vw;
-	}
+  &__car4 {
+    position: absolute;
+    bottom: 30.2%;
+    animation: car4_anim 10s;
+    animation-iteration-count:infinite;
+    max-width: 268px;
+    width: 16vw;
+  }
 
-	&__lantern1 {
-		position: absolute;
-		bottom: 26%;
-		left: 33.2%;
-		max-width: 151px;
-		width: 9vw;
-	}
+  &__lantern1 {
+    position: absolute;
+    bottom: 26%;
+    left: 33.2%;
+    max-width: 151px;
+    width: 9vw;
+  }
 
-	&__lantern2 {
-		position: absolute;
-		bottom: 26.5%;
-		left: 88.3%;
-		max-width: 151px;
-		width: 9vw;
-	}
+  &__lantern2 {
+    position: absolute;
+    bottom: 26.5%;
+    left: 88.3%;
+    max-width: 151px;
+    width: 9vw;
+  }
 
-	&__taxi {
-		position: absolute;
-		bottom: 13.2%;
-		left: 100%;
-		max-width: 886px;
-		width: 52.7vw;
-		animation: taxi_anim 10s;
-		animation-iteration-count:infinite;
-	}
+  &__taxi {
+    position: absolute;
+    bottom: 13.2%;
+    left: 100%;
+    max-width: 886px;
+    width: 52.7vw;
+    animation: taxi_anim 10s;
+    animation-iteration-count:infinite;
+  }
 
-	&__message-box {
-		position: absolute;
-		bottom: 40.5%;
-		left: 60.6%;
-		z-index: -1;
-		max-width: 167px;
-		width: 10vw;
-		animation: message_anim 10s;
-		animation-iteration-count:infinite;
+  &__message-box {
+    position: absolute;
+    bottom: 40.5%;
+    left: 60.6%;
+    z-index: -1;
+    max-width: 167px;
+    width: 10vw;
+    animation: message_anim 10s;
+    animation-iteration-count:infinite;
 
-		&_2 {
-			bottom: 40%;
-			left: 11.5%;
-			animation: message2_anim 10s;
-			animation-iteration-count:infinite;
-		}
+    &_2 {
+      bottom: 40%;
+      left: 11.5%;
+      animation: message2_anim 10s;
+      animation-iteration-count:infinite;
+    }
 
-		&_3 {
-			bottom: 51.2%;
-			left: 23.2%;
-			animation: message3_anim 10s;
-			animation-iteration-count:infinite;
-		}
+    &_3 {
+      bottom: 51.2%;
+      left: 23.2%;
+      animation: message3_anim 10s;
+      animation-iteration-count:infinite;
+    }
 
-		&_4 {
-			bottom: 51.2%;
-			left: 23.2%;
-			animation: message4_anim 10s;
-			animation-iteration-count:infinite;
-		}
+    &_4 {
+      bottom: 51.2%;
+      left: 23.2%;
+      animation: message4_anim 10s;
+      animation-iteration-count:infinite;
+    }
 
-		&__text {
-			position: absolute;
-			top: 0.1%;
-			left: 11.5%;
-			font-size: $small;
-			width: 7.5vw;
-			max-width: 127px;
-		}
-	}
+    &__text {
+      position: absolute;
+      top: 0.1%;
+      left: 11.5%;
+      font-size: $small;
+      width: 7.5vw;
+      max-width: 127px;
+    }
+  }
 
-	&__lantern3 {
-		position: absolute;
-		bottom: 6%;
-		left: 70.6%;
-		max-width: 214px;
-		width: 12.8vw;
-	}
+  &__lantern3 {
+    position: absolute;
+    bottom: 6%;
+    left: 70.6%;
+    max-width: 214px;
+    width: 12.8vw;
+  }
 
-	&__woman {
-		position: absolute;
-		bottom: 6%;
-		left: 17.4%;
-		max-width: 98px;
-		width: 6vw;
-	}
+  &__woman {
+    position: absolute;
+    bottom: 6%;
+    left: 17.4%;
+    max-width: 98px;
+    width: 6vw;
+  }
 
-	&__hand2 {
-		position: absolute;
-		bottom: 20.4%;
-		left: 19%;
-		max-width: 63px;
-		animation: hand2_anim 10s;
-		animation-iteration-count:infinite;
-		width: 4vw;
-	}
+  &__hand2 {
+    position: absolute;
+    bottom: 20.4%;
+    left: 19%;
+    max-width: 63px;
+    animation: hand2_anim 10s;
+    animation-iteration-count:infinite;
+    width: 4vw;
+  }
 
-	&__suitcases {
-		position: absolute;
-		bottom: 6%;
-		left: 16.7%;
-		max-width: 191px;
-		width: 12vw;
-	}
+  &__suitcases {
+    position: absolute;
+    bottom: 6%;
+    left: 16.7%;
+    max-width: 191px;
+    width: 12vw;
+  }
 
-	&__hand {
-		position: absolute;
-		bottom: 40%;
-		left: 24%;
-		max-width: 89px;
-		width: 6vw;
-		transform: rotate(152deg);
-		transform-origin: 16% 90%;
-		animation: hand_anim 10s;
-		animation-iteration-count:infinite;
-	}
+  &__hand {
+    position: absolute;
+    bottom: 40%;
+    left: 24%;
+    max-width: 89px;
+    width: 6vw;
+    transform: rotate(152deg);
+    transform-origin: 16% 90%;
+    animation: hand_anim 10s;
+    animation-iteration-count:infinite;
+  }
 
-	&__man {
-		position: absolute;
-		bottom: 6%;
-		left: 24.1%;
-		max-width: 205px;
-		width: 13vw;
-	}
+  &__man {
+    position: absolute;
+    bottom: 6%;
+    left: 24.1%;
+    max-width: 205px;
+    width: 13vw;
+  }
 }
 
 @keyframes car1_anim {
-	from, to {
-		left: 2.3%;
-	}
-	85% {
-		left: 24%;
-	}
+  from, to {
+    left: 2.3%;
+  }
+  85% {
+    left: 24%;
+  }
 }
 
 @keyframes car2_anim {
-	from, to {
-		left: 26.5%;
-	}
-	85% {
-		left: 47%;
-	}
+  from, to {
+    left: 26.5%;
+  }
+  85% {
+    left: 47%;
+  }
 }
 
 @keyframes car3_anim {
-	from, to {
-		left: 45.2%;
-	}
-	85% {
-		left: 62.5%;
-	}
+  from, to {
+    left: 45.2%;
+  }
+  85% {
+    left: 62.5%;
+  }
 }
 
 @keyframes car4_anim {
-	from, to {
-		left: 66%;
-	}
-	85% {
-		left: 82%;
-	}
+  from, to {
+    left: 66%;
+  }
+  85% {
+    left: 82%;
+  }
 }
 
 @keyframes taxi_anim {
-	from {
-		left: 100%;
-	}
-	40%, 60% {
-		left: 40.8%;
-	}
-	100% {
-		left: -80%;
-	}
+  from {
+    left: 100%;
+  }
+  40%, 60% {
+    left: 40.8%;
+  }
+  100% {
+    left: -80%;
+  }
 }
 
 @keyframes message_anim {
-	from, 45%, 80% {
-		z-index: -1;
-	}
-	46% {
-		z-index: 0;
-	}
+  from, 45%, 80% {
+    z-index: -1;
+  }
+  46% {
+    z-index: 0;
+  }
 }
 
 @keyframes message2_anim {
-	from, 10%, 45% {
-		z-index: -1;
-	}
-	11% {
-		z-index: 0;
-	}
+  from, 10%, 45% {
+    z-index: -1;
+  }
+  11% {
+    z-index: 0;
+  }
 }
 
 @keyframes message3_anim {
-	from, 20%, 45% {
-		z-index: -1;
-	}
-	30% {
-		z-index: 0;
-	}
+  from, 20%, 45% {
+    z-index: -1;
+  }
+  30% {
+    z-index: 0;
+  }
 }
 
 @keyframes message4_anim {
-	from, 60%, 80% {
-		z-index: -1;
-	}
-	70% {
-		z-index: 0;
-	}
+  from, 60%, 80% {
+    z-index: -1;
+  }
+  70% {
+    z-index: 0;
+  }
 }
 
 @keyframes hand_anim {
-	from, 20%, 43% {
-		transform: rotate(152deg);
-	}
-	30% {
-		transform: rotate(0deg);
-	}
+  from, 20%, 43% {
+    transform: rotate(152deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes hand2_anim {
-	from, 10%, 37% {
-		transform: rotate(0deg);
-	}
-	17% {
-		transform: rotate(-50deg);
-		transform-origin: 8% 5%;
-	}
+  from, 10%, 37% {
+    transform: rotate(0deg);
+  }
+  17% {
+    transform: rotate(-50deg);
+    transform-origin: 8% 5%;
+  }
 }

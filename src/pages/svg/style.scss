@@ -1,64 +1,64 @@
 .svg {
-	margin-bottom: 57px;
-	stroke-dasharray: 175;
+  margin-bottom: 57px;
+  stroke-dasharray: 175;
   stroke-dashoffset: 700;
-	animation: dash 7s linear forwards;
-	animation-iteration-count:infinite;
+  animation: dash 7s linear forwards;
+  animation-iteration-count:infinite;
 
-	&__frame1 {
-		animation: frame1 7s;
-		animation-iteration-count:infinite;
-	}
+  &__frame1 {
+    animation: frame1 7s;
+    animation-iteration-count:infinite;
+  }
 
-	&__frame2 {
-		animation: frame2 7s;
-		animation-iteration-count:infinite;
-	}
+  &__frame2 {
+    animation: frame2 7s;
+    animation-iteration-count:infinite;
+  }
 
-	&__moon {
-		animation: moon 7s;
-		animation-iteration-count:infinite;
-	}
+  &__moon {
+    animation: moon 7s;
+    animation-iteration-count:infinite;
+  }
 
-	&__mount1 {
-		animation: mount1 7s;
-		animation-iteration-count:infinite;
-	}
+  &__mount1 {
+    animation: mount1 7s;
+    animation-iteration-count:infinite;
+  }
 
-	&__mount2 {
-		animation: mount2 7s;
-		animation-iteration-count:infinite;
-	}
+  &__mount2 {
+    animation: mount2 7s;
+    animation-iteration-count:infinite;
+  }
 
-	&__mount3 {
-		animation: mount3 7s;
-		animation-iteration-count:infinite;
-	}
+  &__mount3 {
+    animation: mount3 7s;
+    animation-iteration-count:infinite;
+  }
 
-	&__mount4 {
-		animation: mount4 7s;
-		animation-iteration-count:infinite;
-	}
+  &__mount4 {
+    animation: mount4 7s;
+    animation-iteration-count:infinite;
+  }
 
-	&__star {
-		animation: star 7s;
-		animation-iteration-count:infinite;
-	}
+  &__star {
+    animation: star 7s;
+    animation-iteration-count:infinite;
+  }
 
-	&__line1 {
-		animation: line1 7s;
-		animation-iteration-count:infinite;
-	}
+  &__line1 {
+    animation: line1 7s;
+    animation-iteration-count:infinite;
+  }
 
-	&__line2 {
-		animation: line2 7s;
-		animation-iteration-count:infinite;
-	}
+  &__line2 {
+    animation: line2 7s;
+    animation-iteration-count:infinite;
+  }
 
-	&__line3 {
-		animation: line3 7s;
-		animation-iteration-count:infinite;
-	}
+  &__line3 {
+    animation: line3 7s;
+    animation-iteration-count:infinite;
+  }
 }
 
 @keyframes dash {
@@ -68,106 +68,106 @@
 }
 
 @keyframes frame1 {
-	from, to {
-		fill: #5D9CEC;
-	}
-	50% {
-		fill: #fc9795  ;
-	}
+  from, to {
+    fill: #5D9CEC;
+  }
+  50% {
+    fill: #fc9795  ;
+  }
 }
 
 @keyframes frame2 {
-	from, to {
-		fill: #5D9CEC;
-	}
-	50% {
-		fill: #1c1c1c;
-	}
+  from, to {
+    fill: #5D9CEC;
+  }
+  50% {
+    fill: #1c1c1c;
+  }
 }
 
 @keyframes moon {
-	from, to {
-		fill: #FFCE54;
-	}
-	50% {
-		fill: #ffffff;
-	}
+  from, to {
+    fill: #FFCE54;
+  }
+  50% {
+    fill: #ffffff;
+  }
 }
 
 @keyframes mount1 {
-	from, to {
-		fill: #545C66;
-	}
-	50% {
-		fill: #2b4b6e;
-	}
+  from, to {
+    fill: #545C66;
+  }
+  50% {
+    fill: #2b4b6e;
+  }
 }
 
 @keyframes mount2 {
-	from, to {
-		fill: #656D78;
-	}
-	50% {
-		fill: #487eb8;
-	}
+  from, to {
+    fill: #656D78;
+  }
+  50% {
+    fill: #487eb8;
+  }
 }
 
 @keyframes mount3 {
-	from, to {
-		fill: #545C66;
-	}
-	50% {
-		fill: #f77d55;
-	}
+  from, to {
+    fill: #545C66;
+  }
+  50% {
+    fill: #f77d55;
+  }
 }
 
 @keyframes mount4 {
-	from, to {
-		fill: #656D78;
-	}
-	50% {
-		fill: #f9d97b  ;
-	}
+  from, to {
+    fill: #656D78;
+  }
+  50% {
+    fill: #f9d97b  ;
+  }
 }
 
 @keyframes star {
-	from, to {
-		fill: none;
-		fill-opacity: 0;
-	}
-	30%, 60% {
-		fill: #ffffff;
-		fill-opacity: 0.5;
-	}
-	37%, 55% {
-		fill: #ffffff;
-		fill-opacity: 1;
-	}
+  from, to {
+    fill: none;
+    fill-opacity: 0;
+  }
+  30%, 60% {
+    fill: #ffffff;
+    fill-opacity: 0.5;
+  }
+  37%, 55% {
+    fill: #ffffff;
+    fill-opacity: 1;
+  }
 }
 
 @keyframes line1 {
-	from, to {
-		transform: translateX(0);
-	}
-	50% {
-		transform: translateX(-13px);
-	}
+  from, to {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-13px);
+  }
 }
 
 @keyframes line2 {
-	from, to {
-		transform: translateX(0);
-	}
-	50% {
-		transform: translateX(-27px);
-	}
+  from, to {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-27px);
+  }
 }
 
 @keyframes line3 {
-	from, to {
-		transform: translateX(0);
-	}
-	50% {
-		transform: translateX(-40px);
-	}
+  from, to {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-40px);
+  }
 }
