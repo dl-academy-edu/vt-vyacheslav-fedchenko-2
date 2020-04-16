@@ -11,9 +11,10 @@
   cursor: pointer;
   border: none;
 
+  transition: background-color .4s;
+
   &:hover {
     background-color: $brown;
-    transition-duration: 0.5s;
   }
 
   &:active {

@@ -10,10 +10,15 @@
   }
 
   &_hover {
+
+    transition: opacity .4s;
+
     opacity: 1;
+
     &:hover {
       opacity: 0.5;
     }
+
     &:active {
       opacity: 0.2;
     }

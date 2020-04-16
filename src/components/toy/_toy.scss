@@ -29,7 +29,7 @@
 
   &__box {
 
-    &:hover:before {
+    &:before {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -46,6 +46,11 @@
       font-size: $normal-3;
       line-height: 29px;
       background-color: $gray-6;
+      opacity: 0;
+      transition: .6s;
+    }
+
+    &:hover:before {
       opacity: 0.9;
     }
 

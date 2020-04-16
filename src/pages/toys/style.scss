@@ -47,6 +47,8 @@ fieldset {
   background-color: $gray-3;
   outline: none;
 
+  transition: opacity .4s;
+
   &:focus {
     outline-color: $blue;
     outline-offset: -2px;
@@ -55,9 +57,7 @@ fieldset {
   }
 
   &:hover {
-    -webkit-transition: 0.2s;
     opacity: 0.9;
-    transition: opacity 0.2s;
   }
 
   &::-webkit-slider-thumb {
@@ -106,9 +106,12 @@ fieldset {
   align-items: center;
   padding-bottom: 20px;
   cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: all 0.4s;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration-color: $black;
   }
 }
 
@@ -134,9 +137,12 @@ input:focus + .form-checkbox-indicator {
   align-items: center;
   padding-bottom: 16px;
   cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: all 0.4s;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration-color: $black;
   }
 }
 
@@ -202,12 +208,19 @@ input:focus + .form-radio-indicator {
   border: none;
 }
 
+.form-radio-box:not(checked) + .form-radio-box-indicator {
+  background-color: $white;
+  transition: .4s;
+}
+
 .form-radio-box:checked + .form-radio-box-indicator {
   background-color: $pink;
+  transition: .4s;
 }
 
 .form-radio-box:hover + .form-radio-box-indicator {
   background-color: $light-pink;
+  transition: .4s;
 }
 
 input:focus + .form-radio-box-indicator {

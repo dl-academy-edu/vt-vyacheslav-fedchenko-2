@@ -83,10 +83,11 @@
       background-color: $brown-4;
       border: none;
       cursor: pointer;
+
+      transition: background-color .4s;
   
       &:hover {
         background-color: $brown-5;
-        transition-duration: 0.5s;
       }
 
       &_active {
@@ -132,9 +133,15 @@
   }
 }
 
+a > .product__title {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: all 0.4s;
+}
+
 a:hover > .product__title,
 a:active > .product__title {
-  text-decoration: underline;
+  text-decoration-color: $white;
 }
 
 /* slider */
@@ -149,18 +156,19 @@ a:active > .product__title {
 
   &__btn {
     max-width: 37px;
+    max-height: 37px;
     width: 100%;
     padding: 0;
-    margin-right: 6px;
-    margin-bottom: 6px;
-    padding-top: 3px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    padding-top: 4px;
     border: none;
   }
 
   &__text {
     width: 580px;
-    margin-left: 14px;
-    margin-top: 11px;
+    margin-left: 12px;
+    margin-top: 10px;
   }
 }
 
@@ -209,6 +217,8 @@ a:active > .product__title {
   &__link {
     font-weight: normal;
 
+    transition: font-weight .4s;
+
     &_active {
       padding: 16px 180px 13px 60px;
       margin-left: -60px;
@@ -220,7 +230,8 @@ a:active > .product__title {
       font-weight: bold;
     }
 
-    &:hover:before {
+    &:before {
+      opacity: 0;
       content: "";
       position: absolute;
       margin-top: -12px;
@@ -229,6 +240,11 @@ a:active > .product__title {
       height: 55px;
       background-color: $dark-blue;
       pointer-events: none;
+      transition: all .6s;
+    }
+
+    &:hover:before {
+      opacity: 1;
     }
   }
 }
@@ -247,6 +263,9 @@ a:active > .product__title {
   }
 
   &__item {
+
+    transition: opacity .4s;
+
     opacity: 1;
 
     &:hover {
@@ -258,7 +277,7 @@ a:active > .product__title {
 /*info-box*/
 
 .info-box {
-  margin-bottom: 110px;
+  margin-bottom: 111px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

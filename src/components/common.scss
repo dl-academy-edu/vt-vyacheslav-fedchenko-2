@@ -90,6 +90,8 @@ textarea {
   &__link {
     opacity: 1;
 
+    transition: opacity .4s;
+
     &:hover {
       opacity: 0.75;
     }
@@ -106,6 +108,12 @@ textarea {
   font-size: $big-2;
   line-height: 49px;
   text-transform: uppercase;
+
+  &_2 {
+    font-size: $big-3;
+    line-height: 44px;
+    margin-bottom: 10px;
+  }
 }
 
 /* Forms */
@@ -152,6 +160,8 @@ textarea {
     line-height: 21px;
     background-color: $white;
     border: 2px solid $dark-2;
+
+    transition: border-color .4s;
 
     &:hover {
       border: 2px solid $dark-3;
@@ -207,6 +217,8 @@ textarea {
     background-color: transparent;
     cursor: pointer;
 
+    transition: opacity .4s;
+
     &:hover {
       opacity: 0.5;
     }
@@ -253,6 +265,8 @@ input:focus + .form__checkbox-indicator {
     padding-left: 33px;
     padding-right: 33px;
 
+    transition: opacity .4s;
+
     &:hover {
       opacity: 0.75;
     }
@@ -264,6 +278,9 @@ input:focus + .form__checkbox-indicator {
 
   &__btn {
     fill: $dark-6;
+
+    transition: opacity .4s;
+    transition: fill .4s;
 
     &:hover {
       fill: $brown;

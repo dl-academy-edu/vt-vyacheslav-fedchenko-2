@@ -9,6 +9,8 @@
 
   &__item {
     color: $white;
+    
+    transition: opacity .4s;
 
     &:hover {
       opacity: 0.5;
@@ -36,13 +38,30 @@
 
   &__web-developer {
     color: $gray-4;
+    display: inline-block;
 
-    &:hover {
-      text-decoration-line: underline;
+    transition: color .4s;
+
+    &:after {
+      content: '';
+      width: 0px;
+      height: 1px;
+      display: block;
+      background: $white;
+      color: $white;
+      transition: .4s;
     }
 
-    &:active {
-      text-decoration-line: underline;
+    &:hover:after {
+      width: 100%;
+    }
+
+    &:hover {
+      color: $white;
+    }
+
+    &:active:after {
+      width: 100%;
     }
   }
 
@@ -102,16 +121,19 @@
       width: 20px;
       padding: 0;
       fill: $white;
+      transition: .4s;
       cursor: pointer;
     }
 
     &> input:checked ~ label {
       fill: $brown;
+      transition: .4s;
     }
 
     &:not(:checked) > label:hover,
     &:not(:checked) > label:hover ~ label {
       fill: $brown-2;
+      transition: fill .4s;
     }
 
     &> input:checked + label:hover,
@@ -120,12 +142,13 @@
     &> input:checked ~ label:hover ~ label,
     &> label:hover ~ input:checked ~ label {
       fill: $brown-2;
+      transition: fill .4s;
     }
   }
 
   &__copyright {
     padding-left: 149px;
-    padding-right: 109px;
+    padding-right: 110px;
   }
 
   &__connect {
@@ -140,6 +163,8 @@
       line-height: 22px;
       color: $gray-5;
       background-color: $gray-3;
+
+      transition: border-color .4s;
   
       &:hover {
         border-color: $light;
@@ -181,6 +206,9 @@
   }
 
   &__item {
+
+    transition: opacity .4s;
+
     opacity: 1;
 
     &:hover {
@@ -193,13 +221,19 @@
   }
 }
 
+input:not(:checked) ~ .footer__rating-text {
+  color: $white;
+  transition: color .4s;
+}
 
 input:checked ~ .footer__rating-text {
   color: $brown;
+  transition: color .4s;
 }
 
 input:hover ~ .footer__rating-text {
   color: $brown;
+  transition: color .4s;
 }
 
 input:focus + label {
