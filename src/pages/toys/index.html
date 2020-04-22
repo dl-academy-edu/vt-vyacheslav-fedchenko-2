@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Toys</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="../../common.css">
@@ -21,7 +22,7 @@
             </a>
           </li>
           <li class="breadcrumbs__item">
-            <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+            <svg class="breadcrumbs__arrow" width="8" height="12" viewBox="0 0 8 12" fill="none">
               <polygon points="0 1.18, 1.31 0, 8 6, 1.31 12, 0 10.82, 5.38 6" fill="#1E0606"/>
             </svg>
           </li>
@@ -31,7 +32,7 @@
             </a>
           </li>
           <li class="breadcrumbs__item">
-            <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+            <svg class="breadcrumbs__arrow" width="8" height="12" viewBox="0 0 8 12" fill="none">
               <polygon points="0 1.18, 1.31 0, 8 6, 1.31 12, 0 10.82, 5.38 6" fill="#1E0606"/>
             </svg>
           </li>
@@ -112,6 +113,11 @@
         @@include('toy/index.html', {
           "link": "#",
           "img": "toy1.jpg",
+          "img2": "toy1@2.jpg",
+          "img-tablet": "toy1-tablet.jpg",
+          "img-tablet2": "toy1-tablet@2.jpg",
+          "img-mobile": "toy1-mobile.jpg",
+          "img-mobile2": "toy1-mobile@2.jpg",
           "alt": "Selected blog",
           "title": "SHARKY BEAN BAG CHAIR COVER",
           "cost": "$60.00 USD"
@@ -119,6 +125,11 @@
         @@include('toy/index.html', {
           "link": "#",
           "img": "toy2.jpg",
+          "img2": "toy2@2.jpg",
+          "img-tablet": "toy2-tablet.jpg",
+          "img-tablet2": "toy2-tablet@2.jpg",
+          "img-mobile": "toy2-mobile.jpg",
+          "img-mobile2": "toy2-mobile@2.jpg",
           "alt": "Selected blog",
           "title": "BRASS DECO FRAMES",
           "cost": "$66.00 USD"
@@ -126,6 +137,11 @@
         @@include('toy/index.html', {
           "link": "#",
           "img": "toy3.jpg",
+          "img2": "toy3@2.jpg",
+          "img-tablet": "toy3-tablet.jpg",
+          "img-tablet2": "toy3-tablet@2.jpg",
+          "img-mobile": "toy3-mobile.jpg",
+          "img-mobile2": "toy3-mobile@2.jpg",
           "alt": "Selected blog",
           "title": "CIBO FULL APRON",
           "cost": "$60.00 USD"
@@ -133,6 +149,11 @@
         @@include('toy/index.html', {
           "link": "#",
           "img": "toy4.jpg",
+          "img2": "toy4@2.jpg",
+          "img-tablet": "toy4-tablet.jpg",
+          "img-tablet2": "toy4-tablet@2.jpg",
+          "img-mobile": "toy4-mobile.jpg",
+          "img-mobile2": "toy4-mobile@2.jpg",
           "alt": "Selected blog",
           "title": "GATCHA GATCHA GUMBALL MACHINE",
           "cost": "$56.00 USD"
@@ -140,6 +161,11 @@
         @@include('toy/index.html', {
           "link": "#",
           "img": "toy5.jpg",
+          "img2": "toy5@2.jpg",
+          "img-tablet": "toy5-tablet.jpg",
+          "img-tablet2": "toy5-tablet@2.jpg",
+          "img-mobile": "toy5-mobile.jpg",
+          "img-mobile2": "toy5-mobile@2.jpg",
           "alt": "Selected blog",
           "title": "CHRISTMAS ADVENT SCENTED CANDLE",
           "cost": "$29.00 USD"
@@ -147,6 +173,11 @@
         @@include('toy/index.html', {
           "link": "#",
           "img": "toy6.jpg",
+          "img2": "toy6@2.jpg",
+          "img-tablet": "toy6-tablet.jpg",
+          "img-tablet2": "toy6-tablet@2.jpg",
+          "img-mobile": "toy6-mobile.jpg",
+          "img-mobile2": "toy6-mobile@2.jpg",
           "alt": "Selected blog",
           "title": "TANGLE SPINNING TEA LIGHT",
           "cost": "$56.00 USD"
@@ -185,5 +216,6 @@
     </div>
   </main>
   @@include('footer/index.html')
+  <script src="./index.js"></script>
 </body>
 </html>

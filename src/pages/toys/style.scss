@@ -10,28 +10,78 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 42px 105px 17px 11px;
+    padding: 42px 105px 14px 11px;
+
+    @media (max-width: 768px) {
+			padding: 30px 50px 21px 6px;
+    }
+
+    @media (max-width: 375px) {
+      padding: 23px 0 25px;
+      font-size: $very-small-2;
+      line-height: 19px;
+    }
   }
 
   &__legend {
     font-weight: bold;
     padding-top: 1px;
     padding-bottom: 10px;
+
+    @media (max-width: 375px) {
+			padding-top: 1px;
+      padding-bottom: 6px;
+    }
   }
 }
 
 .fieldset-color {
   display: flex;
   padding-left: 58px;
+
+  @media (max-width: 768px) {
+    padding-left: 70px;
+    padding-bottom: 5px;
+  }
+
+  @media (max-width: 375px) {
+    padding-left: 3px;
+    padding-bottom: 13px;
+  }
+}
+
+.fieldset-cost {
+
+  @media (max-width: 375px) {
+    padding-left: 8px;
+    padding-bottom: 25px;
+    padding-right: 65px;
+}
 }
 
 .fieldset-delivery {
   display: flex;
   padding-left: 66px;
+
+  @media (max-width: 768px) {
+    padding-right: 25px;
+  }
+
+  @media (max-width: 375px) {
+    padding-right: 41px;
+  }
 }
 
 .fieldset-amount {
   padding-right: 25px;
+
+  @media (max-width: 768px) {
+    padding-left: 8px;
+  }
+
+  @media (max-width: 375px) {
+    padding-left: 3px;
+  }
 }
 
 fieldset {
@@ -46,6 +96,10 @@ fieldset {
   height: 4px;
   background-color: $gray-3;
   outline: none;
+
+  @media (max-width: 768px) {
+    width: 184px;
+  }
 
   transition: opacity .4s;
 
@@ -75,6 +129,11 @@ fieldset {
   display: flex;
   justify-content: space-between;
   margin: 16px -11px 0 -5px;
+
+  @media (max-width: 375px) {
+      margin-top: 7px;
+      margin-right: -13px;
+  }
 }
 
 /*checkbox*/
@@ -82,11 +141,19 @@ fieldset {
 .form-checkbox:checked + .form-checkbox-indicator:after {
   background: url(../../static/images/Check.svg) no-repeat;
   background-color: $white;
+
+  @media (max-width: 375px) {
+    background-size: 13px;
+  }
 }
 
 .form-checkbox-indicator {
   padding-left: 30px;
   margin-right: 8px;
+
+  @media (max-width: 375px) {
+    padding-left: 24px;
+  }
 
   &:after {
     content: "";
@@ -97,6 +164,11 @@ fieldset {
     width: 19px;
     border: 2px solid $brown;
     border-radius: 3px;
+
+    @media (max-width: 375px) {
+      height: 17px;
+      width: 17px;
+    }
   }
 }
 
@@ -109,6 +181,10 @@ fieldset {
   text-decoration: underline;
   text-decoration-color: transparent;
   transition: all 0.4s;
+
+  @media (max-width: 375px) {
+    padding-bottom: 11px;
+  }
 
   &:hover {
     text-decoration-color: $black;
@@ -128,6 +204,10 @@ input:focus + .form-checkbox-indicator {
 
 .form-checkbox:disabled + .form-checkbox-indicator:after {
   background: url(../../static/images/Check_disabled.svg) no-repeat;
+
+  @media (max-width: 375px) {
+    background-size: 13px;
+  }
 }
 
 /*radio*/
@@ -151,6 +231,10 @@ input:focus + .form-checkbox-indicator {
   padding-left: 30px;
   margin-right: 10px;
 
+  @media (max-width: 375px) {
+    padding-left: 24px;
+  }
+
   &:after {
     content: "";
     position: absolute;
@@ -161,6 +245,11 @@ input:focus + .form-checkbox-indicator {
     width: 20px;
     border: 2px solid $brown;
     border-radius: 100%;
+
+    @media (max-width: 375px) {
+			height: 16px;
+      width: 16px;
+    }
   }
 }
 
@@ -174,6 +263,13 @@ input:focus + .form-checkbox-indicator {
   width: 12px;
   border-radius: 100%;
   background-color: $brown;
+
+  @media (max-width: 375px) {
+    top: 8px;
+    left: 8px;
+    height: 9px;
+    width: 9px;
+  }
 }
 
 input:focus + .form-radio-indicator {
@@ -206,6 +302,12 @@ input:focus + .form-radio-indicator {
   text-align: center;
   background-color: $white;
   border: none;
+
+  @media (max-width: 375px) {
+    height: 29px;
+    padding-top: 6px;
+    padding-right: 5px;
+  }
 }
 
 .form-radio-box:not(checked) + .form-radio-box-indicator {
@@ -238,13 +340,36 @@ input:focus + .form-radio-box-indicator {
 
 .fieldset-button {
   margin-top: 36px;
+
+  @media (max-width: 768px) {
+    margin-top: 30px;
+    margin-right: 70px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: $small;
+    line-height: 22px;
+    margin-right: 0;
+    margin-top: 17px;
+    margin-left: 125px;
+  }
 }
 
 /*toy list*/
 
 .toys {
-  margin-top: 57px;
+  margin-top: 60px;
   margin-bottom: 34px;
+
+  @media (max-width: 768px) {
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
+
+  @media (max-width: 375px) {
+    margin-top: 40px;
+    margin-bottom: 12px;
+  }
 
   &__list {
     display: flex;
@@ -252,5 +377,13 @@ input:focus + .form-radio-box-indicator {
     flex-wrap: wrap;
     margin-bottom: 20px;
     margin-top: 0;
+
+    @media (max-width: 768px) {
+      margin-bottom: 7px;		
+    }
+
+    @media (max-width: 375px) {
+      margin-bottom: 0;
+    }
   }
 }

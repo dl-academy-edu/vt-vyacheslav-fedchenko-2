@@ -7,6 +7,15 @@
   max-width: 1585px;
   overflow: hidden;
 
+  @media (max-width: 768px) {
+    margin-bottom: 49px;
+  }
+
+  @media (max-width: 375px) {
+    margin-bottom: 81px;
+    
+  }
+
   &__background-top {
     padding-left: 175px;
   }
@@ -15,19 +24,34 @@
     padding-left: 0px;
   }
 
+  &__clouds {
+    position: absolute;
+    bottom: 82.5%;
+    animation: clouds_anim ease-out 72s;
+    animation-iteration-count:infinite;
+
+    &_2 {
+      animation-delay: 24s;
+    }
+
+    &_3 {
+      animation-delay: 48s;
+    }
+  }
+
   &__car1 {
     position: absolute;
-    bottom: 31.5%;
-    animation: car1_anim 10s;
+    bottom: 34%;
+    animation: car_anim 9s;
     animation-iteration-count:infinite;
-    max-width: 250px;
+    max-width: 246px;
     width: 15vw;
   }
 
   &__car2 {
     position: absolute;
     bottom: 32.1%;
-    animation: car2_anim 10s;
+    animation: car_anim 8s;
     animation-iteration-count:infinite;
     max-width: 203px;
     width: 13vw;
@@ -35,17 +59,17 @@
 
   &__car3 {
     position: absolute;
-    bottom: 34%;
-    animation: car3_anim 10s;
+    bottom: 31.5%;
+    animation: car_anim 7s;
     animation-iteration-count:infinite;
-    max-width: 246px;
+    max-width: 250px;
     width: 15vw;
   }
 
   &__car4 {
     position: absolute;
     bottom: 30.2%;
-    animation: car4_anim 10s;
+    animation: car_anim 10s;
     animation-iteration-count:infinite;
     max-width: 268px;
     width: 16vw;
@@ -113,8 +137,17 @@
       top: 0.1%;
       left: 11.5%;
       font-size: $small;
-      width: 7.5vw;
       max-width: 127px;
+
+      @media (max-width: 1000px) {
+        font-size: 8px;
+        line-height: 10px;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 4px;
+        line-height: 5px;
+      }
     }
   }
 
@@ -173,39 +206,21 @@
   }
 }
 
-@keyframes car1_anim {
-  from, to {
-    left: 2.3%;
+@keyframes car_anim {
+  from {
+    left: -50%;
   }
-  85% {
-    left: 24%;
-  }
-}
-
-@keyframes car2_anim {
-  from, to {
-    left: 26.5%;
-  }
-  85% {
-    left: 47%;
+  to {
+    left: 150%;
   }
 }
 
-@keyframes car3_anim {
-  from, to {
-    left: 45.2%;
+@keyframes clouds_anim {
+  from {
+    left: 100%;
   }
-  85% {
-    left: 62.5%;
-  }
-}
-
-@keyframes car4_anim {
-  from, to {
-    left: 66%;
-  }
-  85% {
-    left: 82%;
+  to {
+    left: -100%;
   }
 }
 

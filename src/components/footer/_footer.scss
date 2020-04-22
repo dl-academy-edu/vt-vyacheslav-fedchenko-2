@@ -1,244 +1,375 @@
 @import "../var";
 
 .footer {
-  font-weight: normal;
-  font-size: $small;
-  line-height: 22px;
-  color: $white;
+	font-weight: normal;
+	font-size: $small;
+	line-height: 22px;
+	color: $white;
   background-color: $dark-gray;
+  
+  &__mobile-box {
+    @media (max-width: 375px) {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 22px;
+		}
+	}
+	
+	&__customer-info {
+		@media (max-width: 375px) {
+			margin-top: 6px;
+    }
+	}
 
-  &__item {
+	&__item {
     color: $white;
     
-    transition: opacity .4s;
+    @media (max-width: 375px) {
+      font-size: $very-small-2;
+      line-height: 19px;
+		}
 
-    &:hover {
-      opacity: 0.5;
-    }
+		transition: opacity 0.4s;
 
-    &:active {
-      opacity: 0.2;
+		&:hover {
+			opacity: 0.5;
+		}
+
+		&:active {
+			opacity: 0.2;
+		}
+	}
+
+	&__nav-list,
+	&__customer-list {
+		margin-top: 0;
+    margin-bottom: 0;
+    
+    &_2 {
+      margin-top: 0;
+			margin-bottom: 13px;
+			
+			@media (max-width: 768px) {
+				margin-bottom: 25px;
+			}
+
+      @media (max-width: 375px) {
+        margin-bottom: 0;
+      }
     }
   }
-
-  &__nav-list,
-  &__customer-list {
-    margin-top: 28px;
-    margin-bottom: 13px;
-  }
-
-  &__title {
-    padding-bottom: 23px;
-    min-width: 380px;
-    margin: 0;
-    font-weight: normal;
-    color: $gray-2;
-    border-bottom: solid 1px $gray-3;
-  }
-
-  &__web-developer {
-    color: $gray-4;
-    display: inline-block;
-
-    transition: color .4s;
-
-    &:after {
-      content: '';
-      width: 0px;
-      height: 1px;
-      display: block;
-      background: $white;
-      color: $white;
-      transition: .4s;
-    }
-
-    &:hover:after {
-      width: 100%;
-    }
-
-    &:hover {
-      color: $white;
-    }
-
-    &:active:after {
-      width: 100%;
+  
+  &__customer-list_2 {
+    @media (max-width: 375px) {
+      padding-right: 8px;
     }
   }
 
-  &__nav-item,
-  &__customer {
-    padding-bottom: 15px;
-  }
+	&__title {
+		padding-bottom: 23px;
+		min-width: 380px;
+		margin-bottom: 28px;
+		font-weight: normal;
+		color: $gray-2;
+		border-bottom: solid 1px $gray-3;
+		
+		@media (max-width: 768px) {
+			min-width: 203px;
+    }
+    
+    @media (max-width: 375px) {
+			min-width: 335px;
+			padding-bottom: 20px;
+			margin-bottom: 18px;
+		}
+    
+    &_2 {
+      margin-bottom: 25px;
 
-  &__row {
-    padding-top: 23px;
-    padding-bottom: 100px;
-    border-top: solid 1px $gray-3;
-  }
+      @media (max-width: 375px) {
+				margin-top: 0;
+				padding-bottom: 22px;
+				margin-bottom: 26px;
+      }
+    }
+	}
 
-  &__list {
-    display: flex;
+	&__web-developer {
+		padding-right: 82px;
+		color: $gray-4;
+		display: inline-block;
+
+    transition: color 0.4s;
+    
+    @media (max-width: 768px) {
+			padding-right: 17px;
+		}
+
+		&:after {
+			content: "";
+			width: 0px;
+			height: 1px;
+			display: block;
+			background: $white;
+			color: $white;
+			transition: 0.4s;
+		}
+
+		&:hover:after {
+			width: 100%;
+		}
+
+		&:hover {
+			color: $white;
+		}
+
+		&:active:after {
+			width: 100%;
+		}
+	}
+
+	&__nav-item,
+	&__customer {
+		padding-bottom: 15px;
+
+		@media (max-width: 375px) {
+			padding-bottom: 13px;
+    }
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 79px;
+		flex-wrap: wrap;
+		
+		@media (max-width: 768px) {
+			padding-top: 59px;
+    }
+
+    @media (max-width: 375px) {
+      padding-left: 0;
+      padding-right: 0;
+			margin-left: 21px;
+			margin-right: 19px;
+			padding-top: 48px;
+		}
+  }
+  
+	&__info {
+		padding-top: 23px;
+		padding-bottom: 100px;
+		border-top: solid 1px $gray-3;
+		display: flex;
+		flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 100px;
-    flex-wrap: wrap;
-  }
-
-  &__info {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  &__rating-text {
-    padding-right: 28px;
-    margin: 0;
-    padding-bottom: 30px;
-  }
-
-  &__rating-area {
-    display: flex;
-    flex-direction: row-reverse;
-    overflow: hidden;
-    position: relative;
-
-    &:focus {
-      outline-color: $blue;
-      outline-offset: -2px;
-      outline-style: auto;
-      outline-width: 5px;
+    
+    @media (max-width: 768px) {
+			padding-bottom: 80px;
     }
 
-    &:not(:checked) > input {
-      position: absolute;
-      opacity: 0;
-      z-index: -1;
-      width: 0;
-      height: 0;
+    @media (max-width: 375px) {
+			margin-top: 44px;
+			padding-bottom: 70px;
+			padding-top: 24px;
+    }
+	}
+
+	&__rating-text {
+		padding-right: 28px;
+		margin: 0;
+		padding-bottom: 15px;
+	}
+
+	&__copyright {
+    padding-right: 105px;
+    
+    @media (max-width: 768px) {
+			padding-right: 0px;
+			padding-bottom: 15px;
+		}
+		
+    @media (max-width: 375px) {
+			padding-bottom: 15px;
+		}
+	}
+
+	&__rating-area {
+		display: flex;
+		flex-direction: row-reverse;
+		overflow: hidden;
+		position: relative;
+    padding-right: 145px;
+
+    @media (max-width: 425px) {
+			padding-right: 0px;
+		}
+    
+		&:focus {
+			outline-color: $blue;
+			outline-offset: -2px;
+			outline-style: auto;
+			outline-width: 5px;
+		}
+
+		&:not(:checked) > input {
+			position: absolute;
+			opacity: 0;
+			z-index: -1;
+			width: 0;
+			height: 0;
+		}
+
+		&:not(:checked) > label {
+			float: right;
+			width: 20px;
+			padding: 0;
+			fill: $white;
+			transition: 0.4s;
+			cursor: pointer;
+		}
+
+		& > input:checked ~ label {
+			fill: $brown;
+			transition: 0.4s;
+		}
+
+		&:not(:checked) > label:hover,
+		&:not(:checked) > label:hover ~ label {
+			fill: $brown-2;
+			transition: fill 0.4s;
+		}
+
+		& > input:checked + label:hover,
+		& > input:checked + label:hover ~ label,
+		& > input:checked ~ label:hover,
+		& > input:checked ~ label:hover ~ label,
+		& > label:hover ~ input:checked ~ label {
+			fill: $brown-2;
+			transition: fill 0.4s;
+		}
+	}
+
+	&__connect {
+
+    @media (max-width: 375px) {
+      margin-top: 47px;
     }
 
-    &:not(:checked) > label {
-      float: right;
-      width: 20px;
-      padding: 0;
-      fill: $white;
-      transition: .4s;
-      cursor: pointer;
-    }
+		&__input {
+			border: 1px solid transparent;
+			width: 300px;
+			height: 40px;
+			padding-left: 15px;
+			font-size: $small;
+			line-height: 22px;
+			color: $gray-5;
+			background-color: $gray-3;
 
-    &> input:checked ~ label {
-      fill: $brown;
-      transition: .4s;
-    }
-
-    &:not(:checked) > label:hover,
-    &:not(:checked) > label:hover ~ label {
-      fill: $brown-2;
-      transition: fill .4s;
-    }
-
-    &> input:checked + label:hover,
-    &> input:checked + label:hover ~ label,
-    &> input:checked ~ label:hover,
-    &> input:checked ~ label:hover ~ label,
-    &> label:hover ~ input:checked ~ label {
-      fill: $brown-2;
-      transition: fill .4s;
-    }
-  }
-
-  &__copyright {
-    padding-left: 149px;
-    padding-right: 110px;
-  }
-
-  &__connect {
-
-    &__input {
-      margin-top: 25px;
-      border: 1px solid transparent;
-      min-width: 300px;
-      height: 40px;
-      padding-left: 15px;
-      font-size: $small;
-      line-height: 22px;
-      color: $gray-5;
-      background-color: $gray-3;
-
-      transition: border-color .4s;
-  
-      &:hover {
-        border-color: $light;
-        cursor: pointer;
+			@media (max-width: 768px) {
+        width: 121px;
       }
-  
-      &:active {
-        border-color: $light;
-        cursor: pointer;
-      }
-    }
+      
+      @media (max-width: 375px) {
+				width: 262px;
+				height: 38px;
+				font-size: $very-small-2;
+				line-height: 19px;
+				padding-left: 13px;
+			}
 
-    &__button {
-      height: 40px;
-      margin-left: -4px;
-    }
+			transition: border-color 0.4s;
 
-    &__label {
-      top: 20px;
-      position: absolute;
-    }
-  }
+			&:hover {
+				border-color: $light;
+				cursor: pointer;
+			}
+
+			&:active {
+				border-color: $light;
+				cursor: pointer;
+			}
+		}
+
+		&__button {
+			height: 40px;
+			margin-left: -4px;
+
+			@media (max-width: 375px) {
+				width: 72px;
+				height: 38px;
+				font-size: 14px;
+				line-height: 19px;
+				padding: 9px 20px;
+			}
+		}
+
+		&__label {
+			top: 20px;
+			position: absolute;
+		}
+	}
 }
 
 .social {
-  display: flex;
-  padding-top: 9px;
+	display: flex;
+	padding-top: 9px;
 
-  &__link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 11px;
-    width: 30px;
-    height: 30px;
-    flex: 0 0 30px;
-    background: $gray-3;
+	@media (max-width: 375px) {
+		padding-top: 4px;
+	}
+
+	&__link {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 11px;
+		width: 30px;
+		height: 30px;
+		flex: 0 0 30px;
+		background: $gray-3;
     border-radius: 50%;
-  }
-
-  &__item {
-
-    transition: opacity .4s;
-
-    opacity: 1;
-
-    &:hover {
-      opacity: 0.5;
+    
+    @media (max-width: 375px) {
+      width: 28px;
+      height: 28px;
+      margin-right: 15px;
     }
+	}
 
-    &:active {
-      opacity: 0.2;
-    }
-  }
+	&__item {
+		transition: opacity 0.4s;
+
+		opacity: 1;
+
+		&:hover {
+			opacity: 0.5;
+		}
+
+		&:active {
+			opacity: 0.2;
+		}
+	}
 }
 
 input:not(:checked) ~ .footer__rating-text {
-  color: $white;
-  transition: color .4s;
+	color: $white;
+	transition: color 0.4s;
 }
 
 input:checked ~ .footer__rating-text {
-  color: $brown;
-  transition: color .4s;
+	color: $brown;
+	transition: color 0.4s;
 }
 
 input:hover ~ .footer__rating-text {
-  color: $brown;
-  transition: color .4s;
+	color: $brown;
+	transition: color 0.4s;
 }
 
 input:focus + label {
-  outline-color: $blue;
-  outline-offset: -2px;
-  outline-style: auto;
-  outline-width: 5px;
+	outline-color: $blue;
+	outline-offset: -2px;
+	outline-style: auto;
+	outline-width: 5px;
 }

@@ -52,6 +52,16 @@ textarea {
   width: 100%;
   max-width: 1220px;
   padding: 0 20px;
+
+  @media (max-width: 768px) {
+    max-width: 678px;
+    padding: 0 15px;
+  }
+
+  @media (max-width: 415px) {
+    max-width: 345px;
+    padding: 0 5px;
+  }
 }
 
 .list-point-none {
@@ -71,8 +81,13 @@ textarea {
     font-size: $normal;
     line-height: 25px;
     color: $dark;
-  }
 
+    @media (max-width: 375px) {
+      font-size: $small;
+      padding-right: 14px;
+    }
+  }
+  
   &__title {
     opacity: 1;
 
@@ -85,6 +100,14 @@ textarea {
     display: inline-flex;
     margin-top: 0;
     margin-bottom: 49px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 375px) {
+      margin-bottom: 16px;
+    }
   }
 
   &__link {
@@ -94,6 +117,13 @@ textarea {
 
     &:hover {
       opacity: 0.75;
+    }
+  }
+
+  &__arrow {
+    @media (max-width: 375px) {
+      width: 6px;
+      height: 9px;
     }
   }
 }
@@ -109,10 +139,30 @@ textarea {
   line-height: 49px;
   text-transform: uppercase;
 
+  @media (max-width: 768px) {
+    font-size: $big-3;
+    line-height: 44px;
+    line-height: 44px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 375px) {
+    margin-top: 8px;
+    font-size: $normal-2;
+    line-height: 29px;
+  }
+
   &_2 {
     font-size: $big-3;
     line-height: 44px;
     margin-bottom: 10px;
+
+    @media (max-width: 375px) {
+      font-size: $normal-2;
+      line-height: 44px;
+      margin-top: 0;
+      margin-bottom: 3px;
+    }
   }
 }
 
@@ -129,9 +179,27 @@ textarea {
   color: $dark;
   background-color: $gray-6;
 
+  @media (max-width: 768px) {
+    padding: 21px 56px 42px 56px;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 415px) {
+    padding: 10px 25px 25px 25px;
+    max-width: 335px;
+  }
+
   &_modal {
     padding: 22px 40px 42px 40px;
     margin: auto;
+
+    @media (max-width: 768px) {
+      padding: 22px 56px 42px 56px;
+    }
+
+    @media (max-width: 415px) {
+      padding: 10px 25px 25px 25px;
+    }
   }
 
   &__row {
@@ -141,14 +209,48 @@ textarea {
     padding-top: 43px;
     min-width: 600px;
 
+    @media (max-width: 768px) {
+      min-width: 536px;
+    }
+
+    @media (max-width: 415px) {
+      flex-direction: column;
+      min-width: 285px;
+      padding-top: 35px;
+    }
+
     &_short {
-      width: 290px;
+      min-width: 290px;
+
+      @media (max-width: 768px) {
+        min-width: 258px;
+      }
+
+      @media (max-width: 415px) {
+        position: relative;
+      }
+
+      &_2 {
+        @media (max-width: 415px) {
+          margin-bottom: 36px;
+        }
+      }
     }
   }
 
   &__label {
     top: 20px;
     position: absolute;
+
+    @media (max-width: 415px) {
+      top: 16px;
+    }
+
+    &_2 {
+      @media (max-width: 415px) {
+        top: -20px;
+      }
+    }
   }
 
   &__input {
@@ -160,6 +262,18 @@ textarea {
     line-height: 21px;
     background-color: $white;
     border: 2px solid $dark-2;
+
+    @media (max-width: 768px) {
+      font-size: $small;
+      line-height: 19px;
+      padding: 14px 19px;
+    }
+
+    @media (max-width: 415px) {
+      font-size: $very-small-2;
+      line-height: 16px;
+      padding: 11px 14px;
+    }
 
     transition: border-color .4s;
 
@@ -184,12 +298,22 @@ textarea {
     align-items: center;
     padding-top: 20px;
     cursor: pointer;
+
+    @media (max-width: 415px) {
+      padding-top: 18px;
+    }
   }
 
   &__checkbox-indicator {
     margin-right: 15px;
     padding-left: 34px;
     padding-top: 2px;
+
+    @media (max-width: 415px) {
+      padding-left: 29px;
+      margin-right: 0;
+      padding-top: 0;
+    }
 
     &:after {
       content: "";
@@ -201,11 +325,20 @@ textarea {
       border: 2px solid $brown;
       border-radius: 3px;
       margin-top: 19px;
+
+      @media (max-width: 415px) {
+        height: 17px;
+        width: 17px;
+      }
     }
   }
 
   &__submit-button {
     margin-top: 20px;
+    
+    @media (max-width: 415px) {
+      margin-top: 15px;
+    }
   }
 
   &__close {
@@ -216,6 +349,11 @@ textarea {
     border: none;
     background-color: transparent;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+			top: -25px;
+      right: 0;
+    }
 
     transition: opacity .4s;
 
@@ -231,6 +369,10 @@ textarea {
   &__checkbox {
     &:checked + .form__checkbox-indicator:after {
       background: url(../../static/images/Check.svg) no-repeat;
+
+      @media (max-width: 415px) {
+        background-size: 13px;
+      }
     }
   }
 }
@@ -257,6 +399,15 @@ input:focus + .form__checkbox-indicator {
   text-transform: uppercase;
   color: $dark;
 
+  @media (max-width: 768px) {
+    margin-bottom: 47px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: $very-small-2;
+    line-height: 17px;
+  }
+
   &__pages {
     display: flex;
   }
@@ -264,6 +415,12 @@ input:focus + .form__checkbox-indicator {
   &__item {
     padding-left: 33px;
     padding-right: 33px;
+
+    @media (max-width: 375px) {
+      margin-top: 3px;
+      padding-left: 26px;
+      padding-right: 26px;
+    }
 
     transition: opacity .4s;
 
@@ -299,9 +456,9 @@ input:focus + .form__checkbox-indicator {
 
 // Подключение компонентов
 
+@import "./button/button";
 @import "./header/header";
 @import "./footer/footer";
-@import "./button/button";
 @import "./link-button/link-button";
 @import "./product/product";
 @import "./blog/blog";

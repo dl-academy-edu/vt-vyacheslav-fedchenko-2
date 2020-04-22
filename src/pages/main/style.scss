@@ -7,6 +7,23 @@
   margin-top: 70px;
   background-color: $brown-3;
 
+  @media (max-width: 768px) {
+    margin-top: -35px;
+  }
+
+  @media (max-width: 375px) {
+    margin-top: -13px;
+  }
+
+  &__container-mobile {
+    
+    @media (max-width: 375px) {
+      margin: 0;
+      max-width: 375px;
+      padding: 0;
+    }
+  }
+
   &__footer {
     display: flex;
     justify-content: center;
@@ -18,12 +35,32 @@
     text-transform: uppercase;
     color: $white;
     background-color: $brown;
+
+    @media (max-width: 375px) {
+      height: 55px;
+      text-align: center;
+    }
+  }
+
+  &__footer-text {
+
+    @media (max-width: 375px) {
+      padding: 4px 11px 4px 11px;
+    }
   }
 
   &__item {
     display: flex;
     flex-wrap: wrap;
     margin: 0 0 0 131px;
+
+    @media (max-width: 768px) {
+			margin-left: 59px;
+    }
+
+    @media (max-width: 375px) {
+      margin-left: 19px;		
+    }
   }
 
   &__content {
@@ -33,12 +70,36 @@
     margin: 89px 0 89px 0;
     padding: 0;
     padding-left: 1px;
+
+    @media (max-width: 768px) {
+      margin-top: 76px;
+      margin-bottom: 102px;
+    }
+
+    @media (max-width: 375px) {
+      margin-top: 81px;
+      margin-bottom: 188px;		
+    }
   }
 
   &__pic {
     position: absolute;
     right: 100px;
     bottom: 39px;
+    width: 635px;
+
+    @media (max-width: 768px) {
+      width: 385px;
+      height: 286px;
+      right: 8px;
+    }
+
+    @media (max-width: 375px) {
+      width: 292px;
+      height: 226px;
+      right: 0;
+      bottom: 55px;
+    }
   }
 
   &__title {
@@ -50,6 +111,11 @@
     font-size: $big-2;
     line-height: 110%;
     color: $dark;
+
+    @media (max-width: 375px) {
+      font-size: $large;
+      padding-bottom: 15px;
+    }
   }
 
   &__text {
@@ -61,10 +127,21 @@
     font-size: $normal;
     line-height: 25px;
     color: $dark;
+
+    @media (max-width: 375px) {
+      font-size: $small-2;
+      line-height: 22px;
+      padding-bottom: 15px;
+    }
   }
 
   &__button {
     width: 161px;
+
+    @media (max-width: 375px) {
+      width: 142px;
+      padding: 9px 20px 8px 20px;
+    }
   }
 
   &__nav {
@@ -74,6 +151,16 @@
     position: absolute;
     top: 17px;
     left: 28px;
+
+    @media (max-width: 768px) {
+      left: 0;
+    }
+
+    @media (max-width: 375px) {
+      top: 20px;
+      right: 19px;
+      left: auto;
+    }
   
     &__button {
       margin-left: 3px;
@@ -84,6 +171,16 @@
       border: none;
       cursor: pointer;
 
+      @media (max-width: 768px) {
+        margin-left: 0;
+        margin-top: 9px;
+        width: 27px;
+      }
+
+      @media (max-width: 375px) {
+        margin-left: 21px;
+      }
+
       transition: background-color .4s;
   
       &:hover {
@@ -92,10 +189,15 @@
 
       &_active {
         margin-top: 10px;
-        width: 31px;
-        height: 3px;
         background-color: $dark-4;
-        border: none;
+
+        @media (max-width: 768px) {
+          margin-top: 0;
+        }
+
+        @media (max-width: 375px) {
+          margin-left: 21px;
+        }
       }
     }
   
@@ -105,6 +207,16 @@
       font-weight: 300;
       font-size: $very-big;
       color: $dark-5;
+
+      @media (max-width: 768px) {
+        padding-bottom: 3px;
+        font-size: $big-4;
+        line-height: 59px;
+      }
+
+      @media (max-width: 375px) {
+        padding-bottom: 8px;
+      }
     }
   }
 }
@@ -114,22 +226,57 @@
 .products {
   margin-top: 92px;
 
+  @media (max-width: 768px) {
+    margin-top: 60px;
+  }
+
+  @media (max-width: 375px) {
+    margin-top: 80px;
+  }
+
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: -1px;
     font-family: "Montserrat", "Candara", sans-serif;
     font-weight: bold;
     font-size: $big;
     line-height: 46px;
     text-transform: uppercase;
     color: $dark;
+
+    @media (max-width: 768px) {
+      font-size: $large;
+      line-height: 44px;
+    }
+
+    @media (max-width: 375px) {
+      font-size: $normal-2;
+      line-height: 29px;
+    }
   }
 
   &__list {
-    margin-bottom: 0;
-    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 30px auto 0 auto;
+    width: 100%;
+    max-width: 1220px;
+    padding: 0 20px;
+
+    @media (max-width: 768px) {
+      flex-wrap: nowrap;
+      margin-top: 25px;
+      padding-left: 59px;
+    }
+
+    @media (max-width: 375px) {
+      margin-top: 22px;
+      padding-left: 21px;
+    }
+  }
+
+  &__wrapper {
+    overflow: hidden;
   }
 }
 
@@ -152,7 +299,20 @@ a:active > .product__title {
   padding-bottom: 74px;
   justify-content: start;
   align-items: center;
-  padding-left: 0;
+  padding-left: 20px;
+
+  @media (max-width: 768px) {
+    margin-top: -3px;
+    padding-left: 14px;
+    padding-bottom: 47px;
+  }
+
+  @media (max-width: 375px) {
+    align-items: flex-start;
+    margin-top: 3px;
+    padding-left: 5px;
+    padding-bottom: 67px;
+  }
 
   &__btn {
     max-width: 37px;
@@ -163,12 +323,33 @@ a:active > .product__title {
     margin-bottom: 7px;
     padding-top: 4px;
     border: none;
+
+    @media (max-width: 768px) {
+			max-width: 36px;
+      max-height: 36px;
+    }
+
+    @media (max-width: 375px) {
+			max-width: 33px;
+      max-height: 33px;
+      padding: 2px 0 0;
+    }
   }
 
   &__text {
     width: 580px;
     margin-left: 12px;
     margin-top: 10px;
+
+    @media (max-width: 768px) {
+      font-size: $very-small-2;
+      line-height: 19px;
+    }
+
+    @media (max-width: 375px) {
+      margin-left: 8px;
+      margin-top: -3px;
+    }
   }
 }
 
@@ -176,7 +357,17 @@ a:active > .product__title {
 
 .about-products {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 87px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 57px;
+  }
+
+  @media (max-width: 375px) {
+    margin-bottom: 88px;
+  }
 
   &__title {
     margin-top: 30px;
@@ -187,6 +378,19 @@ a:active > .product__title {
     line-height: 46px;
     text-transform: uppercase;
     color: $dark;
+
+    @media (max-width: 768px) {
+      font-size: $large;
+      line-height: 44px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 375px) {
+      font-size: $normal-2;
+      line-height: 29px;
+      margin-top: 17px;
+      margin-bottom: 32px;
+    }
   }
 
   &__item {
@@ -196,22 +400,74 @@ a:active > .product__title {
     font-size: $normal-3;
     line-height: 32px;
     color: $dark;
+
+    @media (max-width: 768px) {
+      font-size: $normal-2;
+      line-height: 30px;
+      margin-bottom: 14px;
+    }
   }
 
   &__box {
     position: relative;
-    width: 480px;
+    max-width: 480px;
     margin-right: 100px;
+
+    @media (max-width: 1024px) {
+      width: 314px;
+      margin-right: 20px;
+    }
+
+    @media (max-width: 375px) {
+      width: 335px;
+      margin-right: 0px;
+    }
   }
 
   &__pic {
-    margin-bottom: 74px;
     margin-right: 70px;
+    height: auto;
+
+    @media (max-width: 768px) {
+			width: 258px;
+      min-width: 258px;
+      height: 512px;
+      margin-right: 56px;
+    }
+
+    @media (max-width: 375px) {
+			width: 335px;
+      min-width: 335px;
+      height: 357px;
+      margin-right: 0px;
+    }
   }
 
   &__info {
     margin-top: 29px;
     margin-bottom: 34px;
+
+    @media (max-width: 768px) {
+			margin-top: 21px;
+    }
+
+    @media (max-width: 375px) {
+			margin-bottom: 31px;
+    }
+  }
+
+  &__info-block {
+    @media (max-width: 768px) {
+      font-size: $very-small-2;
+      line-height: 18px;
+      margin-top: 19px;
+    }
+  }
+
+  &__button {
+    @media (max-width: 375px) {
+      padding: 9px 20px;
+    }
   }
 
   &__link {
@@ -224,6 +480,11 @@ a:active > .product__title {
       margin-left: -60px;
       font-weight: bold;
       background-color: $dark-blue;
+
+      @media (max-width: 768px) {
+        padding: 13px 167px 8px 21px;
+        margin-left: -21px;
+      }
     }
 
     &:hover {
@@ -241,6 +502,13 @@ a:active > .product__title {
       background-color: $dark-blue;
       pointer-events: none;
       transition: all .6s;
+
+      @media (max-width: 768px) {
+        left: -21px;
+        width: 267px;
+        height: 45px;
+        margin-top: -9px;
+      }
     }
 
     &:hover:before {
@@ -249,11 +517,20 @@ a:active > .product__title {
   }
 }
 
-
 /*partners*/
 
 .partners {
-  padding-bottom: 97px;
+  padding-bottom: 98px;
+
+  @media (max-width: 768px) {
+    padding-bottom: 85px;
+  }
+
+  @media (max-width: 375px) {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 77px;
+  }
 
   &__list {
     display: flex;
@@ -271,17 +548,119 @@ a:active > .product__title {
     &:hover {
       opacity: 0.75;
     }
+
+    &_1 {
+      @media (max-width: 375px) {
+        order: 3;
+        margin-top: 25px;
+        margin-left: 9px;
+      }
+    }
+
+    &_2 {
+      @media (max-width: 375px) {
+        order: 2;
+        margin-right: 20px;
+      }
+    }
+
+    &_3 {
+      @media (max-width: 375px) {
+        order: 1;
+      }
+    }
+
+    &_4 {
+      @media (max-width: 375px) {
+        order: 4;
+        margin-top: 25px;
+        margin-right: 3px;
+      }
+    }
+  }
+
+  &__img1 {
+    
+    @media (max-width: 768px) {
+			width: 106px;
+      min-width: 106px;
+      height: 33px;
+    }
+
+    @media (max-width: 375px) {
+			width: 131px;
+      min-width: 131px;
+      height: 42px;
+    }
+  }
+
+  &__img2 {
+    
+    @media (max-width: 768px) {
+			width: 98px;
+      min-width: 98px;
+      height: 34px;
+    }
+
+    @media (max-width: 375px) {
+			width: 109px;
+      min-width: 109px;
+      height: 38px;
+    }
+  }
+
+  &__img3 {
+    
+    @media (max-width: 768px) {
+			width: 119px;
+      min-width: 119px;
+      height: 25px;
+    }
+
+    @media (max-width: 375px) {
+			width: 149px;
+      min-width: 149px;
+      height: 32px;
+    }
+  }
+
+  &__img4 {
+    
+    @media (max-width: 768px) {
+			width: 116px;
+      min-width: 116px;
+      height: 22px;
+    }
+
+    @media (max-width: 375px) {
+			width: 143px;
+      min-width: 143px;
+      height: 26px;
+    }
   }
 }
 
 /*info-box*/
 
 .info-box {
-  margin-bottom: 111px;
+  margin-bottom: 110px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @media (max-width: 768px) {
+    margin-bottom: 88px;		
+  }
+
+  &__container-mobile {
+    
+    @media (max-width: 375px) {
+      margin: 0 0 82px;
+      max-width: 375px;
+      padding: 0;
+    }
+  }
+  
   &__title {
     margin: -26px 0 0 0;
     padding-bottom: 11px;
@@ -291,6 +670,20 @@ a:active > .product__title {
     line-height: 46px;
     text-transform: uppercase;
     color: $dark;
+
+    @media (max-width: 768px) {
+      font-size: $normal-4;
+      line-height: 37px;
+      margin-top: -18px;
+      padding-bottom: 16px;
+    }
+
+    @media (max-width: 375px) {
+      font-size: $normal-2;
+      line-height: 29px;
+      margin-top: -16px;
+      padding-bottom: 12px;
+    }
   }
 }
 
@@ -300,6 +693,17 @@ a:active > .product__title {
   margin-bottom: 37px;
   background-color: $light-blue;
 
+  @media (max-width: 1024px) {
+    max-width: 314px;
+    padding: 0 15px 44px;
+  }
+
+  @media (max-width: 375px) {
+    max-width: 375px;
+    padding: 0 20px 33px;
+    margin-bottom: 50px;
+  }
+
   &__subtitle {
     font-family: "Crimson Text", "Big Caslon", serif;
     font-style: italic;
@@ -307,12 +711,33 @@ a:active > .product__title {
     font-size: $normal-3;
     line-height: 32px;
     color: $dark;
+
+    @media (max-width: 375px) {
+      font-size: $normal-2;
+      line-height: 30px;
+    }
   }
 
   &__info {
     margin: 0;
     padding-bottom: 30px;
     padding-top: 10px;
+
+    @media (max-width: 768px) {
+			padding-bottom: 27px;
+    }
+
+    @media (max-width: 375px) {
+      font-size: $very-small-2;
+      line-height: 19px;
+      padding-bottom: 24px;
+    }
+  }
+
+  &__button {
+    @media (max-width: 375px) {
+      padding: 9px 20px;
+    }
   }
 }
 
@@ -323,22 +748,62 @@ a:active > .product__title {
   padding: 0 30px 0 30px;
   background-color: $light-blue;
 
+  @media (max-width: 768px) {
+    max-width: 314px;
+    margin-right: 0;
+    margin-bottom: 67px;
+    padding: 0 15px 44px 15px;
+  }
+
+  @media (max-width: 375px) {
+    max-width: 375px;
+    padding: 0 20px 44px;
+  }
+
   &__title {
     padding-bottom: 20px;
+
+    @media (max-width: 768px) {
+			padding-bottom: 23px;
+    }
+
+    @media (max-width: 375px) {
+      padding-bottom: 12px;
+    }
   }
 
   &__info {
     margin: 0;
     padding-bottom: 20px;
+
+    @media (max-width: 375px) {
+      font-size: $very-small-2;
+      line-height: 19px;
+      padding-bottom: 16px;
+    }
   }
 }
 
 .map {
   margin-bottom: -180px;
 
+  @media (max-width: 375px) {
+    margin-bottom: -145px;
+  }
+
   &__area {
     width: 483px;
     height: 196px;
+
+    @media (max-width: 768px) {
+			width: 284px;
+      height: 151px;
+    }
+
+    @media (max-width: 375px) {
+			width: 335px;
+      height: 196px;
+    }
   }
 }
 

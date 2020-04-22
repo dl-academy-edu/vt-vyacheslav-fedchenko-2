@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Catalog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="../../common.css">
@@ -21,7 +22,7 @@
               </a>
             </li>
             <li class="breadcrumbs__item">
-              <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+              <svg class="breadcrumbs__arrow" width="8" height="12" viewBox="0 0 8 12" fill="none">
                 <polygon points="0 1.18, 1.31 0, 8 6, 1.31 12, 0 10.82, 5.38 6" fill="#1E0606"/>
               </svg>
             </li>
@@ -36,37 +37,79 @@
           @@include('product/index.html', {
             "link": "#",
             "img": "product-1.jpg",
+            "img2": "product-1@2.jpg",
+            "img-tablet": "product-1-tablet.jpg",
+            "img-tablet2": "product-1-tablet@2.jpg",
+            "img-mobile": "product-1-mobile.jpg",
+            "img-mobile2": "product-1-mobile@2.jpg",
             "alt": "APPAREL KIDS",
+            "class": "product__img",
+            "class-title": "product__title",
             "title": "APPAREL KIDS"
           })
           @@include('product/index.html', {
             "link": "#",
             "img": "product-2.jpg",
+            "img2": "product-2@2.jpg",
+            "img-tablet": "product-2-tablet.jpg",
+            "img-tablet2": "product-2-tablet@2.jpg",
+            "img-mobile": "product-2-mobile.jpg",
+            "img-mobile2": "product-2-mobile@2.jpg",
             "alt": "HOLIDAY SHOP",
+            "class": "product__img",
+            "class-title": "product__title",
             "title": "HOLIDAY SHOP"
           })
           @@include('product/index.html', {
             "link": "/pages/toys/index.html",
             "img": "product-3.jpg",
+            "img2": "product-3@2.jpg",
+            "img-tablet": "product-3-tablet.jpg",
+            "img-tablet2": "product-3-tablet@2.jpg",
+            "img-mobile": "product-3-mobile.jpg",
+            "img-mobile2": "product-3-mobile@2.jpg",
             "alt": "TOYS",
+            "class": "product__img",
+            "class-title": "product__title",
             "title": "TOYS"
           })
           @@include('product/index.html', {
             "link": "#",
             "img": "product-4.jpg",
+            "img2": "product-4@2.jpg",
+            "img-tablet": "product-4-tablet.jpg",
+            "img-tablet2": "product-4-tablet@2.jpg",
+            "img-mobile": "product-4-mobile.jpg",
+            "img-mobile2": "product-4-mobile@2.jpg",
             "alt": "ACCESSORIES",
+            "class": "product__img",
+            "class-title": "product__title",
             "title": "ACCESSORIES"
           })
           @@include('product/index.html', {
             "link": "#",
             "img": "product-5.jpg",
+            "img2": "product-5@2.jpg",
+            "img-tablet": "product-5-tablet.jpg",
+            "img-tablet2": "product-5-tablet@2.jpg",
+            "img-mobile": "product-5-mobile.jpg",
+            "img-mobile2": "product-5-mobile@2.jpg",
             "alt": "SALE",
+            "class": "product__img",
+            "class-title": "product__title",
             "title": "SALE"
           })
           @@include('product/index.html', {
             "link": "#",
             "img": "product-6.jpg",
+            "img2": "product-6@2.jpg",
+            "img-tablet": "product-6-tablet.jpg",
+            "img-tablet2": "product-6-tablet@2.jpg",
+            "img-mobile": "product-6-mobile.jpg",
+            "img-mobile2": "product-6-mobile@2.jpg",
             "alt": "APPAREL ADULTS",
+            "class": "product__img",
+            "class-title": "product__title",
             "title": "APPAREL ADULTS"
           })
         </ul>
@@ -87,5 +130,6 @@
       </article>
     </main>
     @@include('footer/index.html')
+    <script src="./index.js"></script>
   </body>
   </html>

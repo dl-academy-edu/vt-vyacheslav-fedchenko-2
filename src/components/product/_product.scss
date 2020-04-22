@@ -2,7 +2,7 @@
 
 .product {
   position: relative;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 
   &__title {
     position: absolute;
@@ -16,9 +16,65 @@
     line-height: 32px;
     text-transform: uppercase;
     color: $white;
+
+    @media (max-width: 768px) {
+      font-size: $normal-2;
+      line-height: 29px;
+      top: 53%;
+    }
+
+    @media (max-width: 375px) {
+      font-size: $small-2;
+      line-height: 22px;
+      top: 53%;
+    }
+
+    &_main {
+      
+      @media (max-width: 768px) {
+        font-size: $normal-3;
+        line-height: 32px;
+        top: 51%;
+        left: 46%;
+      }
+
+      @media (max-width: 375px) {
+        top: 51.5%;
+        left: 46.5%;
+      }
+    }
   }
 
   &__img {
     display: flex;
+
+    @media (max-width: 768px) {
+      width: 203px;
+      min-width: 203px;
+      height: 196px;
+    }
+
+    @media (max-width: 375px) {
+			width: 160px;
+      min-width: 160px;
+      height: 154px;
+    }
+
+    &_main {
+
+      @media (max-width: 768px) {
+        margin-right: 20px;
+        width: 259px;
+        min-width: 259px;
+        height: 249px;
+      }
+    
+      @media (max-width: 375px) {
+        margin-right: 16px;
+        width: 247px;
+        min-width: 247px;
+        height: 238px;
+      }
+    }
   }
 }

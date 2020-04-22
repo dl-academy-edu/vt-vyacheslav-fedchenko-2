@@ -5,6 +5,11 @@
   animation: dash 7s linear forwards;
   animation-iteration-count:infinite;
 
+  @media (max-width: 375px) {
+    max-width: 300px;
+    height: 100%;
+  }
+
   &__frame1 {
     animation: frame1 7s;
     animation-iteration-count:infinite;

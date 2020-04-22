@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="../../common.css">
@@ -21,7 +22,7 @@
           </a>
         </li>
         <li class="breadcrumbs__item">
-          <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+          <svg class="breadcrumbs__arrow" width="8" height="12" viewBox="0 0 8 12" fill="none">
             <polygon points="0 1.18, 1.31 0, 8 6, 1.31 12, 0 10.82, 5.38 6" fill="#1E0606"/>
           </svg>
         </li>
@@ -36,6 +37,11 @@
         @@include('blog/index.html', {
           "link": "#",
           "img": "blog1.jpg",
+          "img2": "blog1@2.jpg",
+          "img-tablet": "blog1-tablet.jpg",
+          "img-tablet2": "blog1-tablet@2.jpg",
+          "img-mobile": "blog1-mobile.jpg",
+          "img-mobile2": "blog1-mobile@2.jpg",
           "alt": "Selected blog",
           "date": "23rd August 2018",
           "title": "Top 5 fastest growing it service companies in philly",
@@ -44,6 +50,11 @@
         @@include('blog/index.html', {
           "link": "#",
           "img": "blog2.jpg",
+          "img2": "blog2@2.jpg",
+          "img-tablet": "blog2-tablet.jpg",
+          "img-tablet2": "blog2-tablet@2.jpg",
+          "img-mobile": "blog2-mobile.jpg",
+          "img-mobile2": "blog2-mobile@2.jpg",
           "alt": "Selected blog",
           "date": "23rd August 2018",
           "title": "Best financial",
@@ -52,6 +63,11 @@
         @@include('blog/index.html', {
           "link": "#",
           "img": "blog3.jpg",
+          "img2": "blog3@2.jpg",
+          "img-tablet": "blog3-tablet.jpg",
+          "img-tablet2": "blog3-tablet@2.jpg",
+          "img-mobile": "blog3-mobile.jpg",
+          "img-mobile2": "blog3-mobile@2.jpg",
           "alt": "Selected blog",
           "date": "23rd August 2018",
           "title": "Company logo or brand identity: which one is more important? brand identity",
@@ -60,6 +76,11 @@
         @@include('blog/index.html', {
           "link": "#",
           "img": "blog4.jpg",
+          "img2": "blog4@2.jpg",
+          "img-tablet": "blog4-tablet.jpg",
+          "img-tablet2": "blog4-tablet@2.jpg",
+          "img-mobile": "blog4-mobile.jpg",
+          "img-mobile2": "blog4-mobile@2.jpg",
           "alt": "Selected blog",
           "date": "23rd August 2018",
           "title": "Best financial",
@@ -68,6 +89,11 @@
         @@include('blog/index.html', {
           "link": "#",
           "img": "blog5.jpg",
+          "img2": "blog5@2.jpg",
+          "img-tablet": "blog5-tablet.jpg",
+          "img-tablet2": "blog5-tablet@2.jpg",
+          "img-mobile": "blog5-mobile.jpg",
+          "img-mobile2": "blog5-mobile@2.jpg",
           "alt": "Selected blog",
           "date": "23rd August 2018",
           "title": "Company logo or brand identity: which one is more important? brand identity",
@@ -76,6 +102,11 @@
         @@include('blog/index.html', {
           "link": "#",
           "img": "blog6.jpg",
+          "img2": "blog6@2.jpg",
+          "img-tablet": "blog6-tablet.jpg",
+          "img-tablet2": "blog6-tablet@2.jpg",
+          "img-mobile": "blog6-mobile.jpg",
+          "img-mobile2": "blog6-mobile@2.jpg",
           "alt": "Selected blog",
           "date": "23rd August 2018",
           "title": "Top 5 fastest growing it service companies in philly",
@@ -115,5 +146,6 @@
     </div>
   </main>
   @@include('footer/index.html')
+  <script src="./index.js"></script>
 </body>
 </html>

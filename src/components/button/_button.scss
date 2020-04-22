@@ -11,6 +11,11 @@
   cursor: pointer;
   border: none;
 
+  @media (max-width: 375px) {
+    font-size: $very-small-2;
+    line-height: 19px;
+  }
+
   transition: background-color .4s;
 
   &:hover {

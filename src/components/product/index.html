@@ -1,6 +1,11 @@
 <li class="product">
   <a href="@@link">
-    <img src="../../static/images/@@img" width="280" height="270" alt="@@alt" class="product__img"/>
-    <span class="product__title">@@title</span>
+    <picture class="product__img-box">
+      <source srcset="../../static/images/@@img-mobile, ../../static/images/@@img-mobile2 2x" media="(max-width: 700px)">
+      <source srcset="../../static/images/@@img-tablet, ../../static/images/@@img-tablet2 2x" media="(max-width: 850px)">
+      <source srcset="../../static/images/@@img, ../../static/images/@@img2 2x">
+      <img src="../../static/images/@@img" width="280" height="270" alt="@@alt" class="@@class"/>
+    </picture>
+    <span class="@@class-title">@@title</span>
   </a>
 </li>

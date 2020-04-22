@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Animation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="../../common.css">
@@ -21,7 +22,7 @@
           </a>
         </li>
         <li class="breadcrumbs__item">
-          <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+          <svg class="breadcrumbs__arrow" width="8" height="12" viewBox="0 0 8 12" fill="none">
             <polygon points="0 1.18, 1.31 0, 8 6, 1.31 12, 0 10.82, 5.38 6" fill="#1E0606"/>
           </svg>
         </li>
@@ -34,6 +35,9 @@
     <div class="animation">
       <img class="animation__background-top" src="../../static/images/sky.png" alt="sky">
       <img class="animation__background-bottom" src="../../static/images/city.jpg" alt="city">
+      <img class="animation__clouds" src="../../static/images/clouds.png" alt="clouds">
+      <img class="animation__clouds animation__clouds_2" src="../../static/images/clouds.png" alt="clouds">
+      <img class="animation__clouds animation__clouds_3" src="../../static/images/clouds.png" alt="clouds">
       <img class="animation__car1" src="../../static/images/car1.png" alt="car1">
       <img class="animation__car2" src="../../static/images/car2.png" alt="car2">
       <img class="animation__car3" src="../../static/images/car3.png" alt="car3">
@@ -66,5 +70,6 @@
     </div>
   </main>
   @@include('footer/index.html')
+  <script src="./index.js"></script>
 </body>
 </html>
