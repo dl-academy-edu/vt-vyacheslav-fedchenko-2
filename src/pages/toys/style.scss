@@ -48,6 +48,10 @@
     padding-left: 3px;
     padding-bottom: 13px;
   }
+
+  @media (max-width: 330px) {
+    padding-left: 10px;
+  }
 }
 
 .fieldset-cost {
@@ -57,6 +61,10 @@
     padding-bottom: 25px;
     padding-right: 65px;
 }
+
+  @media (max-width: 330px) {
+    padding-left: 10px;
+  }
 }
 
 .fieldset-delivery {
@@ -70,6 +78,10 @@
   @media (max-width: 375px) {
     padding-right: 41px;
   }
+
+  @media (max-width: 330px) {
+    padding-left: 10px;
+  }
 }
 
 .fieldset-amount {
@@ -81,6 +93,10 @@
 
   @media (max-width: 375px) {
     padding-left: 3px;
+  }
+
+  @media (max-width: 330px) {
+    padding-left: 10px;
   }
 }
 
