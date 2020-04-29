@@ -26,7 +26,7 @@
 
   &__clouds {
     position: absolute;
-    bottom: 82.5%;
+    bottom: 80.5%;
     animation: clouds_anim ease-out 72s;
     animation-iteration-count:infinite;
 
@@ -139,14 +139,10 @@
       font-size: $small;
       max-width: 127px;
 
-      @media (max-width: 1000px) {
-        font-size: 8px;
-        line-height: 10px;
-      }
-
-      @media (max-width: 500px) {
-        font-size: 4px;
-        line-height: 5px;
+      @media (max-width: 1450px) {
+        font-size: 0.95vw;
+        line-height: 1.5vw;
+        max-width: 90%;
       }
     }
   }

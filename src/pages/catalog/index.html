@@ -33,99 +33,109 @@
         </div>
       </div>
       <div class="products container">
-        <ul class="products__list list-point-none">
-          @@include('product/index.html', {
-            "link": "#",
-            "img": "product-1.jpg",
-            "img2": "product-1@2.jpg",
-            "img-tablet": "product-1-tablet.jpg",
-            "img-tablet2": "product-1-tablet@2.jpg",
-            "img-mobile": "product-1-mobile.jpg",
-            "img-mobile2": "product-1-mobile@2.jpg",
-            "alt": "APPAREL KIDS",
-            "class": "product__img",
-            "class-title": "product__title",
-            "title": "APPAREL KIDS"
-          })
-          @@include('product/index.html', {
-            "link": "#",
-            "img": "product-2.jpg",
-            "img2": "product-2@2.jpg",
-            "img-tablet": "product-2-tablet.jpg",
-            "img-tablet2": "product-2-tablet@2.jpg",
-            "img-mobile": "product-2-mobile.jpg",
-            "img-mobile2": "product-2-mobile@2.jpg",
-            "alt": "HOLIDAY SHOP",
-            "class": "product__img",
-            "class-title": "product__title",
-            "title": "HOLIDAY SHOP"
-          })
-          @@include('product/index.html', {
-            "link": "/pages/toys/index.html",
-            "img": "product-3.jpg",
-            "img2": "product-3@2.jpg",
-            "img-tablet": "product-3-tablet.jpg",
-            "img-tablet2": "product-3-tablet@2.jpg",
-            "img-mobile": "product-3-mobile.jpg",
-            "img-mobile2": "product-3-mobile@2.jpg",
-            "alt": "TOYS",
-            "class": "product__img",
-            "class-title": "product__title",
-            "title": "TOYS"
-          })
-          @@include('product/index.html', {
-            "link": "#",
-            "img": "product-4.jpg",
-            "img2": "product-4@2.jpg",
-            "img-tablet": "product-4-tablet.jpg",
-            "img-tablet2": "product-4-tablet@2.jpg",
-            "img-mobile": "product-4-mobile.jpg",
-            "img-mobile2": "product-4-mobile@2.jpg",
-            "alt": "ACCESSORIES",
-            "class": "product__img",
-            "class-title": "product__title",
-            "title": "ACCESSORIES"
-          })
-          @@include('product/index.html', {
-            "link": "#",
-            "img": "product-5.jpg",
-            "img2": "product-5@2.jpg",
-            "img-tablet": "product-5-tablet.jpg",
-            "img-tablet2": "product-5-tablet@2.jpg",
-            "img-mobile": "product-5-mobile.jpg",
-            "img-mobile2": "product-5-mobile@2.jpg",
-            "alt": "SALE",
-            "class": "product__img",
-            "class-title": "product__title",
-            "title": "SALE"
-          })
-          @@include('product/index.html', {
-            "link": "#",
-            "img": "product-6.jpg",
-            "img2": "product-6@2.jpg",
-            "img-tablet": "product-6-tablet.jpg",
-            "img-tablet2": "product-6-tablet@2.jpg",
-            "img-mobile": "product-6-mobile.jpg",
-            "img-mobile2": "product-6-mobile@2.jpg",
-            "alt": "APPAREL ADULTS",
-            "class": "product__img",
-            "class-title": "product__title",
-            "title": "APPAREL ADULTS"
-          })
-        </ul>
+        <div class="grid-container">
+          <ul class="products__list list-point-none row">
+            @@include('product/index.html', {
+              "link": "#",
+              "img": "product-1.jpg",
+              "img2": "product-1@2.jpg",
+              "img-tablet": "product-1-tablet.jpg",
+              "img-tablet2": "product-1-tablet@2.jpg",
+              "img-mobile": "product-1-mobile.jpg",
+              "img-mobile2": "product-1-mobile@2.jpg",
+              "alt": "APPAREL KIDS",
+              "class": "product__img",
+              "class-product": "product col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-3",
+              "class-title": "product__title",
+              "title": "APPAREL KIDS"
+            })
+            @@include('product/index.html', {
+              "link": "#",
+              "img": "product-2.jpg",
+              "img2": "product-2@2.jpg",
+              "img-tablet": "product-2-tablet.jpg",
+              "img-tablet2": "product-2-tablet@2.jpg",
+              "img-mobile": "product-2-mobile.jpg",
+              "img-mobile2": "product-2-mobile@2.jpg",
+              "alt": "HOLIDAY SHOP",
+              "class": "product__img",
+              "class-product": "product col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-3",
+              "class-title": "product__title",
+              "title": "HOLIDAY SHOP"
+            })
+            @@include('product/index.html', {
+              "link": "/pages/toys/index.html",
+              "img": "product-3.jpg",
+              "img2": "product-3@2.jpg",
+              "img-tablet": "product-3-tablet.jpg",
+              "img-tablet2": "product-3-tablet@2.jpg",
+              "img-mobile": "product-3-mobile.jpg",
+              "img-mobile2": "product-3-mobile@2.jpg",
+              "alt": "TOYS",
+              "class": "product__img",
+              "class-product": "product col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-3",
+              "class-title": "product__title",
+              "title": "TOYS"
+            })
+            @@include('product/index.html', {
+              "link": "#",
+              "img": "product-4.jpg",
+              "img2": "product-4@2.jpg",
+              "img-tablet": "product-4-tablet.jpg",
+              "img-tablet2": "product-4-tablet@2.jpg",
+              "img-mobile": "product-4-mobile.jpg",
+              "img-mobile2": "product-4-mobile@2.jpg",
+              "alt": "ACCESSORIES",
+              "class": "product__img",
+              "class-product": "product col-xs-6 col-sm-4 col-md-4 skip-lg-2 skip-xl-2 col-lg-3 col-xl-3",
+              "class-title": "product__title",
+              "title": "ACCESSORIES"
+            })
+            @@include('product/index.html', {
+              "link": "#",
+              "img": "product-5.jpg",
+              "img2": "product-5@2.jpg",
+              "img-tablet": "product-5-tablet.jpg",
+              "img-tablet2": "product-5-tablet@2.jpg",
+              "img-mobile": "product-5-mobile.jpg",
+              "img-mobile2": "product-5-mobile@2.jpg",
+              "alt": "SALE",
+              "class": "product__img",
+              "class-product": "product col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-3",
+              "class-title": "product__title",
+              "title": "SALE"
+            })
+            @@include('product/index.html', {
+              "link": "#",
+              "img": "product-6.jpg",
+              "img2": "product-6@2.jpg",
+              "img-tablet": "product-6-tablet.jpg",
+              "img-tablet2": "product-6-tablet@2.jpg",
+              "img-mobile": "product-6-mobile.jpg",
+              "img-mobile2": "product-6-mobile@2.jpg",
+              "alt": "APPAREL ADULTS",
+              "class": "product__img",
+              "class-product": "product col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-3",
+              "class-title": "product__title",
+              "title": "APPAREL ADULTS"
+            })
+          </ul>
+        </div>
       </div>
       <article class="products-info container">
+        <div class="skip-lg-2 skip-xl-2">
         <h2 class="products-info__title">Product Description</h2>
-        <div class="products-info__text">
-          <p>
-            Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.
-          </p>
-          <p>
-            A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.
-          </p>
-          <p>
-            The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.
-          </p>
+          <div class="products-info__text">
+            <p>
+              Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.
+            </p>
+            <p>
+              A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.
+            </p>
+            <p>
+              The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.
+            </p>
+        </div>
         </div>
       </article>
     </main>

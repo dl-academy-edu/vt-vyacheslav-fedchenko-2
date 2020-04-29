@@ -58,9 +58,13 @@ textarea {
     padding: 0 15px;
   }
 
-  @media (max-width: 415px) {
+  @media (max-width: 376px) {
     max-width: 345px;
     padding: 0 5px;
+  }
+
+  @media (max-width: 360px) {
+    padding: 0 10px;
   }
 }
 
@@ -171,7 +175,8 @@ textarea {
 .form {
   position: relative;
   padding: 21px 40px 40px 40px;
-  margin: 0 auto 61px;
+  min-width: 57.6%;
+  margin-right: 2.5%;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: normal;
   font-size: $very-small-2;
@@ -179,26 +184,29 @@ textarea {
   color: $dark;
   background-color: $gray-6;
 
-  @media (max-width: 768px) {
+  @media (max-width: 973px) {
     padding: 21px 56px 42px 56px;
-    margin-bottom: 50px;
+    min-width: 100%;
+    margin-right: 0;
   }
 
-  @media (max-width: 670px) {
-    padding: 10px 25px 25px 25px;
-    max-width: 335px;
+  @media (max-width: 600px) {
+    padding: 10px 7.5% 25px;
   }
-
+  
   &_modal {
     padding: 22px 40px 42px 40px;
+    min-width: 680px;
     margin: auto;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1050px) {
       padding: 22px 56px 42px 56px;
+      min-width: 84.5%;
     }
 
-    @media (max-width: 670px) {
-      padding: 10px 25px 25px 25px;
+    @media (max-width: 680px) {
+      padding: 10px 25px 25px;
+      width: 89%;
     }
   }
 
@@ -207,35 +215,23 @@ textarea {
     display: flex;
     justify-content: space-between;
     padding-top: 43px;
-    min-width: 600px;
+    min-width: 100%;
 
-    @media (max-width: 768px) {
-      min-width: 536px;
-    }
-
-    @media (max-width: 670px) {
+    @media (max-width: 600px) {
       flex-direction: column;
-      min-width: 285px;
+      min-width: 100%;
       padding-top: 35px;
     }
 
-    @media (max-width: 330px) {
-      min-width: 265px;
-    }
-
     &_short {
-      min-width: 290px;
+      min-width: 48.5%;
 
-      @media (max-width: 768px) {
-        min-width: 258px;
-      }
-
-      @media (max-width: 670px) {
+      @media (max-width: 600px) {
         position: relative;
       }
 
       &_2 {
-        @media (max-width: 670px) {
+        @media (max-width: 600px) {
           margin-bottom: 36px;
         }
       }
@@ -246,12 +242,12 @@ textarea {
     top: 20px;
     position: absolute;
 
-    @media (max-width: 670px) {
+    @media (max-width: 600px) {
       top: 16px;
     }
 
     &_2 {
-      @media (max-width: 670px) {
+      @media (max-width: 600px) {
         top: -20px;
       }
     }
@@ -273,7 +269,7 @@ textarea {
       padding: 14px 19px;
     }
 
-    @media (max-width: 670px) {
+    @media (max-width: 600px) {
       font-size: $very-small-2;
       line-height: 16px;
       padding: 11px 14px;
@@ -303,7 +299,7 @@ textarea {
     padding-top: 20px;
     cursor: pointer;
 
-    @media (max-width: 670px) {
+    @media (max-width: 600px) {
       padding-top: 18px;
     }
   }
@@ -313,7 +309,7 @@ textarea {
     padding-left: 34px;
     padding-top: 2px;
 
-    @media (max-width: 670px) {
+    @media (max-width: 600px) {
       padding-left: 29px;
       margin-right: 0;
       padding-top: 0;
@@ -330,9 +326,10 @@ textarea {
       border-radius: 3px;
       margin-top: 19px;
 
-      @media (max-width: 670px) {
+      @media (max-width: 600px) {
         height: 17px;
         width: 17px;
+        margin-top: 14px;
       }
     }
   }
@@ -340,7 +337,7 @@ textarea {
   &__submit-button {
     margin-top: 20px;
     
-    @media (max-width: 670px) {
+    @media (max-width: 600px) {
       margin-top: 15px;
     }
   }
@@ -354,7 +351,7 @@ textarea {
     background-color: transparent;
     cursor: pointer;
 
-    @media (max-width: 768px) {
+    @media (max-width: 973px) {
 			top: -25px;
       right: 0;
     }
@@ -374,7 +371,7 @@ textarea {
     &:checked + .form__checkbox-indicator:after {
       background: url(../../static/images/Check.svg) no-repeat;
 
-      @media (max-width: 670px) {
+      @media (max-width: 600px) {
         background-size: 13px;
       }
     }
@@ -467,3 +464,5 @@ input:focus + .form__checkbox-indicator {
 @import "./product/product";
 @import "./blog/blog";
 @import "./toy/toy";
+
+@import "./settings";

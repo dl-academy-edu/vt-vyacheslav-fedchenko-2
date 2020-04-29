@@ -93,12 +93,12 @@
     width: 635px;
 
     @media (max-width: 1180px) {
-      width: 385px;
-      height: 286px;
+      width: 50vw;
+      height: 37.3vw;
       right: 8px;
     }
 
-    @media (max-width: 655px) {
+    @media (max-width: 550px) {
       width: 292px;
       height: 226px;
       right: 0;
@@ -122,6 +122,7 @@
     color: $dark;
 
     @media (max-width: 550px) {
+      width: 80%;
       font-size: 9.6vw;
       padding-bottom: 15px;
     }
@@ -148,8 +149,8 @@
     width: 161px;
 
     @media (max-width: 550px) {
+      padding: 9px 10px;
       width: 142px;
-      padding: 9px 20px 8px 20px;
     }
   }
 
@@ -261,7 +262,7 @@
       line-height: 44px;
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: 460px) {
       font-size: $normal-2;
       line-height: 29px;
     }
@@ -270,21 +271,17 @@
   &__list {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 30px auto 0 auto;
-    width: 100%;
-    max-width: 1220px;
-    padding: 0 20px;
+    margin: 30px auto 20px;
+
 
     @media (max-width: 768px) {
-      flex-wrap: nowrap;
       margin-top: 25px;
-      padding-left: 59px;
+
     }
 
     @media (max-width: 375px) {
       margin-top: 22px;
-      padding-left: 21px;
+
     }
 
     @media (max-width: 330px) {
@@ -374,15 +371,15 @@ a:active > .product__title {
 
 .about-products {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   margin-bottom: 87px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1102px) {
     margin-bottom: 57px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 630px) {
+    flex-direction: column;
+    flex-wrap: wrap;
     margin-bottom: 88px;
   }
 
@@ -400,17 +397,17 @@ a:active > .product__title {
     text-transform: uppercase;
     color: $dark;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1102px) {
       font-size: $large;
       line-height: 44px;
       margin-bottom: 16px;
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: 380px) {
       font-size: $normal-2;
       line-height: 29px;
       margin-top: 17px;
-      margin-bottom: 32px;
+      margin-bottom: 31px;
     }
   }
 
@@ -422,7 +419,7 @@ a:active > .product__title {
     line-height: 32px;
     color: $dark;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1102px) {
       font-size: $normal-2;
       line-height: 30px;
       margin-bottom: 14px;
@@ -431,44 +428,46 @@ a:active > .product__title {
 
   &__box {
     position: relative;
-    max-width: 480px;
-    margin-right: 100px;
+    max-width: 40.6%;
 
-    @media (max-width: 1024px) {
-      width: 314px;
-      margin-right: 20px;
+    @media (max-width: 1102px) {
+      max-width: 46%;
     }
 
-    @media (max-width: 375px) {
-      width: 335px;
-      margin-right: 0px;
+    @media (max-width: 630px) {
+      max-width: 100%;
     }
   }
 
   &__pic {
-    margin-right: 70px;
-    height: auto;
+    width: 100%;
+    height: 100%;
+  }
 
-    @media (max-width: 768px) {
-			width: 258px;
-      min-width: 258px;
-      height: 512px;
-      margin-right: 56px;
+  &__img-box {
+    width: 40.6%;
+    height: 100%;
+    margin-right: 10.3%;
+
+    @media (max-width: 990px) {
+      width: 39.8%;
+      height: 100%;
+			margin-right: 8.7%;
     }
 
-    @media (max-width: 700px) {
-			width: 90vw;
-      min-width: 89vw;
-      height: 95vw;
-      margin-right: 0px;
+    @media (max-width: 630px) {
+      width: 100%;
+      height: 100%;
+      margin-right: 0;
     }
   }
+
 
   &__info {
     margin-top: 29px;
     margin-bottom: 34px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1102px) {
 			margin-top: 21px;
     }
 
@@ -478,7 +477,7 @@ a:active > .product__title {
   }
 
   &__info-block {
-    @media (max-width: 768px) {
+    @media (max-width: 1102px) {
       font-size: $very-small-2;
       line-height: 18px;
       margin-top: 19px;
@@ -502,7 +501,7 @@ a:active > .product__title {
       font-weight: bold;
       background-color: $dark-blue;
 
-      @media (max-width: 768px) {
+      @media (max-width: 1102px) {
         padding: 13px 167px 8px 21px;
         margin-left: -21px;
       }
@@ -524,7 +523,7 @@ a:active > .product__title {
       pointer-events: none;
       transition: all .6s;
 
-      @media (max-width: 768px) {
+      @media (max-width: 1102px) {
         left: -21px;
         width: 267px;
         height: 45px;
@@ -571,93 +570,70 @@ a:active > .product__title {
     }
 
     &_1 {
-      @media (max-width: 517px) {
+      width: 16.32%;
+      height: 100%;
+
+      @media (max-width: 630px) {
+        width: 21%;
+      }
+
+      @media (max-width: 550px) {
+        width: 41%;
         order: 3;
-        margin-top: 25px;
-        margin-left: 9px;
+        margin-left: 8px;
       }
     }
 
     &_2 {
-      @media (max-width: 517px) {
+      width: 15.2%;
+      height: 100%;
+      
+      @media (max-width: 630px) {
+        width: 18%;
+      }
+
+      @media (max-width: 550px) {
+        width: 34%;
         order: 2;
-        margin-right: 20px;
+        padding-bottom: 25px;
+        margin-right: 19px;
       }
     }
 
     &_3 {
-      @media (max-width: 517px) {
+      width: 18.5%;
+      height: 100%;
+
+      @media (max-width: 630px) {
+        width: 22%;
+      }
+
+      @media (max-width: 550px) {
+        width: 46%;
         order: 1;
+        padding-bottom: 25px;
       }
     }
 
     &_4 {
-      @media (max-width: 517px) {
+      width: 17.7%;
+      height: 100%;
+
+      @media (max-width: 630px) {
+        width: 22%;
+      }
+
+      @media (max-width: 550px) {
+        width: 44%;
         order: 4;
-        margin-top: 25px;
         margin-right: 3px;
       }
     }
   }
 
-  &__img1 {
-    
-    @media (max-width: 768px) {
-			width: 106px;
-      min-width: 106px;
-      height: 33px;
-    }
-
-    @media (max-width: 517px) {
-			width: 131px;
-      min-width: 131px;
-      height: 42px;
-    }
-  }
-
-  &__img2 {
-    
-    @media (max-width: 768px) {
-			width: 98px;
-      min-width: 98px;
-      height: 34px;
-    }
-
-    @media (max-width: 517px) {
-			width: 109px;
-      min-width: 109px;
-      height: 38px;
-    }
-  }
-
-  &__img3 {
-    
-    @media (max-width: 768px) {
-			width: 119px;
-      min-width: 119px;
-      height: 25px;
-    }
-
-    @media (max-width: 517px) {
-			width: 149px;
-      min-width: 149px;
-      height: 32px;
-    }
-  }
-
-  &__img4 {
-    
-    @media (max-width: 768px) {
-			width: 116px;
-      min-width: 116px;
-      height: 22px;
-    }
-
-    @media (max-width: 517px) {
-			width: 143px;
-      min-width: 143px;
-      height: 26px;
-    }
+  &__img {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -675,13 +651,13 @@ a:active > .product__title {
 
   &__container-mobile {
     
-    @media (max-width: 375px) {
+    @media (max-width: 550px) {
       margin: 0 0 82px;
-      max-width: 375px;
+      max-width: 100%;
       padding: 0;
     }
   }
-  
+
   &__title {
     margin: -26px 0 0 0;
     padding-bottom: 11px;
@@ -699,7 +675,7 @@ a:active > .product__title {
       padding-bottom: 16px;
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: 550px) {
       font-size: $normal-2;
       line-height: 29px;
       margin-top: -16px;
@@ -709,24 +685,20 @@ a:active > .product__title {
 }
 
 .about-us {
-  max-width: 543px;
+  max-width: 46%;
   padding: 0 30px 44px 30px;
   margin-bottom: 37px;
   background-color: $light-blue;
 
-  @media (max-width: 1024px) {
-    max-width: 314px;
+  @media (max-width: 780px) {
+    max-width: 48.5%;
     padding: 0 15px 44px;
   }
 
-  @media (max-width: 375px) {
-    max-width: 375px;
+  @media (max-width: 550px) {
+    max-width: 100%;
     padding: 0 20px 33px;
     margin-bottom: 50px;
-  }
-
-  @media (max-width: 330px) {
-    padding: 0 10px 33px;
   }
 
   &__subtitle {
@@ -737,7 +709,7 @@ a:active > .product__title {
     line-height: 32px;
     color: $dark;
 
-    @media (max-width: 375px) {
+    @media (max-width: 550px) {
       font-size: $normal-2;
       line-height: 30px;
     }
@@ -752,7 +724,7 @@ a:active > .product__title {
 			padding-bottom: 27px;
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: 550px) {
       font-size: $very-small-2;
       line-height: 19px;
       padding-bottom: 24px;
@@ -760,33 +732,29 @@ a:active > .product__title {
   }
 
   &__button {
-    @media (max-width: 375px) {
+    @media (max-width: 550px) {
       padding: 9px 20px;
     }
   }
 }
 
 .contacts {
-  max-width: 543px;
+  max-width: 46%;
   margin-right: 37px;
   margin-bottom: 64px;
   padding: 0 30px 0 30px;
   background-color: $light-blue;
 
-  @media (max-width: 768px) {
-    max-width: 314px;
+  @media (max-width: 780px) {
+    max-width: 48.5%;
     margin-right: 0;
     margin-bottom: 67px;
     padding: 0 15px 44px 15px;
   }
 
-  @media (max-width: 375px) {
-    max-width: 375px;
+  @media (max-width: 550px) {
+    max-width: 100%;
     padding: 0 20px 44px;
-  }
-
-  @media (max-width: 330px) {
-    padding: 0 10px 33px;
   }
 
   &__title {
@@ -796,7 +764,7 @@ a:active > .product__title {
 			padding-bottom: 23px;
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: 550px) {
       padding-bottom: 12px;
     }
   }
@@ -805,7 +773,7 @@ a:active > .product__title {
     margin: 0;
     padding-bottom: 20px;
 
-    @media (max-width: 375px) {
+    @media (max-width: 550px) {
       font-size: $very-small-2;
       line-height: 19px;
       padding-bottom: 16px;
@@ -816,22 +784,20 @@ a:active > .product__title {
 .map {
   margin-bottom: -180px;
 
-  @media (max-width: 375px) {
+  @media (max-width: 550px) {
     margin-bottom: -145px;
   }
 
   &__area {
-    width: 483px;
+    width: 100%;
     height: 196px;
 
     @media (max-width: 768px) {
-			width: 284px;
       height: 151px;
     }
 
-    @media (max-width: 375px) {
-			width: 89vw;
-      height: 52.3vw;
+    @media (max-width: 550px) {
+			height: 196px;
     }
   }
 }
