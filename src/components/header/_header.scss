@@ -133,16 +133,36 @@
       margin-right: 21px;
     }
   }
+
+  &__mobile-bg {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $violet;
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  
+    @media (max-width: 782px) {
+      display: initial;
+    }
+  
+    &_open {
+      opacity: 1;
+    }
+  }
 }
 
 .mobile-header {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: $violet;
   display: none;
 
   @media (max-width: 782px) {
