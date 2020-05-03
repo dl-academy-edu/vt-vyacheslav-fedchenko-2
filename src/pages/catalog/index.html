@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Catalog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="../../common.css">
@@ -11,79 +12,134 @@
   <body>
     @@include('header/index.html')
     <main>
-      <div class="breadcrumbs-box container">
+      <div class="container">
         <h1 class="title-site">Category Products</h1>
         <div class="breadcrumbs">
-          <ul class="breadcrumbs-list list-point-none">
-            <li class="breadcrumbs-item">
-              <a href="../../index.html" class="breadcrumbs-link-active">
-                <span>Home</span>
+          <ul class="breadcrumbs__list list-point-none">
+            <li class="breadcrumbs__item">
+              <a href="../../index.html" class="breadcrumbs__link">
+                <span class="breadcrumbs__title">Home</span>
               </a>
             </li>
-            <li class="breadcrumbs-item">
-              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.31229 0L0 1.17735L5.37541 6L0 10.8227L1.31229 12L8 6L1.31229 0Z" fill="#1E0606"/>
-                </svg>
+            <li class="breadcrumbs__item">
+              <svg class="breadcrumbs__arrow" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                <polygon points="0 1.18, 1.31 0, 8 6, 1.31 12, 0 10.82, 5.38 6" fill="#1E0606"/>
+              </svg>
             </li>
-            <li class="breadcrumbs-item">
-              <span class="breadcrumbs-active">Catalog</span>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__title_active">Catalog</span>
             </li>
           </ul>
         </div>
       </div>
       <div class="products container">
-        <ul class="products-list list-point-none">
-          <li class="product">
-            <a href="#">
-              <img src="../../static/images/product-1.jpg" alt="APPAREL KIDS" width="280" height="270" class="product-img"/>
-              <span class="product-title">APPAREL KIDS</span>
-            </a>
-          </li>
-          <li class="product">
-            <a href="#">
-              <img src="../../static/images/product-2.jpg" alt="HOLIDAY SHOP" width="280" height="270" class="product-img"/>
-              <span class="product-title">HOLIDAY SHOP</span>
-            </a>
-          </li>
-          <li class="product">
-            <a href="/pages/toys/index.html">
-              <img src="../../static/images/product-3.jpg" alt="TOYS" width="280" height="270" class="product-img"/>
-              <span class="product-title">TOYS</span>
-            </a>
-          </li>
-          <li class="product">
-            <a href="#">
-              <img src="../../static/images/product-4.jpg" alt="ACCESSORIES" width="280" height="270" class="product-img"/>
-              <span class="product-title">ACCESSORIES</span>
-            </a>
-          </li>
-        <li class="product">
-          <a href="#">
-            <img src="../../static/images/product-5.jpg" alt="SALE" width="280" height="270" class="product-img"/>
-            <span class="product-title">SALE</span>
-          </a>
-        </li>
-      <li class="product">
-        <a href="#">
-          <img src="../../static/images/product-6.jpg" alt="APPAREL ADULTS" width="280" height="270" class="product-img"/>
-          <span class="product-title">APPAREL ADULTS</span>
-        </a>
-      </li>
-        </ul>
+        <div class="grid-container">
+          <ul class="products__list list-point-none row">
+            @@include('product/index.html', {
+              "link": "#",
+              "img": "product-1.jpg",
+              "img2": "product-1@2.jpg",
+              "img-tablet": "product-1-tablet.jpg",
+              "img-tablet2": "product-1-tablet@2.jpg",
+              "img-mobile": "product-1-mobile.jpg",
+              "img-mobile2": "product-1-mobile@2.jpg",
+              "alt": "APPAREL KIDS",
+              "class": "product__img",
+              "class-product": "product col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-3",
+              "class-title": "product__title",
+              "title": "APPAREL KIDS"
+            })
+            @@include('product/index.html', {
+              "link": "#",
+              "img": "product-2.jpg",
+              "img2": "product-2@2.jpg",
+              "img-tablet": "product-2-tablet.jpg",
+              "img-tablet2": "product-2-tablet@2.jpg",
+              "img-mobile": "product-2-mobile.jpg",
+              "img-mobile2": "product-2-mobile@2.jpg",
+              "alt": "HOLIDAY SHOP",
+              "class": "product__img",
+              "class-product": "product col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-3",
+              "class-title": "product__title",
+              "title": "HOLIDAY SHOP"
+            })
+            @@include('product/index.html', {
+              "link": "/pages/toys/index.html",
+              "img": "product-3.jpg",
+              "img2": "product-3@2.jpg",
+              "img-tablet": "product-3-tablet.jpg",
+              "img-tablet2": "product-3-tablet@2.jpg",
+              "img-mobile": "product-3-mobile.jpg",
+              "img-mobile2": "product-3-mobile@2.jpg",
+              "alt": "TOYS",
+              "class": "product__img",
+              "class-product": "product col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-3",
+              "class-title": "product__title",
+              "title": "TOYS"
+            })
+            @@include('product/index.html', {
+              "link": "#",
+              "img": "product-4.jpg",
+              "img2": "product-4@2.jpg",
+              "img-tablet": "product-4-tablet.jpg",
+              "img-tablet2": "product-4-tablet@2.jpg",
+              "img-mobile": "product-4-mobile.jpg",
+              "img-mobile2": "product-4-mobile@2.jpg",
+              "alt": "ACCESSORIES",
+              "class": "product__img",
+              "class-product": "product col-xs-6 col-sm-4 col-md-4 skip-lg-2 skip-xl-2 col-lg-3 col-xl-3",
+              "class-title": "product__title",
+              "title": "ACCESSORIES"
+            })
+            @@include('product/index.html', {
+              "link": "#",
+              "img": "product-5.jpg",
+              "img2": "product-5@2.jpg",
+              "img-tablet": "product-5-tablet.jpg",
+              "img-tablet2": "product-5-tablet@2.jpg",
+              "img-mobile": "product-5-mobile.jpg",
+              "img-mobile2": "product-5-mobile@2.jpg",
+              "alt": "SALE",
+              "class": "product__img",
+              "class-product": "product col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-3",
+              "class-title": "product__title",
+              "title": "SALE"
+            })
+            @@include('product/index.html', {
+              "link": "#",
+              "img": "product-6.jpg",
+              "img2": "product-6@2.jpg",
+              "img-tablet": "product-6-tablet.jpg",
+              "img-tablet2": "product-6-tablet@2.jpg",
+              "img-mobile": "product-6-mobile.jpg",
+              "img-mobile2": "product-6-mobile@2.jpg",
+              "alt": "APPAREL ADULTS",
+              "class": "product__img",
+              "class-product": "product col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-3",
+              "class-title": "product__title",
+              "title": "APPAREL ADULTS"
+            })
+          </ul>
+        </div>
       </div>
       <article class="products-info container">
-        <h2 class="products-info-title">Product Description</h2>
-        <p class="products-info-text">
-          Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.
-        </p>
-        <p class="products-info-text">
-          A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.
-        </p>
-        <p class="products-info-text">
-          The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.
-        </p>
+        <div class="skip-lg-2 skip-xl-2">
+        <h2 class="products-info__title">Product Description</h2>
+          <div class="products-info__text">
+            <p>
+              Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.
+            </p>
+            <p>
+              A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.
+            </p>
+            <p>
+              The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.
+            </p>
+        </div>
+        </div>
       </article>
     </main>
     @@include('footer/index.html')
+    <script src="./index.js"></script>
   </body>
   </html>

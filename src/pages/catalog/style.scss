@@ -1,75 +1,72 @@
 /*description*/
 
-.products {
-  padding: 0;
-}
-
-.product {
-  position: relative;
-  margin-bottom: 23px;
-  margin-left: 20px;
-}
-
-.product-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  align-self: center;
-  font-family: "Montserrat", "Candara", sans-serif;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 32px;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
-}
-
-.product-img {
-  display: flex;
-}
-
-.products-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 28px;
-  margin-top: 0;
-}
-
-.product:nth-child(4) {
-  margin-left: 220px;
-}
+@import "../../components/var";
 
 .products-info {
+  margin-top: 54px;
   margin-bottom: 45px;
-  padding-left: 220px;
+  padding-left: 24px;
+
+  @media (max-width: 899px) {
+    padding-left: 15px;
+    margin-top: 37px;
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: 375px) {
+    margin-top: 26px;
+    padding-left: 5px;
+    margin-bottom: 34px;
+  }
+
+  @media (max-width: 330px) {
+    padding-left: 10px;
+  }
+
+  &__text {
+    max-width: 680px;
+
+    @media (max-width: 1000px) {
+      max-width: 100%;
+    }
+    
+    &> p {
+      margin: 0;
+      padding-bottom: 15px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding-bottom: 24px;
+    font-family: "Montserrat", "Candara", sans-serif;
+    font-weight: bold;
+    font-size: $big;
+    line-height: 46px;
+    text-transform: uppercase;
+    color: $dark;
+
+    @media (max-width: 768px) {
+      font-size: $big-3;
+      line-height: 44px;
+      padding-bottom: 20px;
+    }
+
+    @media (max-width: 375px) {
+      font-size: $normal-2;
+      line-height: 29px;
+      padding-bottom: 16px;
+    }
+  }
 }
 
-.products-info-text {
-  max-width: 680px;
-}
-
-.products-info-title {
-  margin: 0;
-  padding-bottom: 24px;
-  font-family: "Montserrat", "Candara", sans-serif;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 46px;
-  text-transform: uppercase;
-  color: #1e0606;
-}
-
-a:hover > .product-title {
+a > .product__title {
   text-decoration: underline;
-}
-a:active > .product-title {
-  text-decoration: underline;
-}
-
-.products-info-text {
-  margin: 0;
-  padding-bottom: 15px;
+  text-decoration-color: transparent;
+  transition: all 0.4s;
 }
 
+a:hover > .product__title,
+a:active > .product__title {
+  text-decoration-color: $white;
+}

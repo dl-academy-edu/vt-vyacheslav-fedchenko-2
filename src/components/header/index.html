@@ -1,14 +1,43 @@
 <header class="header container">
-  <a class="header_active" href="../../index.html"><img class="header-logo" src="../../static/images/logo.svg" width="110" height="60" alt="logo"/></a>
-  <nav class="header-nav">
-    <ul class="header-list-links list-point-none">
-      <li><a class="header-nav_item header_active" href="../../pages/blog/index.html">Blog</a></li>
-      <li><a class="header-nav_item header_active" href="../../pages/catalog/index.html">Catalog</a></li>
-      <li><a class="header-nav_item header_active" href="../../pages/toys/index.html">Toys</a></li>
+  <a class="header_hover" href="../../index.html"><img class="header__logo" src="../../static/images/logo.svg" width="110" height="60" alt="logo"/></a>
+  <nav class="header__nav">
+    <ul class="header__nav-list list-point-none">
+      <li><a class="header__nav-item header_hover" href="../../pages/blog/index.html">Blog</a></li>
+      <li><a class="header__nav-item header_hover" href="../../pages/catalog/index.html">Catalog</a></li>
+      <li><a class="header__nav-item header_hover" href="../../pages/toys/index.html">Toys</a></li>
+      <li><a class="header__nav-item header_hover" href="../../pages/animation/index.html">Animation</a></li>
+      <li><a class="header__nav-item header_hover" href="../../pages/svg/index.html">SVG</a></li>
+      <li><a class="header__nav-item header_hover" href="../../pages/grid/index.html">Grid</a></li>
     </ul>
-    <ul class="header-list-contacts list-point-none">
-      <li><a class="search-link header_active" href="#"><img src="../../static/images/search.svg" width="19" height="19" alt="search"/></a></li>
-      <li><a class="header-contact header_active" href="../../pages/contact-us/index.html">Contact Us</a></li>
+    <a class="header__mobile-menu header__mobile-menu_js" href="#">Menu</a>
+    <ul class="header__nav-list-side list-point-none">
+      <li><a class="header__nav-item header_hover" href="#"><img src="../../static/images/search.svg" width="19" height="19" alt="search"/></a></li>
+      <li><a class="header__nav-item header__nav-item_side header_hover" href="../../pages/contact-us/index.html">Contact Us</a></li>
     </ul>
   </nav>
+  <a class="header__mobile-search" href="#"><img src="../../static/images/search.svg" width="19" height="19" alt="search"/></a>
+  <div class="mobile-header">
+    <div class="mobile-header__content">
+      <div class="mobile-header__top">
+        <a href="../../index.html"><img class="mobile-header__logo" src="../../static/images/logo.svg" width="110" height="60" alt="logo"/></a>
+        <button class="mobile-header__button-close mobile-header__button-close_js">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.707105 0L0 0.707105L7.07111 7.77821L4.6869e-05 14.8493L0.707151 15.5564L7.77821 8.48532L14.8492 15.5563L15.5563 14.8492L8.48532 7.77821L15.5563 0.707178L14.8492 7.33696e-05L7.77821 7.07111L0.707105 0Z" fill="#1E0606"/>
+          </svg>      
+        </button>
+        <a class="mobile-header__search" href="#"><img src="../../static/images/search.svg" width="19" height="19" alt="search"/></a>
+      </div>
+      <nav class="mobile-header__nav">
+        <ul class="mobile-header__nav-list list-point-none">
+          <li><a class="mobile-header__nav-item" href="../../pages/blog/index.html">Blog</a></li>
+          <li><a class="mobile-header__nav-item" href="../../pages/catalog/index.html">Catalog</a></li>
+          <li><a class="mobile-header__nav-item" href="../../pages/toys/index.html">Toys</a></li>
+          <li><a class="mobile-header__nav-item" href="../../pages/animation/index.html">Animation</a></li>
+          <li><a class="mobile-header__nav-item" href="../../pages/svg/index.html">SVG</a></li>
+          <li><a class="mobile-header__nav-item" href="../../pages/grid/index.html">Grid</a></li>
+        </ul>
+        <a class="mobile-header__contact" href="../../pages/contact-us/index.html">Contact Us</a>
+      </nav>
+    </div>
+  </div>
 </header>

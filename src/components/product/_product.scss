@@ -1,0 +1,88 @@
+@import "../var";
+
+.product {
+  position: relative;
+
+  &_main {
+    margin-right: 20px;
+
+    @media (max-width: 375px) {
+      margin-right: 16px;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: "Montserrat", "Candara", sans-serif;
+    font-weight: bold;
+    font-size: $normal-3;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: $white;
+
+    @media (max-width: 800px) {
+      font-size: $normal-2;
+      line-height: 29px;
+      top: 57%;
+    }
+
+    @media (max-width: 650px) {
+      font-size: 22px;
+    }
+
+    @media (max-width: 450px) {
+      font-size: $small-2;
+      line-height: 22px;
+      top: 56.5%;
+    }
+
+    &_main {
+      top: 50%;
+
+      @media (max-width: 800px) {
+        font-size: $normal-3;
+        line-height: 32px;
+        top: 51%;
+        left: 49.5%;
+      }
+
+      @media (max-width: 450px) {
+        top: 51.2%;
+        left: 49.5%;
+      }
+    }
+  }
+
+  &__img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 768px) {
+      height: 99%;
+    }
+
+    &_main {
+
+      width: 280px;
+      min-width: 280px;
+      height: 270px;
+
+      @media (max-width: 768px) {
+        width: 259px;
+        min-width: 259px;
+        height: 249px;
+      }
+    
+      @media (max-width: 375px) {
+        width: 247px;
+        min-width: 247px;
+        height: 238px;
+      }
+    }
+  }
+}
