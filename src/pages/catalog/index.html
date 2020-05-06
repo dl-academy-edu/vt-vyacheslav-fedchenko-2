@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Catalog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="../../common.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="../../static/images/favicon.ico"/>
+    <title>Catalog of our products. Apparel kids, toys, holyday shop, accessories.</title>
+    <meta name="description" content="More than 100,000 products for children and their parents in Design Life Kids store! Big choice. Low prices.">
+    <meta name="keywords" content="Toys, Apparel kids, Accessories for kids, Apparel adults, Kids fashion, furniture for kids, furniture">
   </head>
   <body>
     @@include('header/index.html')
@@ -43,7 +45,7 @@
               "img-tablet2": "product-1-tablet@2.jpg",
               "img-mobile": "product-1-mobile.jpg",
               "img-mobile2": "product-1-mobile@2.jpg",
-              "alt": "APPAREL KIDS",
+              "alt": "category - Apparel kids",
               "class": "product__img",
               "class-product": "product col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-3",
               "class-title": "product__title",
@@ -57,7 +59,7 @@
               "img-tablet2": "product-2-tablet@2.jpg",
               "img-mobile": "product-2-mobile.jpg",
               "img-mobile2": "product-2-mobile@2.jpg",
-              "alt": "HOLIDAY SHOP",
+              "alt": "category - Holiday shop",
               "class": "product__img",
               "class-product": "product col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-3",
               "class-title": "product__title",
@@ -71,7 +73,7 @@
               "img-tablet2": "product-3-tablet@2.jpg",
               "img-mobile": "product-3-mobile.jpg",
               "img-mobile2": "product-3-mobile@2.jpg",
-              "alt": "TOYS",
+              "alt": "category - Toys",
               "class": "product__img",
               "class-product": "product col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-3",
               "class-title": "product__title",
@@ -85,7 +87,7 @@
               "img-tablet2": "product-4-tablet@2.jpg",
               "img-mobile": "product-4-mobile.jpg",
               "img-mobile2": "product-4-mobile@2.jpg",
-              "alt": "ACCESSORIES",
+              "alt": "category - Accessories",
               "class": "product__img",
               "class-product": "product col-xs-6 col-sm-4 col-md-4 skip-lg-2 skip-xl-2 col-lg-3 col-xl-3",
               "class-title": "product__title",
@@ -99,7 +101,7 @@
               "img-tablet2": "product-5-tablet@2.jpg",
               "img-mobile": "product-5-mobile.jpg",
               "img-mobile2": "product-5-mobile@2.jpg",
-              "alt": "SALE",
+              "alt": "category - Sale",
               "class": "product__img",
               "class-product": "product col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-3",
               "class-title": "product__title",
@@ -113,7 +115,7 @@
               "img-tablet2": "product-6-tablet@2.jpg",
               "img-mobile": "product-6-mobile.jpg",
               "img-mobile2": "product-6-mobile@2.jpg",
-              "alt": "APPAREL ADULTS",
+              "alt": "category - Apparel adults",
               "class": "product__img",
               "class-product": "product col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-3",
               "class-title": "product__title",
@@ -141,6 +143,8 @@
     </main>
     @@include('footer/index.html')
     <script src="./index.js"></script>
-    @@include('audio/index.html')
+    @@include('audio/index.html', {
+      "link": "https://archive.org/download/catalog_202005/Catalog.mp3"
+    })
   </body>
   </html>

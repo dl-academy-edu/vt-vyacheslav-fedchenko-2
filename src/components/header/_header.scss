@@ -106,8 +106,10 @@
     line-height: 19px;
     color: $dark;
     text-transform: uppercase;
+    border: none;
+    background-color: transparent;
     margin-right: 40px;
-    margin-top: 7px;
+    margin-bottom: 5px;
 
     @media (max-width: 768px) {
       display: initial;
@@ -145,6 +147,8 @@
     display: none;
     opacity: 0;
     pointer-events: none;
+
+    transition: opacity .4s;
   
     @media (max-width: 782px) {
       display: initial;
@@ -169,7 +173,7 @@
 		display: initial;
   }
 
-  transition: .4s transform ;
+  transition: .6s transform ;
 
   transform: translateY(-100%);
 
@@ -240,7 +244,7 @@
   }
 
   &__nav-item {
-    font-size: 16px;
+    font-size: $small;
     line-height: 22px;
     text-transform: uppercase;
     color: $dark;
@@ -249,7 +253,7 @@
   }
   
   &__contact {
-    font-size: 16px;
+    font-size: $small;
     line-height: 22px;
     font-weight: bold;
     text-transform: uppercase;

@@ -28,16 +28,10 @@ var mobileBG = document.querySelector(".header__mobile-bg");
 
 buttonMobileHeader.addEventListener("click", function(){
   mobileHeader.classList.add("mobile-header_open");
-});
-
-buttonCloseMobileHeader.addEventListener("click", function(){
-  mobileHeader.classList.remove("mobile-header_open");
-});
-
-buttonMobileHeader.addEventListener("click", function(){
   mobileBG.classList.add("header__mobile-bg_open");
 });
 
 buttonCloseMobileHeader.addEventListener("click", function(){
+  mobileHeader.classList.remove("mobile-header_open");
   mobileBG.classList.remove("header__mobile-bg_open");
 });

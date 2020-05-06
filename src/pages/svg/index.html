@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SVG</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="../../common.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="../../static/images/favicon.ico"/>
+    <title>SVG animated picture from DLK store.</title>
+    <meta name="description" content="An example of using SVG animation in a simple picture.">
+    <meta name="keywords" content="SVG, animation, dynamic image, moving picture">
 </head>
 <body>
   @@include('header/index.html')
@@ -31,6 +33,7 @@
         </li>
       </ul>
     </div>
+    <span class="hidden">SVG Animated picture</span>
     <svg class="svg" width="418" height="351" viewBox="0 0 418 351" fill="none">
       <path d="M 0 15,
         C 0 5.5, 5.5 0, 15 0,
@@ -105,6 +108,8 @@
   </main>
   @@include('footer/index.html')
   <script src="./index.js"></script>
-  @@include('audio/index.html')
+  @@include('audio/index.html', {
+    "link": "https://archive.org/download/svg_20200506/SVG.mp3"
+  })
 </body>
 </html>
