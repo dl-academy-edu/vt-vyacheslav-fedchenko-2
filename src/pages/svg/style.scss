@@ -1,3 +1,5 @@
+@import "../../components/var";
+
 .svg {
   margin-bottom: 57px;
   stroke-dasharray: 175;
@@ -73,64 +75,64 @@
 
 @keyframes frame1 {
   from, to {
-    fill: #5D9CEC;
+    fill: $blue-3;
   }
   50% {
-    fill: #fc9795  ;
+    fill: $pink-2;
   }
 }
 
 @keyframes frame2 {
   from, to {
-    fill: #5D9CEC;
+    fill: $blue-3;
   }
   50% {
-    fill: #1c1c1c;
+    fill: $light-dark-2;
   }
 }
 
 @keyframes moon {
   from, to {
-    fill: #FFCE54;
+    fill: $yellow-3;
   }
   50% {
-    fill: #ffffff;
+    fill: $white;
   }
 }
 
 @keyframes mount1 {
   from, to {
-    fill: #545C66;
+    fill: $gray-8;
   }
   50% {
-    fill: #2b4b6e;
+    fill: $navy-blue;
   }
 }
 
 @keyframes mount2 {
   from, to {
-    fill: #656D78;
+    fill: $gray-9;
   }
   50% {
-    fill: #487eb8;
+    fill: $navy-blue-2;
   }
 }
 
 @keyframes mount3 {
   from, to {
-    fill: #545C66;
+    fill: $gray-8;
   }
   50% {
-    fill: #f77d55;
+    fill: $orange-3;
   }
 }
 
 @keyframes mount4 {
   from, to {
-    fill: #656D78;
+    fill: $gray-9;
   }
   50% {
-    fill: #f9d97b  ;
+    fill: $light-yellow;
   }
 }
 
@@ -140,11 +142,11 @@
     fill-opacity: 0;
   }
   30%, 60% {
-    fill: #ffffff;
+    fill: $white;
     fill-opacity: 0.5;
   }
   37%, 55% {
-    fill: #ffffff;
+    fill: $white;
     fill-opacity: 1;
   }
 }

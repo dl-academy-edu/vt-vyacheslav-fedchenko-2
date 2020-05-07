@@ -2,7 +2,7 @@
 
 .animation {
   position: relative;
-  margin: 0 auto 66px auto;
+  margin: 0 auto 67px auto;
   width: 100%;
   max-width: 1585px;
   overflow: hidden;
@@ -17,16 +17,28 @@
   }
 
   &__background-top {
-    padding-left: 175px;
+    padding-left: 10.7%;
+    max-width: 1517px;
+    max-height: 135px;
+    width: 92.5vw;
+    height: 8.26vw;
   }
 
   &__background-bottom {
     padding-left: 0px;
+    max-width: 1585px;
+    max-height: 630px;
+    width: 96.7vw;
+    height: 38.5vw;
   }
 
   &__clouds {
     position: absolute;
     bottom: 80.5%;
+    max-width: 1342px;
+    max-height: 125px;
+    width: 81.8vw;
+    height: 7.6vw;
     animation: clouds_anim ease-out 72s;
     animation-iteration-count:infinite;
 
@@ -45,7 +57,9 @@
     animation: car_anim 9s;
     animation-iteration-count:infinite;
     max-width: 246px;
+    max-height: 65px;
     width: 15vw;
+    height: 4vw;
   }
 
   &__car2 {
@@ -54,7 +68,9 @@
     animation: car_anim 8s;
     animation-iteration-count:infinite;
     max-width: 203px;
+    max-height: 96px;
     width: 13vw;
+    height: 5.9vw;
   }
 
   &__car3 {
@@ -63,7 +79,9 @@
     animation: car_anim 7s;
     animation-iteration-count:infinite;
     max-width: 250px;
+    max-height: 99px;
     width: 15vw;
+    height: 6vw;
   }
 
   &__car4 {
@@ -72,7 +90,9 @@
     animation: car_anim 10s;
     animation-iteration-count:infinite;
     max-width: 268px;
+    max-height: 126px;
     width: 16vw;
+    height: 7.7vw;
   }
 
   &__lantern1 {
@@ -81,6 +101,8 @@
     left: 33.2%;
     max-width: 151px;
     width: 9vw;
+    max-height: 395px;
+    height: 24vw;
   }
 
   &__lantern2 {
@@ -89,6 +111,8 @@
     left: 88.3%;
     max-width: 151px;
     width: 9vw;
+    max-height: 395px;
+    height: 24vw;
   }
 
   &__taxi {
@@ -97,6 +121,8 @@
     left: 100%;
     max-width: 886px;
     width: 52.7vw;
+    max-height: 266px;
+    height: 16.2vw;
     animation: taxi_anim 10s;
     animation-iteration-count:infinite;
   }
@@ -142,7 +168,21 @@
       @media (max-width: 1450px) {
         font-size: 0.95vw;
         line-height: 1.5vw;
-        max-width: 90%;
+        max-width: 84%;
+      }
+    }
+
+    &__pic {
+      max-width: 167px;
+      width: 10vw;
+      max-height: 108px;
+      height: 6.6vw;
+
+      &_2 {
+        max-width: 167px;
+        width: 10vw;
+        max-height: 86px;
+        height: 5.24vw;
       }
     }
   }
@@ -153,6 +193,8 @@
     left: 70.6%;
     max-width: 214px;
     width: 12.8vw;
+    max-height: 562px;
+    height: 34.3vw;
   }
 
   &__woman {
@@ -161,6 +203,8 @@
     left: 17.4%;
     max-width: 98px;
     width: 6vw;
+    max-height: 267px;
+    height: 16.3vw;
   }
 
   &__hand2 {
@@ -168,9 +212,11 @@
     bottom: 20.4%;
     left: 19%;
     max-width: 63px;
+    width: 4vw;
+    max-height: 44px;
+    height: 2.7vw;
     animation: hand2_anim 10s;
     animation-iteration-count:infinite;
-    width: 4vw;
   }
 
   &__suitcases {
@@ -179,6 +225,8 @@
     left: 16.7%;
     max-width: 191px;
     width: 12vw;
+    max-height: 95px;
+    height: 5.8vw;
   }
 
   &__hand {
@@ -187,6 +235,8 @@
     left: 24%;
     max-width: 89px;
     width: 6vw;
+    max-height: 128px;
+    height: 7.8vw;
     transform: rotate(152deg);
     transform-origin: 16% 90%;
     animation: hand_anim 10s;
@@ -199,6 +249,8 @@
     left: 24.1%;
     max-width: 205px;
     width: 13vw;
+    max-height: 353px;
+    height: 21.5vw;
   }
 }
 

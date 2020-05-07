@@ -106,8 +106,10 @@
     line-height: 19px;
     color: $dark;
     text-transform: uppercase;
+    border: none;
+    background-color: transparent;
     margin-right: 40px;
-    margin-top: 7px;
+    margin-bottom: 5px;
 
     @media (max-width: 768px) {
       display: initial;
@@ -133,23 +135,45 @@
       margin-right: 21px;
     }
   }
+
+  &__mobile-bg {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $violet;
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity .4s;
+  
+    @media (max-width: 782px) {
+      display: initial;
+    }
+  
+    &_open {
+      opacity: 1;
+    }
+  }
 }
 
 .mobile-header {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: $violet;
   display: none;
 
   @media (max-width: 782px) {
 		display: initial;
   }
 
-  transition: .4s transform ;
+  transition: .6s transform ;
 
   transform: translateY(-100%);
 
@@ -220,7 +244,7 @@
   }
 
   &__nav-item {
-    font-size: 16px;
+    font-size: $small;
     line-height: 22px;
     text-transform: uppercase;
     color: $dark;
@@ -229,7 +253,7 @@
   }
   
   &__contact {
-    font-size: 16px;
+    font-size: $small;
     line-height: 22px;
     font-weight: bold;
     text-transform: uppercase;

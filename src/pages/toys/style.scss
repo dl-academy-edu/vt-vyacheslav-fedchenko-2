@@ -163,12 +163,15 @@ fieldset {
 /*checkbox*/
 
 .form-checkbox:checked + .form-checkbox-indicator:after {
-  background: url(../../static/images/Check.svg) no-repeat;
   background-color: $white;
 
   @media (max-width: 400px) {
     background-size: 13px;
   }
+}
+
+.form-checkbox:checked + .form-checkbox-indicator:before {
+  opacity: 1;
 }
 
 .form-checkbox-indicator {
@@ -177,6 +180,19 @@ fieldset {
 
   @media (max-width: 400px) {
     padding-left: 24px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 2px;
+    top: 2px;
+    height: 19px;
+    width: 19px;
+    background: url(../../static/images/Check.svg) no-repeat;
+    opacity: 0;
+    transition: opacity .4s;
   }
 
   &:after {
@@ -277,7 +293,7 @@ input:focus + .form-checkbox-indicator {
   }
 }
 
-.form-radio:checked + .form-radio-indicator:before {
+.form-radio + .form-radio-indicator:before {
   content: "";
   position: absolute;
   top: 10px;
@@ -287,6 +303,8 @@ input:focus + .form-checkbox-indicator {
   width: 12px;
   border-radius: 100%;
   background-color: $brown;
+  opacity: 0;
+  transition: .4s;
 
   @media (max-width: 400px) {
     top: 8px;
@@ -294,6 +312,10 @@ input:focus + .form-checkbox-indicator {
     height: 9px;
     width: 9px;
   }
+}
+
+.form-radio:checked + .form-radio-indicator:before {
+  opacity: 1;
 }
 
 input:focus + .form-radio-indicator {
