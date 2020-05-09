@@ -147,6 +147,7 @@
 
   &__button {
     width: 161px;
+    z-index: 1;
 
     @media (max-width: 550px) {
       padding: 9px 10px;
@@ -511,7 +512,7 @@ a:active > .product__title {
       font-weight: bold;
     }
 
-    &:before {
+    &::before {
       opacity: 0;
       content: "";
       position: absolute;
@@ -531,7 +532,7 @@ a:active > .product__title {
       }
     }
 
-    &:hover:before {
+    &:hover::before {
       opacity: 1;
     }
   }
@@ -803,15 +804,71 @@ a:active > .product__title {
 
 /*modal window*/
 
-.modal-bg {
+.modal {
   display: flex;
   position: fixed;
   background-color: $violet;
   top: 0;
   height: 100vh;
   width: 100vw;
+  z-index: 2;
+
+  @media (max-width: 680px) {
+    display: block;
+    overflow: auto;
+
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      font-size: 0;
+      height: 100%;
+      vertical-align: middle;
+      width: 0;
+    }
+  }
+
+  &__content {
+    display: block;
+    position: relative;
+    align-self: center;
+    margin: 0 auto;
+
+    @media (max-width: 1050px) {
+      min-width: 84.5%;
+    }
+
+    @media (max-width: 680px) {
+      width: 89%; 
+    }   
+  }
 
   &_close {
     display: none;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    @media (max-width: 973px) {
+			top: -25px;
+      right: 0;
+    }
+
+    transition: opacity .4s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

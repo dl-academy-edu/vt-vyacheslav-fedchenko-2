@@ -5,6 +5,7 @@
   margin: 0 auto 67px auto;
   width: 100%;
   max-width: 1585px;
+  width: 96.7vw;
   overflow: hidden;
 
   @media (max-width: 768px) {
@@ -13,7 +14,6 @@
 
   @media (max-width: 375px) {
     margin-bottom: 81px;
-    
   }
 
   &__background-top {

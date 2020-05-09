@@ -68,7 +68,7 @@
 
   &__box {
 
-    &:before {
+    &::before {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -93,11 +93,11 @@
       }
     }
 
-    &:hover:before {
+    &:hover::before {
       opacity: 0.9;
     }
 
-    &:active:before {
+    &:active::before {
       opacity: 0.67;
     }
   }

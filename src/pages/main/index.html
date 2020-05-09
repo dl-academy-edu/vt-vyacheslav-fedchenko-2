@@ -208,36 +208,38 @@
       </div>
     </main>
     @@include('footer/index.html')
-    <div class="modal-bg modal-bg_close modal-bg_js">
-      <form class="form form_modal" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
-        <div class="form__row">
-          <label class="form__label" for="form-name">Name</label>
-          <input class="form__input form__input_js" id="form-name" type="text" name="name">
-        </div>
-        <div class="form__row">
-          <div class="form__row_short form__row_short_2">
-            <label class="form__label form__label_2" for="form-phone">Phone</label>
-            <input class="form__input" id="form-phone" type="text" name="phone">
+    <div class="modal modal_close modal_js">
+      <div class="modal__content">
+        <form class="form form_modal" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+          <div class="form__row">
+            <label class="form__label" for="form-name">Name</label>
+            <input class="form__input form__input_js" id="form-name" type="text" name="name">
           </div>
-          <div class="form__row_short">
-            <label class="form__label form__label_2" for="form-email-modal">Email</label>
-            <input class="form__input" id="form-email-modal" type="email" name="email">
+          <div class="form__row">
+            <div class="form__row_short form__row_short_2">
+              <label class="form__label form__label_2" for="form-phone">Phone</label>
+              <input class="form__input" id="form-phone" type="text" name="phone">
+            </div>
+            <div class="form__row_short">
+              <label class="form__label form__label_2" for="form-email-modal">Email</label>
+              <input class="form__input" id="form-email-modal" type="email" name="email">
+            </div>
           </div>
-        </div>
-        <div class="form__row">
-          <label class="form__label" for="form-message">Message</label>
-          <textarea class="form__input form__input-message" id="form-message" name="message"></textarea>
-        </div>
-        <label class="form__checkbox-label">
-          <input class="form__checkbox hidden" type="checkbox" value="accept" name="accept-button">
-          <span class="form__checkbox-indicator">By clicking on the button, you consent to the processing of your personal data</span>
-        </label>
-        @@include('button/index.html', {
-          "type": "submit",
-          "class": "button_gray",
-          "text": "SUBMIT"
-          })
-        <button type="button" class="form__close form__close_js">
+          <div class="form__row">
+            <label class="form__label" for="form-message">Message</label>
+            <textarea class="form__input form__input-message" id="form-message" name="message"></textarea>
+          </div>
+          <label class="form__checkbox-label">
+            <input class="form__checkbox hidden" type="checkbox" value="accept" name="accept-button">
+            <span class="form__checkbox-indicator">By clicking on the button, you consent to the processing of your personal data</span>
+          </label>
+          @@include('button/index.html', {
+            "type": "submit",
+            "class": "button_gray",
+            "text": "SUBMIT"
+            })
+        </form>
+        <button type="button" class="modal__close modal__close_js">
           <svg width="15" height="15" viewBox="0 0 15 15">
             <path d="M 5.65 7.5,
             L 0.37 2.23,
@@ -260,7 +262,7 @@
             Z" fill="white"/>
           </svg>
         </button>
-      </form>
+      </div>
     </div>
     <script src="./index.js"></script>
     @@include('audio/index.html', {
