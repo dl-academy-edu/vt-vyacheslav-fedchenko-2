@@ -816,6 +816,7 @@ a:active > .product__title {
   @media (max-width: 680px) {
     display: block;
     overflow: auto;
+    text-align: center;
 
     &::before,
     &::after {
@@ -833,6 +834,7 @@ a:active > .product__title {
     position: relative;
     align-self: center;
     margin: 0 auto;
+    text-align: left;
 
     @media (max-width: 1050px) {
       min-width: 84.5%;
