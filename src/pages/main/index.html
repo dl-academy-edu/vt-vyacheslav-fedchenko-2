@@ -16,28 +16,31 @@
     <main>
       <div class="container poster__container-mobile">
         <section class="poster">
-          <div class="poster__nav">
-            <span class="poster__nav__number">01</span>
-            <button aria-label="poster navigation button" class="poster__nav__button poster__nav__button_active"></button>
-            <button aria-label="poster navigation button" class="poster__nav__button"></button>
-            <button aria-label="poster navigation button" class="poster__nav__button"></button>
-            <button aria-label="poster navigation button" class="poster__nav__button"></button>
-          </div>
-          <div class="poster__item">
-            <div class="poster__content">
-              <h1 class="poster__title">THE OOH NOO COLLECTION</h1>
-              <span class="poster__text">Designed in Slovenia</span>
-              @@include('button/index.html', {
-                "class": "poster__button poster__button_js",
-                "text": "EXPLORE NOW"
-                })
+          <div class="poster__main-block">
+            <div class="poster__nav">
+              <span class="poster__nav__number">01</span>
+              <button aria-label="poster navigation button" class="poster__nav__button poster__nav__button_active"></button>
+              <button aria-label="poster navigation button" class="poster__nav__button"></button>
+              <button aria-label="poster navigation button" class="poster__nav__button"></button>
+              <button aria-label="poster navigation button" class="poster__nav__button"></button>
             </div>
-            <picture class="poster__img-box">
-              <source srcset="../../static/images/poster-mobile.png, ../../static/images/poster-mobile@2.png 2x" media="(max-width: 700px)">
-              <source srcset="../../static/images/poster-tablet.png, ../../static/images/poster-tablet@2.png 2x" media="(max-width: 850px)">
-              <source srcset="../../static/images/poster.png, ../../static/images/poster@2.png 2x">
-              <img class="poster__pic" src="../../static/images/poster.png" width="635" height="460" alt="Poster of the site"/>
-            </picture>
+            <div class="poster__item">
+              <div class="poster__content">
+                <h1 class="poster__title">THE OOH NOO COLLECTION</h1>
+                <span class="poster__text">Designed in Slovenia</span>
+                @@include('button/index.html', {
+                  "class": "poster__button poster__button_js",
+                  "type": "button",
+                  "text": "EXPLORE NOW"
+                  })
+              </div>
+              <picture class="poster__img-box">
+                <source srcset="../../static/images/poster-mobile.png, ../../static/images/poster-mobile@2.png 2x" media="(max-width: 700px)">
+                <source srcset="../../static/images/poster-tablet.png, ../../static/images/poster-tablet@2.png 2x" media="(max-width: 850px)">
+                <source srcset="../../static/images/poster.png, ../../static/images/poster@2.png 2x">
+                <img class="poster__img" src="../../static/images/poster.png" width="635" height="460" alt="Poster of the site"/>
+              </picture>
+            </div>
           </div>
           <div class="poster__footer">
             <span class="poster__footer-text">Free (continental) USA shipping on all orders of $100 USD or more!</span>
@@ -60,7 +63,7 @@
                 "img-mobile": "product-1-mobile.jpg",
                 "img-mobile2": "product-1-mobile@2.jpg",
                 "alt": "category - Apparel kids",
-                "class": "product__img product__img_main",
+                "class": "product__img product__img_1 product__img_main",
                 "class-product": "product product_main",
                 "class-title": "product__title product__title_main",
                 "title": "APPAREL KIDS"
@@ -74,7 +77,7 @@
                 "img-mobile": "product-2-mobile.jpg",
                 "img-mobile2": "product-2-mobile@2.jpg",
                 "alt": "category - Holiday shop",
-                "class": "product__img product__img_main",
+                "class": "product__img product__img_2 product__img_main",
                 "class-product": "product product_main",
                 "class-title": "product__title product__title_main",
                 "title": "HOLIDAY SHOP"
@@ -88,7 +91,7 @@
                 "img-mobile": "product-3-mobile.jpg",
                 "img-mobile2": "product-3-mobile@2.jpg",
                 "alt": "category - Toys",
-                "class": "product__img product__img_main",
+                "class": "product__img product__img_3 product__img_main",
                 "class-product": "product product_main",
                 "class-title": "product__title product__title_main",
                 "title": "TOYS"
@@ -102,7 +105,7 @@
                 "img-mobile": "product-4-mobile.jpg",
                 "img-mobile2": "product-4-mobile@2.jpg",
                 "alt": "category - Accessories",
-                "class": "product__img product__img_main",
+                "class": "product__img product__img_4 product__img_main",
                 "class-product": "product product_main",
                 "class-title": "product__title product__title_main",
                 "title": "ACCESSORIES"
@@ -133,9 +136,9 @@
           <source srcset="../../static/images/Delivery-mobile.jpg, ../../static/images/Delivery-mobile@2.jpg 2x" media="(max-width: 630px)">
           <source srcset="../../static/images/Delivery-tablet.jpg, ../../static/images/Delivery-tablet@2.jpg 2x" media="(max-width: 990px)">
           <source srcset="../../static/images/Delivery.jpg, ../../static/images/Delivery@2.jpg 2x">
-          <img src="../../static/images/Delivery.jpg" width="480" height="559" alt="Photo of a happy woman " class="about-products__pic"/>
+          <img src="../../static/images/Delivery.jpg" width="480" height="559" alt="Photo of a happy woman " class="about-products__img"/>
         </picture>
-        <div class="about-products__box">
+        <div class="about-products__content-box">
           <h2 class="about-products__title">Delivery</h2>
             <ul class="about-products__list list-point-none">
               <li class="about-products__item"><a href="#" class="about-products__link about-products__link_active">Delivery</a></li>
@@ -201,8 +204,8 @@
             there are other days that i am completely shocked that four years have
             flown by. It's simply magical.
           </p>
-          <div class="map">
-            <iframe class="map__area" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.548079422519!2d49.289455962969754!3d53.51226787371357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41687981eb77e79b%3A0xc6236db15e1d074e!2z0L_RgC4g0KHRgtC10L_QsNC90LAg0KDQsNC30LjQvdCwLCA0NCwg0KLQvtC70YzRj9GC0YLQuCwg0KHQsNC80LDRgNGB0LrQsNGPINC-0LHQuy4sIDQ0NTAyNw!5e0!3m2!1sru!2sru!4v1588158657463!5m2!1sru!2sru"></iframe> 
+          <div class="contacts__map">
+            <iframe class="contacts__map-area" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.548079422519!2d49.289455962969754!3d53.51226787371357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41687981eb77e79b%3A0xc6236db15e1d074e!2z0L_RgC4g0KHRgtC10L_QsNC90LAg0KDQsNC30LjQvdCwLCA0NCwg0KLQvtC70YzRj9GC0YLQuCwg0KHQsNC80LDRgNGB0LrQsNGPINC-0LHQuy4sIDQ0NTAyNw!5e0!3m2!1sru!2sru!4v1588158657463!5m2!1sru!2sru"></iframe>
           </div>
         </article>
       </div>
@@ -216,11 +219,11 @@
             <input class="form__input form__input_js" id="form-name" type="text" name="name">
           </div>
           <div class="form__row">
-            <div class="form__row_short form__row_short_2">
+            <div class="form__row-short form__row-short_2">
               <label class="form__label form__label_2" for="form-phone">Phone</label>
               <input class="form__input" id="form-phone" type="text" name="phone">
             </div>
-            <div class="form__row_short">
+            <div class="form__row-short">
               <label class="form__label form__label_2" for="form-email-modal">Email</label>
               <input class="form__input" id="form-email-modal" type="email" name="email">
             </div>
@@ -235,30 +238,30 @@
           </label>
           @@include('button/index.html', {
             "type": "submit",
-            "class": "button_gray",
+            "class": "form__button button_gray",
             "text": "SUBMIT"
             })
         </form>
         <button type="button" class="modal__close modal__close_js">
           <svg width="15" height="15" viewBox="0 0 15 15">
-            <path d="M 5.65 7.5,
-            L 0.37 2.23,
-            C 0.12 1.97, 0 1.66, 0 1.31,
-            C 0 0.96, 0.12 0.65, 0.37 0.39,
-            C 0.89 -0.13, 1.7 -0.13, 2.22 0.39,
-            L 7.49 5.66,
-            L 12.77 0.39,
-            C 13.29 -0.13, 14.09 -0.13, 14.61 0.39,
-            C 15.13 0.91, 15.13 1.71, 14.61 2.23,
-            L 9.34 7.5,
-            L 14.61 12.77,
-            C 15.13 13.29, 15.13 14.09, 14.61 14.61,
-            C 14.09 15.13, 13.29 15.13, 12.77 14.61,
-            L 7.49 9.34,
-            L 2.22 14.61,
-            C 1.7 15.13, 0.89 15.13, 0.37 14.61,
-            C 0.12 14.35, 0 14.04, 0 13.69,
-            C 0 13.34, 0.12 13.03, 0.37 12.77,
+            <path d="M 5.65 7.5
+            L 0.37 2.23
+            C 0.12 1.97 0 1.66 0 1.31
+            C 0 0.96 0.12 0.65 0.37 0.39
+            C 0.89 -0.13 1.7 -0.13 2.22 0.39
+            L 7.49 5.66
+            L 12.77 0.39
+            C 13.29 -0.13 14.09 -0.13 14.61 0.39
+            C 15.13 0.91 15.13 1.71 14.61 2.23
+            L 9.34 7.5
+            L 14.61 12.77
+            C 15.13 13.29 15.13 14.09 14.61 14.61
+            C 14.09 15.13 13.29 15.13 12.77 14.61
+            L 7.49 9.34
+            L 2.22 14.61
+            C 1.7 15.13 0.89 15.13 0.37 14.61
+            C 0.12 14.35 0 14.04 0 13.69
+            C 0 13.34 0.12 13.03 0.37 12.77
             Z" fill="white"/>
           </svg>
         </button>

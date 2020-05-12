@@ -124,7 +124,7 @@ textarea {
     }
   }
 
-  &__arrow {
+  &__item-img {
     @media (max-width: 375px) {
       width: 6px;
       height: 9px;
@@ -197,7 +197,7 @@ textarea {
   &_modal {
     padding: 22px 40px 42px;
     min-width: 100%;
-    margin: auto;  //?
+    margin: auto;
 
     @media (max-width: 1050px) {
       padding: 22px 56px 42px 56px;
@@ -220,18 +220,19 @@ textarea {
       min-width: 100%;
       padding-top: 35px;
     }
+  }
 
-    &_short {
-      min-width: 48.5%;
+  &__row-short {
+    width: 48.5%;
 
+    @media (max-width: 600px) {
+      width: 100%;
+      position: relative;
+    }
+
+    &_2 {
       @media (max-width: 600px) {
-        position: relative;
-      }
-
-      &_2 {
-        @media (max-width: 600px) {
-          margin-bottom: 36px;
-        }
+        margin-bottom: 36px;
       }
     }
   }
@@ -384,6 +385,7 @@ input:focus + .form__checkbox-indicator {
 
   &__pages {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__item {

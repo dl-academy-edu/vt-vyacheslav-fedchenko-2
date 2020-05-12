@@ -131,30 +131,30 @@
     position: absolute;
     bottom: 40.5%;
     left: 60.6%;
-    z-index: -1;
+    opacity: 0;
     max-width: 167px;
     width: 10vw;
-    animation: message_anim 10s;
+    animation: step-start message_anim 10s;
     animation-iteration-count:infinite;
 
     &_2 {
       bottom: 40%;
       left: 11.5%;
-      animation: message2_anim 10s;
+      animation: step-start message2_anim 10s;
       animation-iteration-count:infinite;
     }
 
     &_3 {
       bottom: 51.2%;
       left: 23.2%;
-      animation: message3_anim 10s;
+      animation: step-start message3_anim 10s;
       animation-iteration-count:infinite;
     }
 
     &_4 {
       bottom: 51.2%;
       left: 23.2%;
-      animation: message4_anim 10s;
+      animation: step-start message4_anim 10s;
       animation-iteration-count:infinite;
     }
 
@@ -179,8 +179,6 @@
       height: 6.6vw;
 
       &_2 {
-        max-width: 167px;
-        width: 10vw;
         max-height: 86px;
         height: 5.24vw;
       }
@@ -286,37 +284,37 @@
 
 @keyframes message_anim {
   from, 45%, 80% {
-    z-index: -1;
+    opacity: 0;
   }
-  46% {
-    z-index: 0;
+  60% {
+    opacity: 1;
   }
 }
 
 @keyframes message2_anim {
   from, 10%, 45% {
-    z-index: -1;
+    opacity: 0;
   }
-  11% {
-    z-index: 0;
+  20% {
+    opacity: 1;
   }
 }
 
 @keyframes message3_anim {
   from, 20%, 45% {
-    z-index: -1;
+    opacity: 0;
   }
   30% {
-    z-index: 0;
+    opacity: 1;
   }
 }
 
 @keyframes message4_anim {
   from, 60%, 80% {
-    z-index: -1;
+    opacity: 0;
   }
   70% {
-    z-index: 0;
+    opacity: 1;
   }
 }
 
