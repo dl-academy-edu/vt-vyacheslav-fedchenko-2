@@ -163,6 +163,7 @@
 .mobile-header {
   position: fixed;
   z-index: 2;
+  overflow: auto;
   top: 0;
   bottom: 0;
   right: 0;
@@ -175,7 +176,7 @@
 
   transition: .6s transform ;
 
-  transform: translateY(-100%);
+  transform: translateY(-200%);
 
   &_open {
     transform: translateY(0);

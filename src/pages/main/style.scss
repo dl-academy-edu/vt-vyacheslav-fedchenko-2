@@ -3,7 +3,6 @@
 @import "../../components/var";
 
 .poster {
-  position: relative;
   margin-top: 70px;
   background-color: $brown-3;
 
@@ -24,11 +23,15 @@
     }
   }
 
+  &__main-block {
+    position: relative;
+  }
+
   &__footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 39px;
+    min-height: 39px;
     font-weight: bold;
     font-size: $very-small;
     line-height: 16px;
@@ -37,12 +40,14 @@
     background-color: $brown;
 
     @media (max-width: 550px) {
-      height: 55px;
+      min-height: 55px;
       text-align: center;
     }
   }
 
   &__footer-text {
+    padding-top: 11px;
+    padding-bottom: 11px;
 
     @media (max-width: 550px) {
       padding: 4px 11px 4px 11px;
@@ -86,10 +91,10 @@
     }
   }
 
-  &__pic {
+  &__img {
     position: absolute;
     right: 100px;
-    bottom: 39px;
+    bottom: 0;
     width: 635px;
 
     @media (max-width: 1180px) {
@@ -97,12 +102,11 @@
       height: 37.3vw;
       right: 8px;
     }
-
+    
     @media (max-width: 550px) {
       width: 292px;
       height: 226px;
       right: 0;
-      bottom: 55px;
     }
 
     @media (max-width: 340px) {
@@ -147,6 +151,7 @@
 
   &__button {
     width: 161px;
+    z-index: 1;
 
     @media (max-width: 550px) {
       padding: 9px 10px;
@@ -273,10 +278,8 @@
     justify-content: space-between;
     margin: 30px auto 20px;
 
-
     @media (max-width: 768px) {
       margin-top: 25px;
-
     }
 
     @media (max-width: 375px) {
@@ -426,7 +429,7 @@ a:active > .product__title {
     }
   }
 
-  &__box {
+  &__content-box {
     position: relative;
     max-width: 40.6%;
 
@@ -439,9 +442,10 @@ a:active > .product__title {
     }
   }
 
-  &__pic {
+  &__img {
     width: 100%;
     height: 100%;
+    background-color: $dark-blue;
   }
 
   &__img-box {
@@ -511,7 +515,7 @@ a:active > .product__title {
       font-weight: bold;
     }
 
-    &:before {
+    &::before {
       opacity: 0;
       content: "";
       position: absolute;
@@ -531,7 +535,7 @@ a:active > .product__title {
       }
     }
 
-    &:hover:before {
+    &:hover::before {
       opacity: 1;
     }
   }
@@ -643,6 +647,7 @@ a:active > .product__title {
   margin-bottom: 111px;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-between;
 
   @media (max-width: 768px) {
@@ -742,14 +747,14 @@ a:active > .product__title {
   max-width: 46%;
   margin-right: 37px;
   margin-bottom: 64px;
-  padding: 0 30px 0 30px;
+  padding: 0 30px 62px;
   background-color: $light-blue;
 
   @media (max-width: 780px) {
     max-width: 48.5%;
     margin-right: 0;
     margin-bottom: 67px;
-    padding: 0 15px 44px 15px;
+    padding: 0 15px 107px;
   }
 
   @media (max-width: 550px) {
@@ -779,22 +784,23 @@ a:active > .product__title {
       padding-bottom: 16px;
     }
   }
-}
 
-.map {
-  margin-bottom: -180px;
-  height: 200px;
-  
-  @media (max-width: 780px) {
-    height: 151px;
-  }
-
-  @media (max-width: 550px) {
-    margin-bottom: -145px;
+  &__map {
+    margin-bottom: -180px;
     height: 200px;
+    background-color: $gray-6;
+    
+    @media (max-width: 780px) {
+      height: 151px;
+    }
+  
+    @media (max-width: 550px) {
+      margin-bottom: -145px;
+      height: 200px;
+    }
   }
 
-  &__area {
+  &__map-area {
     width: 100%;
     height: 100%;
     border: none;
@@ -803,15 +809,76 @@ a:active > .product__title {
 
 /*modal window*/
 
-.modal-bg {
+.modal {
   display: flex;
   position: fixed;
   background-color: $violet;
   top: 0;
   height: 100vh;
   width: 100vw;
+  z-index: 2;
+
+  @media (max-width: 680px) {
+    display: block;
+    overflow: auto;
+    text-align: center;
+
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      font-size: 0;
+      height: 100%;
+      vertical-align: middle;
+      width: 0;
+    }
+  }
+
+  &__content {
+    display: block;
+    position: relative;
+    align-self: center;
+    margin: 0 auto;
+    text-align: left;
+
+    @media (max-width: 1050px) {
+      min-width: 84.5%;
+    }
+
+    @media (max-width: 680px) {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 40px 0;
+      width: 89%; 
+    }   
+  }
 
   &_close {
     display: none;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    @media (max-width: 973px) {
+			top: -25px;
+      right: 0;
+    }
+
+    transition: opacity .4s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

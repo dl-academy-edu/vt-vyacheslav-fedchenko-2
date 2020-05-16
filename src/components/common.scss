@@ -124,7 +124,7 @@ textarea {
     }
   }
 
-  &__arrow {
+  &__item-img {
     @media (max-width: 375px) {
       width: 6px;
       height: 9px;
@@ -195,18 +195,16 @@ textarea {
   }
   
   &_modal {
-    padding: 22px 40px 42px 40px;
-    min-width: 680px;
+    padding: 22px 40px 42px;
+    min-width: 100%;
     margin: auto;
 
     @media (max-width: 1050px) {
       padding: 22px 56px 42px 56px;
-      min-width: 84.5%;
     }
 
     @media (max-width: 680px) {
       padding: 10px 25px 25px;
-      width: 89%;
     }
   }
 
@@ -222,18 +220,19 @@ textarea {
       min-width: 100%;
       padding-top: 35px;
     }
+  }
 
-    &_short {
-      min-width: 48.5%;
+  &__row-short {
+    width: 48.5%;
 
+    @media (max-width: 600px) {
+      width: 100%;
+      position: relative;
+    }
+
+    &_2 {
       @media (max-width: 600px) {
-        position: relative;
-      }
-
-      &_2 {
-        @media (max-width: 600px) {
-          margin-bottom: 36px;
-        }
+        margin-bottom: 36px;
       }
     }
   }
@@ -315,7 +314,7 @@ textarea {
       padding-top: 0;
     }
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       top: 0;
@@ -342,33 +341,8 @@ textarea {
     }
   }
 
-  &__close {
-    position: absolute;
-    top: 0;
-    right: -25px;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-
-    @media (max-width: 973px) {
-			top: -25px;
-      right: 0;
-    }
-
-    transition: opacity .4s;
-
-    &:hover {
-      opacity: 0.5;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-  }
-
   &__checkbox {
-    &:checked + .form__checkbox-indicator:after {
+    &:checked + .form__checkbox-indicator::after {
       background: url(../../static/images/Check.svg) no-repeat;
 
       @media (max-width: 600px) {
@@ -411,6 +385,7 @@ input:focus + .form__checkbox-indicator {
 
   &__pages {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__item {

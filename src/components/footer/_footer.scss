@@ -319,6 +319,7 @@
 
 .social {
 	display: flex;
+	flex-wrap: wrap;
 	padding-top: 9px;
 
 	@media (max-width: 420px) {
