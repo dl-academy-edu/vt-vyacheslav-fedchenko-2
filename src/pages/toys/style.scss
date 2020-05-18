@@ -228,44 +228,6 @@
     }
   }
 
-  &__form-checkbox-indicator {   /*checkbox*/
-    padding-left: 30px;
-    margin-right: 8px;
-  
-    @media (max-width: 400px) {
-      padding-left: 24px;
-    }
-  
-    &::before {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      left: 2px;
-      top: 2px;
-      height: 19px;
-      width: 19px;
-      background: url(../../static/images/Check.svg) no-repeat;
-      opacity: 0;
-      transition: opacity .4s;
-    }
-  
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 19px;
-      width: 19px;
-      border: 2px solid $brown;
-      border-radius: 3px;
-  
-      @media (max-width: 400px) {
-        height: 17px;
-        width: 17px;
-      }
-    }
-  }
-
   &__checkbox-label {
     position: relative;
     display: flex;
@@ -285,7 +247,7 @@
     }
   }
 
-  &__form-checkbox {
+  &__form-checkbox {  /*checkbox*/
     &:checked + .filter__form-checkbox-indicator::after {
       background-color: $white;
     
@@ -309,6 +271,44 @@
         background-size: 13px;
       }
     }
+
+    &-indicator {   
+      padding-left: 30px;
+      margin-right: 8px;
+    
+      @media (max-width: 400px) {
+        padding-left: 24px;
+      }
+    
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 2px;
+        top: 2px;
+        height: 19px;
+        width: 19px;
+        background: url(../../static/images/Check.svg) no-repeat;
+        opacity: 0;
+        transition: opacity .4s;
+      }
+    
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 19px;
+        width: 19px;
+        border: 2px solid $brown;
+        border-radius: 3px;
+    
+        @media (max-width: 400px) {
+          height: 17px;
+          width: 17px;
+        }
+      }
+    }  
   }
 
   &__radio-label {   /*radio*/
@@ -322,33 +322,6 @@
   
     &:hover {
       text-decoration-color: $black;
-    }
-  }
-
-  &__form-radio-indicator {
-    position: relative;
-    padding-left: 30px;
-    margin-right: 10px;
-  
-    @media (max-width: 400px) {
-      padding-left: 24px;
-    }
-  
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      display: block;
-      height: 20px;
-      width: 20px;
-      border: 2px solid $brown;
-      border-radius: 100%;
-  
-      @media (max-width: 400px) {
-        height: 16px;
-        width: 16px;
-      }
     }
   }
 
@@ -385,26 +358,44 @@
     &:disabled + .filter__form-radio-indicator::after {
       border: 2px solid $brown-6;
     }
+
+    &-indicator {
+      position: relative;
+      padding-left: 30px;
+      margin-right: 10px;
+    
+      @media (max-width: 400px) {
+        padding-left: 24px;
+      }
+    
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        height: 20px;
+        width: 20px;
+        border: 2px solid $brown;
+        border-radius: 100%;
+    
+        @media (max-width: 400px) {
+          height: 16px;
+          width: 16px;
+        }
+      }
+    }
   }
 
-  &__radio-box-label {  /*radio-box*/
-    position: relative;
-    cursor: pointer;
-  }
+  &__radio-box {  /*radio-box*/
 
-  &__form-radio-box-indicator {
-    display: block;
-    height: 35px;
-    width: 80px;
-    padding-top: 10px;
-    text-align: center;
-    background-color: $white;
-    border: none;
-  
-    @media (max-width: 400px) {
-      height: 29px;
-      padding-top: 6px;
-      padding-right: 5px;
+    &-label {  
+      position: relative;
+      cursor: pointer;
+    }
+
+    &-container {
+      display: flex;
     }
   }
 
@@ -423,10 +414,22 @@
       background-color: $light-pink;
       transition: .4s;
     }
-  }
 
-  &__radio-box-container {
-    display: flex;
+    &-indicator {
+      display: block;
+      height: 35px;
+      width: 80px;
+      padding-top: 10px;
+      text-align: center;
+      background-color: $white;
+      border: none;
+    
+      @media (max-width: 400px) {
+        height: 29px;
+        padding-top: 6px;
+        padding-right: 5px;
+      }
+    } 
   }
 
   &__button {   /*filter-button*/

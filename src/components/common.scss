@@ -90,6 +90,13 @@ textarea {
       font-size: $small;
       padding-right: 14px;
     }
+
+    &-img {
+      @media (max-width: 375px) {
+        width: 6px;
+        height: 9px;
+      }
+    }
   }
   
   &__title {
@@ -121,13 +128,6 @@ textarea {
 
     &:hover {
       opacity: 0.75;
-    }
-  }
-
-  &__item-img {
-    @media (max-width: 375px) {
-      width: 6px;
-      height: 9px;
     }
   }
 }
@@ -220,19 +220,19 @@ textarea {
       min-width: 100%;
       padding-top: 35px;
     }
-  }
 
-  &__row-short {
-    width: 48.5%;
-
-    @media (max-width: 600px) {
-      width: 100%;
-      position: relative;
-    }
-
-    &_2 {
+    &-short {
+      width: 48.5%;
+  
       @media (max-width: 600px) {
-        margin-bottom: 36px;
+        width: 100%;
+        position: relative;
+      }
+  
+      &_2 {
+        @media (max-width: 600px) {
+          margin-bottom: 36px;
+        }
       }
     }
   }
@@ -283,53 +283,11 @@ textarea {
     &:active {
       border: 2px solid $dark-2;
     }
-  }
 
-  &__input-message {
-    min-height: 150px;
-    width: 100%;
-    resize: none;
-  }
-
-  &__checkbox-label {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-top: 20px;
-    cursor: pointer;
-
-    @media (max-width: 600px) {
-      padding-top: 18px;
-    }
-  }
-
-  &__checkbox-indicator {
-    margin-right: 15px;
-    padding-left: 34px;
-    padding-top: 2px;
-
-    @media (max-width: 600px) {
-      padding-left: 29px;
-      margin-right: 0;
-      padding-top: 0;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 20px;
-      width: 20px;
-      border: 2px solid $brown;
-      border-radius: 3px;
-      margin-top: 19px;
-
-      @media (max-width: 600px) {
-        height: 17px;
-        width: 17px;
-        margin-top: 14px;
-      }
+    &-message {
+      min-height: 150px;
+      width: 100%;
+      resize: none;
     }
   }
 
@@ -347,6 +305,48 @@ textarea {
 
       @media (max-width: 600px) {
         background-size: 13px;
+      }
+    }
+
+    &-label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-top: 20px;
+      cursor: pointer;
+  
+      @media (max-width: 600px) {
+        padding-top: 18px;
+      }
+    }
+
+    &-indicator {
+      margin-right: 15px;
+      padding-left: 34px;
+      padding-top: 2px;
+  
+      @media (max-width: 600px) {
+        padding-left: 29px;
+        margin-right: 0;
+        padding-top: 0;
+      }
+  
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        border: 2px solid $brown;
+        border-radius: 3px;
+        margin-top: 19px;
+  
+        @media (max-width: 600px) {
+          height: 17px;
+          width: 17px;
+          margin-top: 14px;
+        }
       }
     }
   }

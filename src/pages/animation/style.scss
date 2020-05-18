@@ -16,20 +16,23 @@
     margin-bottom: 81px;
   }
 
-  &__background-top {
-    padding-left: 10.7%;
-    max-width: 1517px;
-    max-height: 135px;
-    width: 92.5vw;
-    height: 8.26vw;
-  }
+  &__background {
+  
+    &-top {
+      padding-left: 10.7%;
+      max-width: 1517px;
+      max-height: 135px;
+      width: 92.5vw;
+      height: 8.26vw;
+    }
 
-  &__background-bottom {
-    padding-left: 0px;
-    max-width: 1585px;
-    max-height: 630px;
-    width: 96.7vw;
-    height: 38.5vw;
+    &-bottom {
+      padding-left: 0px;
+      max-width: 1585px;
+      max-height: 630px;
+      width: 96.7vw;
+      height: 38.5vw;
+    }
   }
 
   &__clouds {
@@ -51,68 +54,84 @@
     }
   }
 
-  &__car1 {
-    position: absolute;
-    bottom: 34%;
-    animation: car_anim 9s;
-    animation-iteration-count:infinite;
-    max-width: 246px;
-    max-height: 65px;
-    width: 15vw;
-    height: 4vw;
+  &__car {
+  
+    &-1 {
+      position: absolute;
+      bottom: 34%;
+      animation: car_anim 9s;
+      animation-iteration-count:infinite;
+      max-width: 246px;
+      max-height: 65px;
+      width: 15vw;
+      height: 4vw;
+    }
+
+    &-2 {
+      position: absolute;
+      bottom: 32.1%;
+      animation: car_anim 8s;
+      animation-iteration-count:infinite;
+      max-width: 203px;
+      max-height: 96px;
+      width: 13vw;
+      height: 5.9vw;
+    }
+
+    &-3 {
+      position: absolute;
+      bottom: 31.5%;
+      animation: car_anim 7s;
+      animation-iteration-count:infinite;
+      max-width: 250px;
+      max-height: 99px;
+      width: 15vw;
+      height: 6vw;
+    }
+
+    &-4 {
+      position: absolute;
+      bottom: 30.2%;
+      animation: car_anim 10s;
+      animation-iteration-count:infinite;
+      max-width: 268px;
+      max-height: 126px;
+      width: 16vw;
+      height: 7.7vw;
+    }
   }
 
-  &__car2 {
-    position: absolute;
-    bottom: 32.1%;
-    animation: car_anim 8s;
-    animation-iteration-count:infinite;
-    max-width: 203px;
-    max-height: 96px;
-    width: 13vw;
-    height: 5.9vw;
-  }
+  &__lantern {
 
-  &__car3 {
-    position: absolute;
-    bottom: 31.5%;
-    animation: car_anim 7s;
-    animation-iteration-count:infinite;
-    max-width: 250px;
-    max-height: 99px;
-    width: 15vw;
-    height: 6vw;
-  }
+    &-1 {
+      position: absolute;
+      bottom: 26%;
+      left: 33.2%;
+      max-width: 151px;
+      width: 9vw;
+      max-height: 395px;
+      height: 24vw;
+    }
 
-  &__car4 {
-    position: absolute;
-    bottom: 30.2%;
-    animation: car_anim 10s;
-    animation-iteration-count:infinite;
-    max-width: 268px;
-    max-height: 126px;
-    width: 16vw;
-    height: 7.7vw;
-  }
+    &-2 {
+      position: absolute;
+      bottom: 26.5%;
+      left: 88.3%;
+      max-width: 151px;
+      width: 9vw;
+      max-height: 395px;
+      height: 24vw;
+    }
 
-  &__lantern1 {
-    position: absolute;
-    bottom: 26%;
-    left: 33.2%;
-    max-width: 151px;
-    width: 9vw;
-    max-height: 395px;
-    height: 24vw;
-  }
-
-  &__lantern2 {
-    position: absolute;
-    bottom: 26.5%;
-    left: 88.3%;
-    max-width: 151px;
-    width: 9vw;
-    max-height: 395px;
-    height: 24vw;
+    &-3 {
+      position: absolute;
+      bottom: 6%;
+      left: 70.6%;
+      max-width: 214px;
+      width: 12.8vw;
+      max-height: 562px;
+      height: 34.3vw;
+    }
   }
 
   &__taxi {
@@ -185,16 +204,6 @@
     }
   }
 
-  &__lantern3 {
-    position: absolute;
-    bottom: 6%;
-    left: 70.6%;
-    max-width: 214px;
-    width: 12.8vw;
-    max-height: 562px;
-    height: 34.3vw;
-  }
-
   &__woman {
     position: absolute;
     bottom: 6%;
@@ -205,18 +214,35 @@
     height: 16.3vw;
   }
 
-  &__hand2 {
-    position: absolute;
-    bottom: 20.4%;
-    left: 19%;
-    max-width: 63px;
-    width: 4vw;
-    max-height: 44px;
-    height: 2.7vw;
-    animation: hand2_anim 10s;
-    animation-iteration-count:infinite;
-  }
+  &__hand {
 
+    &-1 {
+      position: absolute;
+      bottom: 40%;
+      left: 24%;
+      max-width: 89px;
+      width: 6vw;
+      max-height: 128px;
+      height: 7.8vw;
+      transform: rotate(152deg);
+      transform-origin: 16% 90%;
+      animation: hand_anim 10s;
+      animation-iteration-count:infinite;
+    }
+  
+    &-2 {
+      position: absolute;
+      bottom: 20.4%;
+      left: 19%;
+      max-width: 63px;
+      width: 4vw;
+      max-height: 44px;
+      height: 2.7vw;
+      animation: hand2_anim 10s;
+      animation-iteration-count:infinite;
+    }
+  }
+  
   &__suitcases {
     position: absolute;
     bottom: 6%;
@@ -225,20 +251,6 @@
     width: 12vw;
     max-height: 95px;
     height: 5.8vw;
-  }
-
-  &__hand {
-    position: absolute;
-    bottom: 40%;
-    left: 24%;
-    max-width: 89px;
-    width: 6vw;
-    max-height: 128px;
-    height: 7.8vw;
-    transform: rotate(152deg);
-    transform-origin: 16% 90%;
-    animation: hand_anim 10s;
-    animation-iteration-count:infinite;
   }
 
   &__man {
@@ -254,31 +266,31 @@
 
 @keyframes car_anim {
   from {
-    left: -50%;
+    transform: translate(-1000%);
   }
   to {
-    left: 150%;
+    transform: translate(200%);
   }
 }
 
 @keyframes clouds_anim {
   from {
-    left: 100%;
+    transform: translate(0%);
   }
   to {
-    left: -100%;
+    transform: translate(-250%);
   }
 }
 
 @keyframes taxi_anim {
   from {
-    left: 100%;
+    transform: translate(70%);
   }
   40%, 60% {
-    left: 40.8%;
+    transform: translate(-108.5%);
   }
   100% {
-    left: -80%;
+    transform: translate(-400%);
   }
 }
 

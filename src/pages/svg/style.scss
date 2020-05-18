@@ -11,14 +11,17 @@
     width: 100%;
   }
 
-  &__frame1 {
-    animation: frame1 7s;
-    animation-iteration-count:infinite;
-  }
+  &__frame {
 
-  &__frame2 {
-    animation: frame2 7s;
-    animation-iteration-count:infinite;
+    &-1 {
+      animation: frame1 7s;
+      animation-iteration-count:infinite;
+    }
+  
+    &-2 {
+      animation: frame2 7s;
+      animation-iteration-count:infinite;
+    }
   }
 
   &__moon {
@@ -26,24 +29,27 @@
     animation-iteration-count:infinite;
   }
 
-  &__mount1 {
-    animation: mount1 7s;
-    animation-iteration-count:infinite;
-  }
+  &__mount {
 
-  &__mount2 {
-    animation: mount2 7s;
-    animation-iteration-count:infinite;
-  }
-
-  &__mount3 {
-    animation: mount3 7s;
-    animation-iteration-count:infinite;
-  }
-
-  &__mount4 {
-    animation: mount4 7s;
-    animation-iteration-count:infinite;
+    &-1 {
+      animation: mount1 7s;
+      animation-iteration-count:infinite;
+    }
+  
+    &-2 {
+      animation: mount2 7s;
+      animation-iteration-count:infinite;
+    }
+  
+    &-3 {
+      animation: mount3 7s;
+      animation-iteration-count:infinite;
+    }
+  
+    &-4 {
+      animation: mount4 7s;
+      animation-iteration-count:infinite;
+    }
   }
 
   &__star {
@@ -51,19 +57,22 @@
     animation-iteration-count:infinite;
   }
 
-  &__line1 {
-    animation: line1 7s;
-    animation-iteration-count:infinite;
-  }
-
-  &__line2 {
-    animation: line2 7s;
-    animation-iteration-count:infinite;
-  }
-
-  &__line3 {
-    animation: line3 7s;
-    animation-iteration-count:infinite;
+  &__line {
+    
+    &-1 {
+      animation: line1 7s;
+      animation-iteration-count:infinite;
+    }
+  
+    &-2 {
+      animation: line2 7s;
+      animation-iteration-count:infinite;
+    }
+  
+    &-3 {
+      animation: line3 7s;
+      animation-iteration-count:infinite;
+    }
   }
 }
 
