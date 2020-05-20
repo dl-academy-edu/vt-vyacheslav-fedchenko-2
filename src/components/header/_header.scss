@@ -138,7 +138,7 @@
       }
     }
 
-    &-bg {
+    &-overlay {
       position: fixed;
       z-index: 2;
       top: 0;
@@ -177,7 +177,7 @@
 		display: initial;
   }
 
-  transition: .6s transform ;
+  transition: transform .6s;
 
   transform: translateY(-200%);
 

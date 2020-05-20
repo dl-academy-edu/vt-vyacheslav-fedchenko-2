@@ -29,6 +29,7 @@
   &:disabled {
     color: $gray-7;
     background-color: $light-gray;
+    pointer-events: none;
   }
 
   &_blue {

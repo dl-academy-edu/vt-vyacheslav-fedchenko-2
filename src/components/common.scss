@@ -34,6 +34,11 @@ textarea {
   outline: none;
 }
 
+input {
+  -webkit-appearance: none;
+  border-radius: 0px;
+}
+
 /* Фрагмент кода предоставлен лектором */
 
 .hidden {
@@ -366,7 +371,7 @@ input:focus + .form__checkbox-indicator {
   justify-content: space-between;
   align-items: center;
   margin-top: -8px;
-  margin-bottom: 56px;
+  margin-bottom: 61px;
   font-family: "Montserrat", "Candara", sans-serif;
   font-weight: bold;
   font-size: $small;
@@ -386,6 +391,7 @@ input:focus + .form__checkbox-indicator {
   &__pages {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 7px;
   }
 
   &__item {
@@ -411,6 +417,7 @@ input:focus + .form__checkbox-indicator {
 
   &__btn {
     fill: $dark-6;
+    display: flex;
 
     transition: opacity .4s;
     transition: fill .4s;

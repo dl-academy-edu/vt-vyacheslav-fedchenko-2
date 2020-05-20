@@ -92,7 +92,7 @@ a {
   & > .blog__title {
     text-decoration: underline;
     text-decoration-color: transparent;
-    transition: all 0.4s;
+    transition: text-decoration-color 0.4s;
   }
 
   &:hover > .blog__title,

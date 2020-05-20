@@ -59,7 +59,7 @@
     &-1 {
       position: absolute;
       bottom: 34%;
-      animation: car_anim 9s;
+      animation: car_anim 14s;
       animation-iteration-count:infinite;
       max-width: 246px;
       max-height: 65px;
@@ -70,7 +70,7 @@
     &-2 {
       position: absolute;
       bottom: 32.1%;
-      animation: car_anim 8s;
+      animation: car_anim 13s;
       animation-iteration-count:infinite;
       max-width: 203px;
       max-height: 96px;
@@ -81,7 +81,7 @@
     &-3 {
       position: absolute;
       bottom: 31.5%;
-      animation: car_anim 7s;
+      animation: car_anim 12s;
       animation-iteration-count:infinite;
       max-width: 250px;
       max-height: 99px;
@@ -92,7 +92,7 @@
     &-4 {
       position: absolute;
       bottom: 30.2%;
-      animation: car_anim 10s;
+      animation: car_anim 15s;
       animation-iteration-count:infinite;
       max-width: 268px;
       max-height: 126px;
@@ -269,7 +269,7 @@
     transform: translate(-1000%);
   }
   to {
-    transform: translate(200%);
+    transform: translate(1000%);
   }
 }
 
@@ -287,7 +287,7 @@
     transform: translate(70%);
   }
   40%, 60% {
-    transform: translate(-108.5%);
+    transform: translate(-106.5%);
   }
   100% {
     transform: translate(-400%);
