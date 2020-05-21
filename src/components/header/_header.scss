@@ -26,6 +26,7 @@
     }
 
     @media (max-width: 375px) {
+      margin-left: 15px;
       width: 42px;
       min-width: 42px;
       height: 22px;
@@ -130,11 +131,12 @@
       }
 
       @media (max-width: 375px) {
+        display: flex;
         width: 13px;
         min-width: 13px;
         height: 13px;
         margin-bottom: 6px;
-        margin-right: 21px;
+        margin-right: 36px;
       }
     }
 
@@ -191,6 +193,10 @@
     width: 100%;
     padding: 35px 60px 25px 60px;
 
+    @media (max-width: 710px) {
+			padding: 35px 20px 25px 20px;
+    }
+
     @media (max-width: 375px) {
 			padding: 25px 30px 25px 30px;
     }
@@ -228,10 +234,12 @@
   &__search {
 
     @media (max-width: 375px) {
+      display: flex;
       width: 13px;
       min-width: 13px;
       height: 13px;
       margin-bottom: 6px;
+      margin-right: 5px;
     }
   }
 

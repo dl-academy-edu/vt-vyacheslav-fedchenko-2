@@ -59,13 +59,11 @@ input {
   padding: 0 20px;
 
   @media (max-width: 768px) {
-    max-width: 678px;
-    padding: 0 15px;
+    padding: 0 60px;
   }
 
-  @media (max-width: 376px) {
-    max-width: 345px;
-    padding: 0 5px;
+  @media (max-width: 710px) {
+    padding: 0 20px;
   }
 
   @media (max-width: 360px) {
@@ -370,8 +368,8 @@ input:focus + .form__checkbox-indicator {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -8px;
-  margin-bottom: 61px;
+  margin-top: -5px;
+  margin-bottom: 58px;
   font-family: "Montserrat", "Candara", sans-serif;
   font-weight: bold;
   font-size: $small;
@@ -380,10 +378,11 @@ input:focus + .form__checkbox-indicator {
   color: $dark;
 
   @media (max-width: 768px) {
-    margin-bottom: 47px;
+    margin-bottom: 50px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 395px) {
+    margin-bottom: 48px;
     font-size: $very-small-2;
     line-height: 17px;
   }
@@ -391,7 +390,6 @@ input:focus + .form__checkbox-indicator {
   &__pages {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 7px;
   }
 
   &__item {
@@ -399,7 +397,6 @@ input:focus + .form__checkbox-indicator {
     padding-right: 33px;
 
     @media (max-width: 375px) {
-      margin-top: 3px;
       padding-left: 26px;
       padding-right: 26px;
     }

@@ -10,15 +10,15 @@
   padding: 42px 105px 14px 11px;
 
   @media (max-width: 900px) {
-    padding: 30px 50px 21px 6px;
+    padding: 30px 95px 21px 51px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 607px) {
     padding-right: 6px;
   }
 
-  @media (max-width: 376px) {
-    padding: 23px 0 25px;
+  @media (max-width: 415px) {
+    padding: 23px 15px 25px;
     font-size: $very-small-2;
     line-height: 19px;
   }
@@ -46,10 +46,10 @@
     margin-right: 7.4%;
   
     @media (max-width: 950px) {
-      margin-right: 10.2%;
+      margin-right: 9.2%;
     }
   
-    @media (max-width: 675px) {
+    @media (max-width: 758px) {
       margin-right: 50%;
       padding-left: 8px;
       padding-bottom: 25px;
@@ -68,7 +68,7 @@
     @media (max-width: 375px) {
       padding-left: 3px;
       padding-bottom: 13px;
-      margin-right: 23.5%;
+      margin-right: 22.5%;
     }
   
     @media (max-width: 370px) {
@@ -454,7 +454,7 @@
       margin-right: 70px;
     }
   
-    @media (max-width: 514px) {
+    @media (max-width: 518px) {
       margin: 30px auto 0;
     }
   
