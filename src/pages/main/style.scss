@@ -295,6 +295,8 @@
     max-width: 100vw;
     margin-right: calc((100% - 100vw) / 2);
     overflow: auto;
+    margin-left: -80px;
+    padding-left: 80px;
   }
 }
 
