@@ -34,6 +34,11 @@ textarea {
   outline: none;
 }
 
+input {
+  -webkit-appearance: none;
+  border-radius: 0px;
+}
+
 /* Фрагмент кода предоставлен лектором */
 
 .hidden {
@@ -54,13 +59,11 @@ textarea {
   padding: 0 20px;
 
   @media (max-width: 768px) {
-    max-width: 678px;
-    padding: 0 15px;
+    padding: 0 60px;
   }
 
-  @media (max-width: 376px) {
-    max-width: 345px;
-    padding: 0 5px;
+  @media (max-width: 710px) {
+    padding: 0 20px;
   }
 
   @media (max-width: 360px) {
@@ -89,6 +92,13 @@ textarea {
     @media (max-width: 375px) {
       font-size: $small;
       padding-right: 14px;
+    }
+
+    &-img {
+      @media (max-width: 375px) {
+        width: 6px;
+        height: 9px;
+      }
     }
   }
   
@@ -121,13 +131,6 @@ textarea {
 
     &:hover {
       opacity: 0.75;
-    }
-  }
-
-  &__item-img {
-    @media (max-width: 375px) {
-      width: 6px;
-      height: 9px;
     }
   }
 }
@@ -220,19 +223,19 @@ textarea {
       min-width: 100%;
       padding-top: 35px;
     }
-  }
 
-  &__row-short {
-    width: 48.5%;
-
-    @media (max-width: 600px) {
-      width: 100%;
-      position: relative;
-    }
-
-    &_2 {
+    &-short {
+      width: 48.5%;
+  
       @media (max-width: 600px) {
-        margin-bottom: 36px;
+        width: 100%;
+        position: relative;
+      }
+  
+      &_2 {
+        @media (max-width: 600px) {
+          margin-bottom: 36px;
+        }
       }
     }
   }
@@ -283,53 +286,11 @@ textarea {
     &:active {
       border: 2px solid $dark-2;
     }
-  }
 
-  &__input-message {
-    min-height: 150px;
-    width: 100%;
-    resize: none;
-  }
-
-  &__checkbox-label {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-top: 20px;
-    cursor: pointer;
-
-    @media (max-width: 600px) {
-      padding-top: 18px;
-    }
-  }
-
-  &__checkbox-indicator {
-    margin-right: 15px;
-    padding-left: 34px;
-    padding-top: 2px;
-
-    @media (max-width: 600px) {
-      padding-left: 29px;
-      margin-right: 0;
-      padding-top: 0;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 20px;
-      width: 20px;
-      border: 2px solid $brown;
-      border-radius: 3px;
-      margin-top: 19px;
-
-      @media (max-width: 600px) {
-        height: 17px;
-        width: 17px;
-        margin-top: 14px;
-      }
+    &-message {
+      min-height: 150px;
+      width: 100%;
+      resize: none;
     }
   }
 
@@ -349,6 +310,48 @@ textarea {
         background-size: 13px;
       }
     }
+
+    &-label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-top: 20px;
+      cursor: pointer;
+  
+      @media (max-width: 600px) {
+        padding-top: 18px;
+      }
+    }
+
+    &-indicator {
+      margin-right: 15px;
+      padding-left: 34px;
+      padding-top: 2px;
+  
+      @media (max-width: 600px) {
+        padding-left: 29px;
+        margin-right: 0;
+        padding-top: 0;
+      }
+  
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        border: 2px solid $brown;
+        border-radius: 3px;
+        margin-top: 19px;
+  
+        @media (max-width: 600px) {
+          height: 17px;
+          width: 17px;
+          margin-top: 14px;
+        }
+      }
+    }
   }
 }
 
@@ -365,8 +368,8 @@ input:focus + .form__checkbox-indicator {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -8px;
-  margin-bottom: 56px;
+  margin-top: -5px;
+  margin-bottom: 58px;
   font-family: "Montserrat", "Candara", sans-serif;
   font-weight: bold;
   font-size: $small;
@@ -375,10 +378,11 @@ input:focus + .form__checkbox-indicator {
   color: $dark;
 
   @media (max-width: 768px) {
-    margin-bottom: 47px;
+    margin-bottom: 50px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 395px) {
+    margin-bottom: 48px;
     font-size: $very-small-2;
     line-height: 17px;
   }
@@ -393,7 +397,6 @@ input:focus + .form__checkbox-indicator {
     padding-right: 33px;
 
     @media (max-width: 375px) {
-      margin-top: 3px;
       padding-left: 26px;
       padding-right: 26px;
     }
@@ -411,6 +414,7 @@ input:focus + .form__checkbox-indicator {
 
   &__btn {
     fill: $dark-6;
+    display: flex;
 
     transition: opacity .4s;
     transition: fill .4s;

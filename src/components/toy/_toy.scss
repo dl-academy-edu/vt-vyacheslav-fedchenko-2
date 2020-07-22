@@ -86,7 +86,7 @@
       line-height: 29px;
       background-color: $gray-6;
       opacity: 0;
-      transition: .6s;
+      transition: opacity .6s;
 
       @media (max-width: 1100px) {
         font-size: 2vw;
@@ -99,12 +99,16 @@
       }
     }
 
-    &:hover::before {
-      opacity: 0.9;
-    }
+    
+  }
+}
 
-    &:active::before {
-      opacity: 0.67;
-    }
+a {
+  &:hover > .toy__box::before {
+    opacity: 0.9;
+  }
+
+  &:active > .toy__box::before {
+    opacity: 0.67;
   }
 }

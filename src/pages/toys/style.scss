@@ -10,15 +10,15 @@
   padding: 42px 105px 14px 11px;
 
   @media (max-width: 900px) {
-    padding: 30px 50px 21px 6px;
+    padding: 30px 95px 21px 51px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 607px) {
     padding-right: 6px;
   }
 
-  @media (max-width: 376px) {
-    padding: 23px 0 25px;
+  @media (max-width: 415px) {
+    padding: 23px 15px 25px;
     font-size: $very-small-2;
     line-height: 19px;
   }
@@ -46,10 +46,10 @@
     margin-right: 7.4%;
   
     @media (max-width: 950px) {
-      margin-right: 10.2%;
+      margin-right: 9.2%;
     }
   
-    @media (max-width: 675px) {
+    @media (max-width: 758px) {
       margin-right: 50%;
       padding-left: 8px;
       padding-bottom: 25px;
@@ -68,7 +68,7 @@
     @media (max-width: 375px) {
       padding-left: 3px;
       padding-bottom: 13px;
-      margin-right: 23.5%;
+      margin-right: 22.5%;
     }
   
     @media (max-width: 370px) {
@@ -228,64 +228,18 @@
     }
   }
 
-  &__form-checkbox-indicator {   /*checkbox*/
-    padding-left: 30px;
-    margin-right: 8px;
-  
-    @media (max-width: 400px) {
-      padding-left: 24px;
-    }
-  
-    &::before {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      left: 2px;
-      top: 2px;
-      height: 19px;
-      width: 19px;
-      background: url(../../static/images/Check.svg) no-repeat;
-      opacity: 0;
-      transition: opacity .4s;
-    }
-  
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 19px;
-      width: 19px;
-      border: 2px solid $brown;
-      border-radius: 3px;
-  
-      @media (max-width: 400px) {
-        height: 17px;
-        width: 17px;
-      }
-    }
-  }
-
   &__checkbox-label {
     position: relative;
     display: flex;
     align-items: center;
     padding-bottom: 20px;
-    cursor: pointer;
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    transition: all 0.4s;
   
     @media (max-width: 400px) {
       padding-bottom: 11px;
     }
-  
-    &:hover {
-      text-decoration-color: $black;
-    }
   }
 
-  &__form-checkbox {
+  &__form-checkbox {  /*checkbox*/
     &:checked + .filter__form-checkbox-indicator::after {
       background-color: $white;
     
@@ -309,47 +263,62 @@
         background-size: 13px;
       }
     }
+
+    &:disabled + .filter__form-checkbox-indicator { 
+      pointer-events: none;
+    }
+
+    &-indicator {   
+      padding-left: 30px;
+      margin-right: 8px;
+      cursor: pointer;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color 0.4s;
+    
+      @media (max-width: 400px) {
+        padding-left: 24px;
+      }
+
+      &:hover {
+        text-decoration-color: $black;
+      }
+    
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 2px;
+        top: 2px;
+        height: 19px;
+        width: 19px;
+        background: url(../../static/images/Check.svg) no-repeat;
+        opacity: 0;
+        transition: opacity .4s;
+      }
+    
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 19px;
+        width: 19px;
+        border: 2px solid $brown;
+        border-radius: 3px;
+    
+        @media (max-width: 400px) {
+          height: 17px;
+          width: 17px;
+        }
+      }
+    }  
   }
 
   &__radio-label {   /*radio*/
     display: flex;
     align-items: center;
     padding-bottom: 16px;
-    cursor: pointer;
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    transition: all 0.4s;
-  
-    &:hover {
-      text-decoration-color: $black;
-    }
-  }
-
-  &__form-radio-indicator {
-    position: relative;
-    padding-left: 30px;
-    margin-right: 10px;
-  
-    @media (max-width: 400px) {
-      padding-left: 24px;
-    }
-  
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      display: block;
-      height: 20px;
-      width: 20px;
-      border: 2px solid $brown;
-      border-radius: 100%;
-  
-      @media (max-width: 400px) {
-        height: 16px;
-        width: 16px;
-      }
-    }
   }
 
   &__form-radio {
@@ -364,7 +333,7 @@
       border-radius: 100%;
       background-color: $brown;
       opacity: 0;
-      transition: .4s;
+      transition: opacity .4s;
     
       @media (max-width: 400px) {
         top: 8px;
@@ -385,48 +354,95 @@
     &:disabled + .filter__form-radio-indicator::after {
       border: 2px solid $brown-6;
     }
+
+    &:disabled + .filter__form-radio-indicator { 
+      pointer-events: none;
+    }
+
+    &-indicator {
+      position: relative;
+      padding-left: 30px;
+      margin-right: 10px;
+      cursor: pointer;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color 0.4s;
+    
+      @media (max-width: 400px) {
+        padding-left: 24px;
+      }
+
+      &:hover {
+        text-decoration-color: $black;
+      }
+    
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        height: 20px;
+        width: 20px;
+        border: 2px solid $brown;
+        border-radius: 100%;
+    
+        @media (max-width: 400px) {
+          height: 16px;
+          width: 16px;
+        }
+      }
+    }
   }
 
-  &__radio-box-label {  /*radio-box*/
-    position: relative;
-    cursor: pointer;
-  }
+  &__radio-box {  /*radio-box*/
 
-  &__form-radio-box-indicator {
-    display: block;
-    height: 35px;
-    width: 80px;
-    padding-top: 10px;
-    text-align: center;
-    background-color: $white;
-    border: none;
-  
-    @media (max-width: 400px) {
-      height: 29px;
-      padding-top: 6px;
-      padding-right: 5px;
+    &-label {  
+      position: relative;
+    }
+
+    &-container {
+      display: flex;
     }
   }
 
   &__form-radio-box {
     &:not(checked) + .filter__form-radio-box-indicator {
       background-color: $white;
-      transition: .4s;
+      transition: background-color .4s;
     }
 
     &:checked + .filter__form-radio-box-indicator {
       background-color: $pink;
-      transition: .4s;
+      transition: background-color .4s;
     }
 
     &:hover + .filter__form-radio-box-indicator {
       background-color: $light-pink;
-      transition: .4s;
+      transition: background-color .4s;
     }
-  }
 
-  &__radio-box-container {
-    display: flex;
+    &:disabled + .filter__form-radio-box-indicator {
+      background-color: $gray-7;
+      pointer-events: none;
+    }
+
+    &-indicator {
+      display: block;
+      height: 35px;
+      width: 80px;
+      padding-top: 10px;
+      text-align: center;
+      background-color: $white;
+      border: none;
+      cursor: pointer;
+    
+      @media (max-width: 400px) {
+        height: 29px;
+        padding-top: 6px;
+        padding-right: 5px;
+      }
+    } 
   }
 
   &__button {   /*filter-button*/
@@ -438,7 +454,7 @@
       margin-right: 70px;
     }
   
-    @media (max-width: 514px) {
+    @media (max-width: 518px) {
       margin: 30px auto 0;
     }
   
